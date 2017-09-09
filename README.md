@@ -1,0 +1,2 @@
+# Standard Go Project Layout
+
