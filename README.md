@@ -4,6 +4,8 @@ This is a basic layout for Go application projects. It represents the most commo
 
 Clone the repository, keep what you need and delete everything else!
 
+[Go Project Layout](https://medium.com/golang-learn/go-project-layout-e5213cdcfaa2) - additional background information.
+
 ## Go Directories
 
 ### `/cmd`
