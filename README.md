@@ -1,6 +1,8 @@
 # Standard Go Project Layout
 
-This is a basic layout for Go application projects. It represents the most common directory structure with a number of small enhancements along with several supporting directories common to any real world application.
+This is a basic layout for Go application projects. It represents the most common directory structure with a number of small enhancements along with several supporting directories common to any real world application. 
+
+This project layout is intentionally generic and it doesn't try to impose a specific Go package structure.
 
 Clone the repository, keep what you need and delete everything else!
 
@@ -14,13 +16,13 @@ Main applications for this project.
 
 The directory name for each application should match the name of the executable you want to have (e.g., `/cmd/myapp`).
 
-Don't put a lot of code in the application directory.  If you think the code can be imported and used in other projects, then it should live in the `/pkg` directory. If the code is not reusable or if you don't want others to reuse it, put that code in the `/internal` directory. You'll be surprised what others will do, so be explicit about your intentions!
+Don't put a lot of code in the application directory. If you think the code can be imported and used in other projects, then it should live in the `/pkg` directory. If the code is not reusable or if you don't want others to reuse it, put that code in the `/internal` directory. You'll be surprised what others will do, so be explicit about your intentions!
 
-It's common to have a small main function that imports and invokes the code from the `/internal` and `/pkg` directories.
+It's common to have a small `main` function that imports and invokes the code from the `/internal` and `/pkg` directories and nothing else.
 
 ### `/internal`
 
-Private application and library code.
+Private application and library code. This is the code you don't want others importing in their applications or libraries.
 
 Put your actual application code in the `/internal/app` directory (e.g., `/internal/app/myapp`) and the code shared by those apps in the `/internal/pkg` directory (e.g., `/internal/pkg/myprivlib`).
 
@@ -107,6 +109,13 @@ Git hooks.
 ### `/assets`
 
 Other assets to go along with your repository.
+
+## Directories You Shouldn't Have
+
+### `/src`
+
+Some Go projects do have a `src` folder, but it usually happens when the devs came from the Java world where it's a common pattern. If you can help yourself try not to adopt this Java pattern. You really don't want your Go code or Go projects to look like Java :-)
+
 
 ## Badges
 

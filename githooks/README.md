@@ -1,0 +1,3 @@
+# `/githooks`
+
+Git hooks.
