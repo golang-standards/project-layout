@@ -34,6 +34,8 @@ Library code that's safe to use by external applications (e.g., `/pkg/mypublicli
 
 Other projects will import these libraries expecting them to work, so think twice before you put something here :-)
 
+See the `/pkg` directory for examples.
+
 ### `/vendor`
 
 Application dependencies (managed manually or by your favorite dependency management tool).
@@ -70,7 +72,9 @@ System init (systemd, upstart, sysv) and process manager/supervisor (runit, supe
 
 Scripts to perform various build, install, analysis, etc operations.
 
-These scripts keep the root level Makefile small and simple.
+These scripts keep the root level Makefile small and simple (e.g., `https://github.com/hashicorp/terraform/blob/master/Makefile`).
+
+See the `/scripts` directory for examples.
 
 ### `/build`
 
@@ -86,7 +90,7 @@ IaaS, PaaS, system and container orchestration deployment configurations and tem
 
 ### `/test`
 
-Additional external test apps and test data.
+Additional external test apps and test data. Feel free to structure the `/test` directory anyway you want. For bigger projects it makes sense to have a data subdirectory (e.g., `/test/data`).
 
 See the `/test` directory for examples.
 
