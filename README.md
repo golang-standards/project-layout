@@ -20,6 +20,8 @@ Don't put a lot of code in the application directory. If you think the code can 
 
 It's common to have a small `main` function that imports and invokes the code from the `/internal` and `/pkg` directories and nothing else.
 
+See the `/cmd` directory for examples.
+
 ### `/internal`
 
 Private application and library code. This is the code you don't want others importing in their applications or libraries.
@@ -43,6 +45,8 @@ Don't commit your application dependencies if you are building a library.
 ### `/api`
 
 OpenAPI/Swagger specs, JSON schema files, protocol definition files.
+
+See the `/api` directory for examples.
 
 ## Web Application Directories
 
@@ -84,19 +88,27 @@ IaaS, PaaS, system and container orchestration deployment configurations and tem
 
 Additional external test apps and test data.
 
+See the `/test` directory for examples.
+
 ## Other Directories
 
 ### `/docs`
 
 Design and user documents (in addition to your godoc generated documentation).
 
+See the `/docs` directory for examples.
+
 ### `/tools`
 
 Supporting tools for this project. Note that these tools can import code from the `/pkg` and `/internal` directories.
 
+See the `/tools` directory for examples.
+
 ### `/examples`
 
 Examples for your applications and/or public libraries.
+
+See the `/examples` directory for examples.
 
 ### `/third_party`
 
