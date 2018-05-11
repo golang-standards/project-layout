@@ -62,7 +62,7 @@ Web application specific components: static web assets, server side templates an
 
 Configuration file templates or default configs.
 
-Put your `confd` or `consule-template` template files here.
+Put your `confd` or `consul-template` template files here.
 
 ### `/init`
 
