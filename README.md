@@ -34,7 +34,7 @@ Library code that's safe to use by external applications (e.g., `/pkg/mypublicli
 
 Other projects will import these libraries expecting them to work, so think twice before you put something here :-)
 
-See the `/pkg` directory for examples.
+See the [`/pkg`](pkg/README.md) directory for examples.
 
 ### `/vendor`
 
@@ -48,7 +48,7 @@ Don't commit your application dependencies if you are building a library.
 
 OpenAPI/Swagger specs, JSON schema files, protocol definition files.
 
-See the `/api` directory for examples.
+See the [`/api`](api/README.md) directory for examples.
 
 ## Web Application Directories
 
@@ -74,7 +74,7 @@ Scripts to perform various build, install, analysis, etc operations.
 
 These scripts keep the root level Makefile small and simple (e.g., `https://github.com/hashicorp/terraform/blob/master/Makefile`).
 
-See the `/scripts` directory for examples.
+See the [`/scripts`](scripts/README.md) directory for examples.
 
 ### `/build`
 
@@ -92,7 +92,7 @@ IaaS, PaaS, system and container orchestration deployment configurations and tem
 
 Additional external test apps and test data. Feel free to structure the `/test` directory anyway you want. For bigger projects it makes sense to have a data subdirectory (e.g., `/test/data`).
 
-See the `/test` directory for examples.
+See the [`/test`](test/README.md) directory for examples.
 
 ## Other Directories
 
@@ -100,19 +100,19 @@ See the `/test` directory for examples.
 
 Design and user documents (in addition to your godoc generated documentation).
 
-See the `/docs` directory for examples.
+See the [`/docs`](docs/README.md) directory for examples.
 
 ### `/tools`
 
 Supporting tools for this project. Note that these tools can import code from the `/pkg` and `/internal` directories.
 
-See the `/tools` directory for examples.
+See the [`/tools`](tools/README.md) directory for examples.
 
 ### `/examples`
 
 Examples for your applications and/or public libraries.
 
-See the `/examples` directory for examples.
+See the [`/examples`](examples/README.md) directory for examples.
 
 ### `/third_party`
 
