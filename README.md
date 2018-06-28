@@ -6,7 +6,13 @@ This project layout is intentionally generic and it doesn't try to impose a spec
 
 Clone the repository, keep what you need and delete everything else!
 
-[Go Project Layout](https://medium.com/golang-learn/go-project-layout-e5213cdcfaa2) - additional background information.
+If you need help with naming, formatting and style start by running [`gofmt`](https://golang.org/cmd/gofmt/) and [`golint`](https://github.com/golang/lint). Also make sure to read these Go code style guidelines and recommendations:
+* https://talks.golang.org/2014/names.slide
+* https://golang.org/doc/effective_go.html#names
+* https://blog.golang.org/package-names
+* https://github.com/golang/go/wiki/CodeReviewComments
+
+See [Go Project Layout](https://medium.com/golang-learn/go-project-layout-e5213cdcfaa2) for additional background information.
 
 ## Go Directories
 
