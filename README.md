@@ -40,7 +40,7 @@ Library code that's safe to use by external applications (e.g., `/pkg/mypublicli
 
 Other projects will import these libraries expecting them to work, so think twice before you put something here :-)
 
-See the [`/pkg`](pkg/README.md) directory for examples.
+See the [`/pkg`](pkg/README.md) directory if you want to see which popular Go repos use this project layout pattern. This is a common layout pattern, but it's not universally accepted and some in the Go community don't recommend it. 
 
 ### `/vendor`
 
