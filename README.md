@@ -14,7 +14,11 @@ If you need help with naming, formatting and style start by running [`gofmt`](ht
 * https://blog.golang.org/package-names
 * https://github.com/golang/go/wiki/CodeReviewComments
 
-See [Go Project Layout](https://medium.com/golang-learn/go-project-layout-e5213cdcfaa2) for additional background information.
+See [`Go Project Layout`](https://medium.com/golang-learn/go-project-layout-e5213cdcfaa2) for additional background information.
+
+More about naming and organizing packages as well as other code structure recommendations:
+* [GopherCon EU 2018: Peter Bourgon - Best Practices for Industrial Programming](https://www.youtube.com/watch?v=PTE4VJIdHPg)
+* [GopherCon Russia 2018: Ashley McNamara + Brian Ketelsen - Go best practices.](https://www.youtube.com/watch?v=MzTcsI6tn-0)
 
 ## Go Directories
 
@@ -38,9 +42,9 @@ Put your actual application code in the `/internal/app` directory (e.g., `/inter
 
 ### `/pkg`
 
-Library code that's safe to use by external applications (e.g., `/pkg/mypubliclib`).
+Library code that's ok to use by external applications (e.g., `/pkg/mypubliclib`). Other projects will import these libraries expecting them to work, so think twice before you put something here :-)
 
-Other projects will import these libraries expecting them to work, so think twice before you put something here :-)
+It's also a way to group Go code in one place when your root directory contains lots of non-Go components and directories making it easier to run various Go tool (as mentioned in the [`Best Practices for Industrial Programming`](https://www.youtube.com/watch?v=PTE4VJIdHPg) from GopherCon EU 2018).
 
 See the [`/pkg`](pkg/README.md) directory if you want to see which popular Go repos use this project layout pattern. This is a common layout pattern, but it's not universally accepted and some in the Go community don't recommend it. 
 
