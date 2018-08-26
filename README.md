@@ -19,6 +19,7 @@ See [`Go Project Layout`](https://medium.com/golang-learn/go-project-layout-e521
 More about naming and organizing packages as well as other code structure recommendations:
 * [GopherCon EU 2018: Peter Bourgon - Best Practices for Industrial Programming](https://www.youtube.com/watch?v=PTE4VJIdHPg)
 * [GopherCon Russia 2018: Ashley McNamara + Brian Ketelsen - Go best practices.](https://www.youtube.com/watch?v=MzTcsI6tn-0)
+* [GopherCon 2017: Edward Muller - Go Anti-Patterns](https://www.youtube.com/watch?v=ltqV6pDKZD8)
 
 ## Go Directories
 
