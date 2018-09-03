@@ -20,6 +20,7 @@ More about naming and organizing packages as well as other code structure recomm
 * [GopherCon EU 2018: Peter Bourgon - Best Practices for Industrial Programming](https://www.youtube.com/watch?v=PTE4VJIdHPg)
 * [GopherCon Russia 2018: Ashley McNamara + Brian Ketelsen - Go best practices.](https://www.youtube.com/watch?v=MzTcsI6tn-0)
 * [GopherCon 2017: Edward Muller - Go Anti-Patterns](https://www.youtube.com/watch?v=ltqV6pDKZD8)
+* [GopherCon UK 2018: Kat Zien - How do you structure your Go apps](https://www.youtube.com/watch?v=VQym87o91f8)
 
 ## Go Directories
 
