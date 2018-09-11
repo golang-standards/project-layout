@@ -12,7 +12,7 @@ Examples:
 * https://github.com/istio/istio/tree/master/pkg
 * https://github.com/google/gvisor/tree/master/pkg
 * https://github.com/google/syzkaller/tree/master/pkg
-* https://github.com/perkeep/perkeep
+* https://github.com/perkeep/perkeep/tree/master/pkg
 * https://github.com/minio/minio/tree/master/pkg
 * https://github.com/heptio/ark/tree/master/pkg
 * https://github.com/heptio/sonobuoy/tree/master/pkg
