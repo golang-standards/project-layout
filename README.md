@@ -138,7 +138,7 @@ Git hooks.
 
 ### `/assets`
 
-Other assets to go along with your repository.
+Other assets to go along with your repository (images, logos, etc).
 
 ## Directories You Shouldn't Have
 
