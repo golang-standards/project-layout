@@ -140,6 +140,12 @@ Git hooks.
 
 Other assets to go along with your repository (images, logos, etc).
 
+### `/website`
+
+This is the place to put your project's website data if you are not using Github pages.
+
+See the [`/website`](website/README.md) directory for examples.
+
 ## Directories You Shouldn't Have
 
 ### `/src`
