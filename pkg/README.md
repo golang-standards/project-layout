@@ -23,10 +23,11 @@ Examples:
 * https://github.com/grafana/grafana/tree/master/pkg
 * https://github.com/influxdata/influxdb/tree/master/pkg
 * https://github.com/cockroachdb/cockroach/tree/master/pkg
+* https://github.com/derekparker/delve/tree/master/pkg
 * https://github.com/coreos/etcd/tree/master/pkg
 * https://github.com/oklog/oklog/tree/master/pkg
 * https://github.com/flynn/flynn/tree/master/pkg
 * https://github.com/jesseduffield/lazygit/tree/master/pkg
 * https://github.com/gopasspw/gopass/tree/master/pkg
 * https://github.com/sourcegraph/sourcegraph/tree/master/pkg
-
+* https://github.com/sosedoff/pgweb/tree/master/pkg
