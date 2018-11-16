@@ -31,3 +31,4 @@ Examples:
 * https://github.com/gopasspw/gopass/tree/master/pkg
 * https://github.com/sourcegraph/sourcegraph/tree/master/pkg
 * https://github.com/sosedoff/pgweb/tree/master/pkg
+* https://github.com/GoogleContainerTools/skaffold/tree/master/pkg
