@@ -16,6 +16,7 @@ Examples:
 * https://github.com/perkeep/perkeep/tree/master/pkg
 * https://github.com/minio/minio/tree/master/pkg
 * https://github.com/heptio/ark/tree/master/pkg
+* https://github.com/argoproj/argo/tree/master/pkg
 * https://github.com/heptio/sonobuoy/tree/master/pkg
 * https://github.com/kubernetes/kubernetes/tree/master/pkg
 * https://github.com/kubernetes/kops/tree/master/pkg
