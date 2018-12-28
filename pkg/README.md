@@ -8,6 +8,7 @@ Note that this is not a universally accepted pattern and for every popular repo 
 
 Examples:
 
+* https://github.com/gogs/gogs/tree/master/pkg
 * https://github.com/prometheus/prometheus/tree/master/pkg
 * https://github.com/jaegertracing/jaeger/tree/master/pkg
 * https://github.com/istio/istio/tree/master/pkg
@@ -18,6 +19,7 @@ Examples:
 * https://github.com/heptio/ark/tree/master/pkg
 * https://github.com/argoproj/argo/tree/master/pkg
 * https://github.com/heptio/sonobuoy/tree/master/pkg
+* https://github.com/helm/helm/tree/master/pkg
 * https://github.com/kubernetes/kubernetes/tree/master/pkg
 * https://github.com/kubernetes/kops/tree/master/pkg
 * https://github.com/moby/moby/tree/master/pkg
@@ -25,7 +27,7 @@ Examples:
 * https://github.com/influxdata/influxdb/tree/master/pkg
 * https://github.com/cockroachdb/cockroach/tree/master/pkg
 * https://github.com/derekparker/delve/tree/master/pkg
-* https://github.com/coreos/etcd/tree/master/pkg
+* https://github.com/etcd-io/etcd/tree/master/pkg
 * https://github.com/oklog/oklog/tree/master/pkg
 * https://github.com/flynn/flynn/tree/master/pkg
 * https://github.com/jesseduffield/lazygit/tree/master/pkg
@@ -34,4 +36,6 @@ Examples:
 * https://github.com/sosedoff/pgweb/tree/master/pkg
 * https://github.com/GoogleContainerTools/skaffold/tree/master/pkg
 * https://github.com/knative/serving/tree/master/pkg
-
+* https://github.com/grafana/loki/tree/master/pkg
+* https://github.com/bloomberg/goldpinger/tree/master/pkg
+* https://github.com/crossplaneio/crossplane/tree/master/pkg
