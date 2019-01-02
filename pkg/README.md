@@ -39,3 +39,4 @@ Examples:
 * https://github.com/grafana/loki/tree/master/pkg
 * https://github.com/bloomberg/goldpinger/tree/master/pkg
 * https://github.com/crossplaneio/crossplane/tree/master/pkg
+* https://github.com/Ne0nd0g/merlin/tree/master/pkg
