@@ -13,6 +13,7 @@ If you need help with naming, formatting and style start by running [`gofmt`](ht
 * https://golang.org/doc/effective_go.html#names
 * https://blog.golang.org/package-names
 * https://github.com/golang/go/wiki/CodeReviewComments
+* [Style guideline for Go packages](https://rakyll.org/style-packages)
 
 See [`Go Project Layout`](https://medium.com/golang-learn/go-project-layout-e5213cdcfaa2) for additional background information.
 
