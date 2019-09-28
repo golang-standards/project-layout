@@ -4,6 +4,8 @@ This is a basic layout for Go application projects. It's not an official standar
 
 If you are trying to learn Go or if you are building a PoC or a toy project for yourself this project layout is an overkill. Start with something really simple (a single `main.go` file is more than enough). As your project grows keep in mind that it'll be important to make sure your code is well structured otherwise you'll end up with a messy code with lots of hidden dependencies and global state. When you have more people working on the project you'll need even more structure. That's when it's important to introduce a common way to manage packages/libraries. When you have an open source project or when you know other projects import the code from your project repository that's when it's important to have private (aka `internal`) packages and code. Clone the repository, keep what you need and delete everything else! Just because it's there it doesn't mean you have to use it all. None of these patterns are used in every single project. Even the `vendor` pattern is not universal.
 
+Note that [`Go modules`](https://github.com/golang/go/wiki/Modules) and the related capabilities will have an impact on your project layout. The repo will be updated to include `Go modules` once it's fully enabled by default.
+
 This project layout is intentionally generic and it doesn't try to impose a specific Go package structure.
 
 This is a community effort. Open an issue if you see a new pattern or if you think one of the existing patterns needs to be updated.
@@ -53,9 +55,11 @@ See the [`/pkg`](pkg/README.md) directory if you want to see which popular Go re
 
 ### `/vendor`
 
-Application dependencies (managed manually or by your favorite dependency management tool like [`dep`](https://github.com/golang/dep)).
+Application dependencies (managed manually or by your favorite dependency management tool like [`dep`](https://github.com/golang/dep) or the new built-in, but still experimental, [`modules`](https://github.com/golang/go/wiki/Modules) feature).
 
 Don't commit your application dependencies if you are building a library.
+
+Note that since [`1.13`](https://golang.org/doc/go1.13#modules) Go also enabled the module proxy feature (using `https://proxy.golang.org` as their module proxy server by default). Read more about it [`here`](https://blog.golang.org/module-mirror-launch) to see if it fits all of your requirements and constraints. If it does, then you won't need the 'vendor' directory at all.
 
 ## Service Application Directories
 
