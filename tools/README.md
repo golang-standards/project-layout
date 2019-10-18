@@ -6,3 +6,4 @@ Examples:
 
 * https://github.com/istio/istio/tree/master/tools
 * https://github.com/openshift/origin/tree/master/tools
+* https://github.com/dapr/dapr/tree/master/tools
