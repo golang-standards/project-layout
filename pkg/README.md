@@ -45,4 +45,14 @@ Examples:
 * https://github.com/jenkins-x/jx/tree/master/pkg
 * https://github.com/DataDog/datadog-agent/tree/master/pkg
 * https://github.com/dapr/dapr/tree/master/pkg
+* https://github.com/cortexproject/cortex/tree/master/pkg
+* https://github.com/dexidp/dex/tree/master/pkg
+* https://github.com/pusher/oauth2_proxy/tree/master/pkg
+* https://github.com/pdfcpu/pdfcpu/tree/master/pkg
+* https://github.com/weaveworks/kured
+* https://github.com/weaveworks/footloose
+* https://github.com/weaveworks/ignite
+* https://github.com/tmrts/boilr/tree/master/pkg
+
+
 
