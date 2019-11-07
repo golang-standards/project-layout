@@ -10,7 +10,6 @@ Ok not to use it if your app project is really small and where an extra level of
 
 Examples:
 
-* https://github.com/gogs/gogs/tree/master/pkg
 * https://github.com/prometheus/prometheus/tree/master/pkg
 * https://github.com/jaegertracing/jaeger/tree/master/pkg
 * https://github.com/istio/istio/tree/master/pkg
