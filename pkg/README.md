@@ -33,7 +33,6 @@ Examples:
 * https://github.com/flynn/flynn/tree/master/pkg
 * https://github.com/jesseduffield/lazygit/tree/master/pkg
 * https://github.com/gopasspw/gopass/tree/master/pkg
-* https://github.com/sourcegraph/sourcegraph/tree/master/pkg
 * https://github.com/sosedoff/pgweb/tree/master/pkg
 * https://github.com/GoogleContainerTools/skaffold/tree/master/pkg
 * https://github.com/knative/serving/tree/master/pkg
@@ -48,10 +47,7 @@ Examples:
 * https://github.com/dexidp/dex/tree/master/pkg
 * https://github.com/pusher/oauth2_proxy/tree/master/pkg
 * https://github.com/pdfcpu/pdfcpu/tree/master/pkg
-* https://github.com/weaveworks/kured
-* https://github.com/weaveworks/footloose
-* https://github.com/weaveworks/ignite
+* https://github.com/weaveworks/kured/pkg
+* https://github.com/weaveworks/footloose/pkg
+* https://github.com/weaveworks/ignite/pkg
 * https://github.com/tmrts/boilr/tree/master/pkg
-
-
-
