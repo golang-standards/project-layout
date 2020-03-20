@@ -13,6 +13,7 @@ Examples:
 * https://github.com/prometheus/prometheus/tree/master/pkg
 * https://github.com/jaegertracing/jaeger/tree/master/pkg
 * https://github.com/istio/istio/tree/master/pkg
+* https://github.com/GoogleContainerTools/kaniko
 * https://github.com/google/gvisor/tree/master/pkg
 * https://github.com/google/syzkaller/tree/master/pkg
 * https://github.com/perkeep/perkeep/tree/master/pkg
