@@ -25,6 +25,9 @@ More about naming and organizing packages as well as other code structure recomm
 * [GopherCon 2017: Edward Muller - Go Anti-Patterns](https://www.youtube.com/watch?v=ltqV6pDKZD8)
 * [GopherCon 2018: Kat Zien - How Do You Structure Your Go Apps](https://www.youtube.com/watch?v=oL6JBUk6tj0)
 
+A Chinese Post about Package-Oriented-Design guidelines and Architecture layer
+* [面向包的设计和架构分层](https://github.com/danceyoung/paper-code/blob/master/package-oriented-design/packageorienteddesign.md)
+
 ## Go Directories
 
 ### `/cmd`
