@@ -52,3 +52,4 @@ Examples:
 * https://github.com/weaveworks/footloose/tree/master/pkg
 * https://github.com/weaveworks/ignite/tree/master/pkg
 * https://github.com/tmrts/boilr/tree/master/pkg
+* https://github.com/kata-containers/runtime/tree/master/pkg
