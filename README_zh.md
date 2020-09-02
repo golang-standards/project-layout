@@ -13,7 +13,7 @@ Go 1.14 [`Go Modules`](https://github.com/golang/go/wiki/Modules) 终于可以�
 这是社区的努力。 如果看到新的模式，或者认为一个现有的模式需要更新，请提一个 issue。
 
 如果需要命名、格式和样式方面的帮助，请运行 [`gofmt`](https://golang.org/cmd/gofmt/) 和 [`golint`](https://github.com/golang/lint) 。还要确保阅读这些 Go 代码风格的指导方针和建议:
-* https://talks.golang.org/2014/names.slidemake
+* https://talks.golang.org/2014/names.slide
 * https://golang.org/doc/effective_go.html#names
 * https://blog.golang.org/package-names
 * https://github.com/golang/go/wiki/CodeReviewComments
