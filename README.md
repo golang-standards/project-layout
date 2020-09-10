@@ -2,6 +2,7 @@
 
 Translations:
 
+* [한국어 문서](README_ko.md)
 * [中文文档](README_zh.md)
 
 ## Overview
