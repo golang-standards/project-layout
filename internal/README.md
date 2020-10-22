@@ -12,3 +12,9 @@ Examples:
 * https://github.com/jaegertracing/jaeger/tree/master/internal
 * https://github.com/moby/moby/tree/master/internal
 * https://github.com/satellity/satellity/tree/master/internal
+
+## `/internal/pkg`
+
+Examples:
+
+* https://github.com/hashicorp/waypoint/tree/main/internal/pkg
