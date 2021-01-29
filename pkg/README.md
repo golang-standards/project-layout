@@ -39,7 +39,6 @@ Examples:
 * https://github.com/knative/serving/tree/master/pkg
 * https://github.com/grafana/loki/tree/master/pkg
 * https://github.com/bloomberg/goldpinger/tree/master/pkg
-* https://github.com/crossplaneio/crossplane/tree/master/pkg
 * https://github.com/Ne0nd0g/merlin/tree/master/pkg
 * https://github.com/jenkins-x/jx/tree/master/pkg
 * https://github.com/DataDog/datadog-agent/tree/master/pkg

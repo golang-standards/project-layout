@@ -6,6 +6,7 @@
 * [简体中文](README_zh.md)
 * [Français](README_fr.md)
 * [正體中文](README_zh-TW.md)
+* [日本語](README_ja.md)
 
 ## 개요
 
