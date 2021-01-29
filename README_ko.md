@@ -2,11 +2,14 @@
 
 번역:
 
+* [English](README.md)
 * [한국어 문서](README_ko.md)
 * [简体中文](README_zh.md)
-* [Français](README_fr.md)
 * [正體中文](README_zh-TW.md)
+* [简体中文](README_zh-CN.md) - ???
+* [Français](README_fr.md)
 * [日本語](README_ja.md)
+* [Español](README_es.md)
 
 ## 개요
 
