@@ -13,17 +13,17 @@
 
 ## Genel Bakış
 
-Bu proje Go projeleri için basit bir yerleşim düzenidir. Bu standart Go geliştirici takımının belirlediği bir resmi standart değildir ama Go ekosistemi zaman geçtikçe ortaya çıkmış şablonları içerir. Bu şablonlardan bazıları diğerlerinden daha popülerdir. Bir dizi iyileştirmenin yanı sıra yeterli büyüklükte herhangi bir gerçek dünya uygulamasına özgü birkaç destekli dizin de içerir.
+Bu proje Go projeleri için basit bir yerleşim düzenidir. Go geliştirici takımının belirlediği resmi standartları değil, Go ekosistemindeki ortak geçmişi ve zaman içinde ortaya çıkmış şablonları içerir. Bu şablonlardan bazıları diğerlerinden daha popülerdir. Bir dizi iyileştirmenin yanı sıra yeterli büyüklükte herhangi bir gerçek dünya uygulamasına özgü birkaç destekli dizin de içerir.
 
-Eğer Go'yu öğrenmeye çalışıyorsanız veya PoC (Proof of Concept) yada kendinize oyuncak bir proje yapıyorsanız bu klasör düzeni aşırı olabilir. Çok basit bir şeyle başlayın (tek bir `main.go` dosyası fazlasıyla yeterli). Projeniz büyüdükçe projenin iyi yapılandırıldığından emin olmanın önemli olduğunu unutmayon yoksa bir sürü gizli bağımlılık (dependency) ve bir sürü her yerden erişebildiğin global değişkenlerle dolu dağınık bir kodla karşılaşabilirsiniz. Proje üstünde fazla kişi çalıştığında projeyi çok daha fazla yapılandırmanız gerekebilir. İşte tam da bu durumda paketleri/kütüphaneleri idare edebilmek için ortaya ortak bir yol koymak gerekir. Açık kaynak bir projeniz olduğunda yada başkalarının senin projeni kullandıklarını bildiğinizde projenizde özel paketlerin ve kodların (diğer adıyla, `internal` klasörü) olması önemlidir. Bu projeyi klonla, ihtiyacın olanları bırakın ve diğer bütün her şeyi silin. Bütün klasörlerin burada olması kullanmanız gerektiği anlamına gelmez. `vendor` klasörü bile herkes tarafından kullanılan bir şey değil.
+Eğer Go'yu öğrenmeye çalışıyorsanız veya PoC (Proof of Concept) ya da kendinize oyuncak bir proje yapıyorsanız bu klasör düzeni aşırı olabilir. Çok basit bir şeyle başlayınız (tek bir `main.go` dosyası fazlasıyla yeterli). Projeniz büyüdükçe projenin iyi yapılandırıldığından emin olmanın önemli olduğunu unutmayın yoksa bir sürü gizli bağımlılık (dependency) ve bir sürü her yerden erişilebilen, `global` değişkenlerle dolu dağınık bir kodla karşılaşabilirsiniz. Proje üstünde fazla kişi çalıştığında projeyi çok daha fazla yapılandırmanız gerekebilir. İşte tam da bu durumda paketleri/kütüphaneleri idare edebilmek için ortaya ortak bir yol koymak gerekir. Açık kaynak bir projeniz olduğunda ya da başkalarının sizin projenizi kullandıklarını bildiğinizde projenizde özel paketlerin ve kodların (diğer adıyla, `internal` klasörü) olması önemlidir. Bu projeyi klonlayın, ihtiyacınız olanları bırakın ve diğer bütün her şeyi silin. Bütün klasörlerin burada olması kullanmanız gerektiği anlamına gelmez. `vendor` klasörü bile herkes tarafından kullanılan bir şey değildir.
 
-Go 1.14 ile birlikte [`Go Modules`](https://github.com/golang/go/wiki/Modules) özelliği sonunda `production` ortamında kullanılması için hazır oldu. Eğer karşı bir nedeniniz yoksa [`Go Modules`](https://blog.golang.org/using-go-modules) kullanın eğer kullanırsanız `$GOPATH` ile ve projenizin nereye koyulacağıyla alakalı endişeler duymazsınız. Projenizde bulunan basit `go.mod` dosyası projenizin GitHub'da barındırıldığını varsayar ama bu bir gereklilik değildir. Modül yolu her şey olabilir ama modül yolunun ilk parçasının içinde bir nokta olmalıdır (Go'nun şimdiki versiyonu artık bu konuda zorlamıyor ama eğer daha eski versiyonları kullanırsanız ve derleme işleminde hata alırsanız şaşırmayın). Daha fazla bilgi için [`37554`](https://github.com/golang/go/issues/37554) ve [`32819`](https://github.com/golang/go/issues/32819) hata bildirimlerine bakabilirsiniz.
+Go 1.14 ile birlikte [`Go Modules`](https://github.com/golang/go/wiki/Modules) özelliği sonunda `production` ortamında kullanılması için hazır oldu. Eğer karşı bir nedeniniz yoksa [`Go Modules`](https://blog.golang.org/using-go-modules) kullanın. Eğer kullanırsanız `$GOPATH` ile ve projenizin nereye koyulacağıyla alakalı endişeler duymazsınız. Projenizde bulunan basit `go.mod` dosyası projenizin GitHub'da barındırıldığını varsayar ama bu bir gereklilik değildir. Modül yolu her şey olabilir ama modül yolunun ilk parçasının içinde bir nokta olmalıdır (Go'nun şimdiki versiyonu artık bu konuda zorlamıyor ama eğer daha eski versiyonları kullanırsanız ve derleme işleminde hata alırsanız şaşırmayın). Daha fazla bilgi için [`37554`](https://github.com/golang/go/issues/37554) ve [`32819`](https://github.com/golang/go/issues/32819) hata bildirimlerine bakabilirsiniz.
 
 Bu proje düzeni genel bir düzendir ve belirli bir Go paketi yapısını empoze etmeye çalışmaz.
 
-Bu bir topluluk eseridir. Eğer yeni bir şablon, düzen ile karşılaşırsanız yada olan şablonların, düzenlerin güncellenmesi gerektiğini düşünyorsanız bir hata bildirimi açınız.
+Bu bir topluluk eseridir. Eğer yeni bir şablon, düzen ile karşılaşırsanız ya da olan şablonların, düzenlerin güncellenmesi gerektiğini düşünyorsanız bir hata bildirimi açınız.
 
-Eğer isimlendirmekle, biçimlendirmeyle ve stilize etmeyle ilgili yardıma ihtiyacın varsa [`gofmt`](https://golang.org/cmd/gofmt/) ve [`golint`](https://github.com/golang/lint) yazılımlarını çalıştırmayı dene. Ayrıca aşağıdaki Go kod stili rehberlerini ve önerilerini okuduğunuzdan emin olun.
+Eğer isimlendirmekle, biçimlendirmeyle ve stilize etmeyle ilgili yardıma ihtiyacınız varsa [`gofmt`](https://golang.org/cmd/gofmt/) ve [`golint`](https://github.com/golang/lint) yazılımlarını çalıştırmayı deneyin. Ayrıca aşağıdaki Go kod stili rehberlerini ve önerilerini okuduğunuzdan emin olun.    
 * https://talks.golang.org/2014/names.slide
 * https://golang.org/doc/effective_go.html#names
 * https://blog.golang.org/package-names
@@ -49,7 +49,7 @@ Projenin ana uygulamalarını içerir.
 
 Her uygulamanın klasör adı, eklemek istediğiniz uygulamanın adıyla eşleşmelidir. (örneğin, `/cmd/benimuygulamam`)
 
-Bu klasöre çok fazla kod koymanız iyi olmaz. Eğer kodların başka projeler tarafından kullanılabileceğini düşünüyorsanız, o kodları `/pkg` klasörüne koymalısınız. Eğer kod yeniden kullanılabilecek değilse yada diğerlerinin yeniden kullanmasını istemiyorsanız, bu kodları `/internal` klasörüne koymalısınız. Niyetiniz hakkında açık olun, diğer geliştiricilerin kodunuzu ne için kullanabileceğine şaşıracaksınız!
+Bu klasöre çok fazla kod koymanız iyi olmaz. Eğer kodların başka projeler tarafından kullanılabileceğini düşünüyorsanız, o kodları `/pkg` klasörüne koymalısınız. Eğer kod yeniden kullanılabilecek değilse ya da diğerlerinin yeniden kullanmasını istemiyorsanız, bu kodları `/internal` klasörüne koymalısınız. Niyetiniz hakkında açık olun, diğer geliştiricilerin kodunuzu ne için kullanabileceğine şaşıracaksınız!
 
 `/internal` ve `/pkg` klasörlerinden kod çağıran küçük bir `main` fonksiyonunuzun olması yaygındır.
 
@@ -69,11 +69,11 @@ Ayrıca ana klasörünüz çok sayıda Go kodu olmayan dosya ve klasör içerdi�
 
 Hangi popüler Go projelerinin bu düzeni kullandığını merak ediyorsanız [`/pkg`](pkg/README.md) klasörüne bakabilirsiniz. Bu genel bir yerleşim düzenidir ama herkes tarafından kabul edilmiyor ve bazı Go toplulukları bu yerleşim düzenini tavsiye etmeyebilir.
 
-Eğer projenizde ekstra bir katmana gerek yoksa yada projeniz çok küçükse burayı kullanmamanızda bir sakınca olmaz (çok istiyorsanız kullanın). Projeniz yeterince büyük olduğunda ve ana klasörünüz karışmaya başladığında (özellikle çok fazla Go kodu olmayan dosyanız olduğunda) bunu kullanmayı düşünebilirsiniz.
+Eğer projenizde ekstra bir katmana gerek yoksa ya da projeniz çok küçükse burayı kullanmamanızda bir sakınca olmaz (çok istiyorsanız kullanın). Projeniz yeterince büyük olduğunda ve ana klasörünüz karışmaya başladığında (özellikle çok fazla Go kodu olmayan dosyanız olduğunda) bunu kullanmayı düşünebilirsiniz.
 
 ### `/vendor`
 
-Uygulama bağımlılıkları (el ile yönetilen yada yeni bir özellik olan  [`Go Modules`](https://github.com/golang/go/wiki/Modules) gibi favori bağımlılık yönetim aracınızla yönetilen). `go mod vendor` komutu size yeni bir `/vendor klasörü yaratır`. Unutmayın eğer Go 1.14 kullanmıyorsanız `go build` komutuna `-mod=vendor` parametresi vermeniz gerekebilir Go 1.14 bunu varsayılan olarak yapar.
+Uygulama bağımlılıkları (el ile yönetilen ya da yeni bir özellik olan  [`Go Modules`](https://github.com/golang/go/wiki/Modules) gibi favori bağımlılık yönetim aracınızla yönetilen). `go mod vendor` komutu size yeni bir `/vendor klasörü yaratır`. Unutmayın eğer Go 1.14 kullanmıyorsanız `go build` komutuna `-mod=vendor` parametresi vermeniz gerekebilir Go 1.14 bunu varsayılan olarak yapar.
 
 Eğer bir kütüphane yazıyorsanız bağımlılıklarınızı `commit` etmeyin.
 
@@ -147,7 +147,7 @@ Bu klasöre projen için destekleyici araçları koyabilirsin. Unutma bu araçla
 
 ### `/examples`
 
-Bu klasöre yaptığın uygulamalar yada kütüphaneler için örnekleri koyabilirsin.
+Bu klasöre yaptığın uygulamalar ya da kütüphaneler için örnekleri koyabilirsin.
 
 Örnekler için [`/examples`](examples/README.md) klasörüne bakabilirsiniz.
 
@@ -173,7 +173,7 @@ Eğer GitHub Pages kullanmıyorsan burası projenin websitesinin dosyalarının 
 
 ### `/src`
 
-Bazı Go projelerinde `src` adlı bir klasör görebilirsiniz, ama bu çoğunlukla `src` klasörü kullanmanın genel bir kalıp olduğu Java dünyasından gelen geliştiricilerde olur. Eğer yapabilirseniz bu Java kalıbını benimsememeye çalışın. Gerçekten Go kodunuzun yada Go projenizin Java gibi gözükmesini istemezsiniz :-)
+Bazı Go projelerinde `src` adlı bir klasör görebilirsiniz, ama bu çoğunlukla `src` klasörü kullanmanın genel bir kalıp olduğu Java dünyasından gelen geliştiricilerde olur. Eğer yapabilirseniz bu Java kalıbını benimsememeye çalışın. Gerçekten Go kodunuzun ya da Go projenizin Java gibi gözükmesini istemezsiniz :-)
 
 Proje seviyesindeki `/src` klasörü ile [`How to Write Go Code`](https://golang.org/doc/code.html) adresinde belirtilen Go'nun çalışma alanları için kullandığı `/src` klasörünü karıştırmayın. `$GOPATH` ortam değişkeni senin çalışma alanına (şuanki) işaret eder (Windows olmayan sistemlerde varsayılan olarak `$HOME/go` klasörüne işaret eder). Bu çalışma alanı içerisinde en üst katmandaki `/pkg`, `/bin` ve `/src` klasörlerini barındırır. Asıl projen `/src` klasörü altında bir alt dizin olur. Eğer projende `/src` klasörüne sahipsen, projenin dosya yolu büyük ihtimal şöyle gözükecek `/calisma-alanin/src/senin_projen/src/senin_kodun.go`. Not olarak Go 1.11 ile `$GOPATH` klasörü dışında projeler açabilirsin ama bunu yapabilmen bu yerleşim düzeninin kullanılmasının iyi bir fikir olduğu anlamına gelmez.
 
