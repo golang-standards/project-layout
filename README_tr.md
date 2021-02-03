@@ -19,15 +19,9 @@ Eğer Go'yu öğrenmeye çalışıyorsanız veya PoC (Proof of Concept) yada ken
 
 Go 1.14 ile birlikte [`Go Modules`](https://github.com/golang/go/wiki/Modules) özelliği sonunda `production` ortamında kullanılması için hazır oldu. Eğer karşı bir nedeniniz yoksa [`Go Modules`](https://blog.golang.org/using-go-modules) kullanın eğer kullanırsanız `$GOPATH` ile ve projenizin nereye koyulacağıyla alakalı endişeler duymazsınız. Projenizde bulunan basit `go.mod` dosyası projenizin GitHub'da barındırıldığını varsayar ama bu bir gereklilik değildir. Modül yolu her şey olabilir ama modül yolunun ilk parçasının içinde bir nokta olmalıdır (Go'nun şimdiki versiyonu artık bu konuda zorlamıyor ama eğer daha eski versiyonları kullanırsanız ve derleme işleminde hata alırsanız şaşırmayın). Daha fazla bilgi için [`37554`](https://github.com/golang/go/issues/37554) ve [`32819`](https://github.com/golang/go/issues/32819) hata bildirimlerine bakabilirsiniz.
 
-With Go 1.14 [`Go Modules`](https://github.com/golang/go/wiki/Modules) are finally ready for production. Use [`Go Modules`](https://blog.golang.org/using-go-modules) unless you have a specific reason not to use them and if you do then you don’t need to worry about $GOPATH and where you put your project. The basic `go.mod` file in the repo assumes your project is hosted on GitHub, but it's not a requirement. The module path can be anything though the first module path component should have a dot in its name (the current version of Go doesn't enforce it anymore, but if you are using slightly older versions don't be surprised if your builds fail without it). See Issues [`37554`](https://github.com/golang/go/issues/37554) and [`32819`](https://github.com/golang/go/issues/32819) if you want to know more about it.
-
 Bu proje düzeni genel bir düzendir ve belirli bir Go paketi yapısını empoze etmeye çalışmaz.
 
 Bu bir topluluk eseridir. Eğer yeni bir şablon, düzen ile karşılaşırsanız yada olan şablonların, düzenlerin güncellenmesi gerektiğini düşünyorsanız bir hata bildirimi açınız.
-
-This project layout is intentionally generic and it doesn't try to impose a specific Go package structure.
-
-This is a community effort. Open an issue if you see a new pattern or if you think one of the existing patterns needs to be updated.
 
 Eğer isimlendirmekle, biçimlendirmeyle ve stilize etmeyle ilgili yardıma ihtiyacın varsa [`gofmt`](https://golang.org/cmd/gofmt/) ve [`golint`](https://github.com/golang/lint) yazılımlarını çalıştırmayı dene. Ayrıca aşağıdaki Go kod stili rehberlerini ve önerilerini okuduğunuzdan emin olun.
 * https://talks.golang.org/2014/names.slide
