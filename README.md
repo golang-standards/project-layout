@@ -9,6 +9,7 @@ Translations:
 * [Français](README_fr.md)
 * [日本語](README_ja.md)
 * [Español](README_es.md)
+* [Русский](README_ru.md)
 
 ## Overview
 
