@@ -183,7 +183,7 @@ Goプロジェクトの中には `src` フォルダを持っているものも�
 
 * [Go Report Card](https://goreportcard.com/) - `gofmt`, `go vet`, `gocyclo`, `golint`, `ineffassign`, `license`, `misspell` でコードをスキャンします。`github.com/golang-standards/project-layout` をプロジェクトリファレンスに置き換えてください。
 
-* ~~[GoDoc](http://godoc.org) - GoDocで作成したドキュメントのオンライン版を提供します。リンクを自分のプロジェクトへのリンクに変更してください。
+* ~~[GoDoc](http://godoc.org) - GoDocで作成したドキュメントのオンライン版を提供します。リンクを自分のプロジェクトへのリンクに変更してください。~~
 
 * [Pkg.go.dev](https://pkg.go.dev) - Pkg.go.devは、囲碁の発見とドキュメントの新しい目的地です。[バッジ生成ツール](https://pkg.go.dev/badge)を使ってバッジを作成することができます。
 
