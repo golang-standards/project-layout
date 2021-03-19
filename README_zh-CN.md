@@ -7,6 +7,7 @@
 * [简体中文](README_zh-CN.md) - ???
 * [Français](README_fr.md)
 * [日本語](README_ja.md)
+* [Portuguese](README_ptBR.md)
 * [Español](README_es.md)
 
 这是Go应用程序项目的基础布局。这不是Go核心开发团队定义的官方标准；无论是在经典项目还是在新兴的项目中，这都是Go生态系统中一组常见的项目布局模式。这其中有一些模式比另外的一些更受欢迎。它通过几个支撑目录为任何足够大规模的实际应用程序提供一些增强功能。
@@ -58,7 +59,7 @@ Go 1.14 `Go Modules`已经可以用于生产环境。没有什么特殊原因的
 
 ### `/pkg`
 
-外部应用程序可以使用的库代码（如，`/pkg/mypubliclib`）。其他项目将会导入这些库来保证项目可以正常运行，所以在将代码放在这里前，一定要三四而行。请注意，`internal`目录是一个更好的选择来确保项目私有代码不会被其他人导入，因为这是Go强制执行的。使用`/pkg`目录来明确表示代码可以被其他人安全的导入仍然是一个好方式。Travis Jeffery撰写的关于 [I’ll take pkg over internal](https://travisjeffery.com/b/2019/11/i-ll-take-pkg-over-internal/) 文章很好地概述了`pkg`和`inernal`目录以及何时使用它们。
+外部应用程序可以使用的库代码（如，`/pkg/mypubliclib`）。其他项目将会导入这些库来保证项目可以正常运行，所以在将代码放在这里前，一定要三思而行。请注意，`internal`目录是一个更好的选择来确保项目私有代码不会被其他人导入，因为这是Go强制执行的。使用`/pkg`目录来明确表示代码可以被其他人安全的导入仍然是一个好方式。Travis Jeffery撰写的关于 [I’ll take pkg over internal](https://travisjeffery.com/b/2019/11/i-ll-take-pkg-over-internal/) 文章很好地概述了`pkg`和`inernal`目录以及何时使用它们。
 
 当您的根目录包含大量非Go组件和目录时，这也是一种将Go代码分组到一个位置的方法，从而使运行各种Go工具更加容易（在如下的文章中都有提到：2018年GopherCon [Best Practices for Industrial Programming](https://www.youtube.com/watch?v=PTE4VJIdHPg)，[Kat Zien - How Do You Structure Your Go Apps](https://www.youtube.com/watch?v=oL6JBUk6tj0) ，Golab 2018 [Massimiliano Pippi - Project layout patterns in Go](https://www.youtube.com/watch?v=3gQa1LWwuzk)）。
 
@@ -168,7 +169,7 @@ Git的钩子。
 
 ### `/src`
 
-有一些Go项目确实包含`src`文件夹，但通常只有在开发者是从Java（这是Java中一个通用的模式）转过来的情况下才会有。如果可以的话请不要使用这种Java模式。你肯定不希望你的Go代码和项目看起来向Java。
+有一些Go项目确实包含`src`文件夹，但通常只有在开发者是从Java（这是Java中一个通用的模式）转过来的情况下才会有。如果可以的话请不要使用这种Java模式。你肯定不希望你的Go代码和项目看起来像Java。
 
 不要将项目级别的`/src`目录与Go用于其工作空间的`/src`目录混淆，就像[How to Write Go Code](https://golang.org/doc/code.html)中描述的那样。`$GOPATH`环境变量指向当前的工作空间（默认情况下指向非Windows系统中的`$HOME/go`）。此工作空间包括顶级`/pkg`，`/bin`和`/src`目录。实际的项目最终变成`/src`下的子目录，因此，如果项目中有`/src`目录，则项目路径将会变成：`/some/path/to/workspace/src/your_project/ src/your_code.go`。请注意，使用Go 1.11，可以将项目放在GOPATH之外，但这并不意味着使用此布局模式是个好主意。
 

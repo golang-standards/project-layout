@@ -9,6 +9,7 @@
 * [简体中文](README_zh-CN.md) - ???
 * [Français](README_fr.md)
 * [日本語](README_ja.md)
+* [Portuguese](README_ptBR.md)
 * [Español](README_es.md)
 
 ## 概要
@@ -65,7 +66,7 @@ Go 1.14では、[`Go Modules`](https://github.com/golang/go/wiki/Modules)がつ�
 
 外部アプリケーションで使用しても問題ないライブラリコード(例: `/pkg/mypubliclib`)。他のプロジェクトは、これらのライブラリが動作することを期待してインポートしますので、ここに何かを置く前によく考えてください :-)。内部ディレクトリは、プライベートパッケージがインポートできないようにするためのより良い方法であることに注意してください。`/pkg` ディレクトリは、そのディレクトリにあるコードが他の人に使われても安全であることを明示的に伝える良い方法です。[`I'll take pkg over internal blog post by Travis Jeffery`](https://travisjeffery.com/b/2019/11/i-ll-take-pkg-over-internal/) は、`pkg` ディレクトリと内部ディレクトリの概要と、それらを使用することが意味のある場合の概要を提供しています。
 
-また、ルートディレクトリにGo以外のコンポーネントやディレクトリが多数含まれている場合は、Goコードを1つの場所にグループ化して、さまざまなGoツールを簡単に実行できるようにする方法でもあります（これらの講演で言及されているように：[`産業用プログラミングのベストプラクティス`](https ：//www.youtube.com/watch？v = PTE4VJIdHPg) from GopherCon EU 2018、[`GopherCon 2018：Kat Zien-How Do You Structure Your Go Apps`](https://www.youtube.com/watch?v= oL6JBUk6tj0) および [`GoLab 2018-Massimiliano Pippi-Goのプロジェクトレイアウトパターン`](https://www.youtube.com/watch?v=3gQa1LWwuzk)）。
+また、ルートディレクトリにGo以外のコンポーネントやディレクトリが多数含まれている場合は、Goコードを1つの場所にグループ化して、さまざまなGoツールを簡単に実行できるようにする方法でもあります（これらの講演で言及されているように：[`産業用プログラミングのベストプラクティス`](https://www.youtube.com/watch?v=PTE4VJIdHPg) from GopherCon EU 2018、[`GopherCon 2018：Kat Zien-How Do You Structure Your Go Apps`](https://www.youtube.com/watch?v=oL6JBUk6tj0) および [`GoLab 2018-Massimiliano Pippi-Goのプロジェクトレイアウトパターン`](https://www.youtube.com/watch?v=3gQa1LWwuzk)）。
 
 このプロジェクトレイアウトパターンを使用している人気のある Go repos を見たい場合は [`/pkg`](pkg/README.md) ディレクトリを参照してください。これは一般的なレイアウトパターンですが、普遍的に受け入れられているわけではありませんし、Goコミュニティの中には推奨していない人もいます。
 
@@ -138,19 +139,19 @@ IaaS、PaaS、システム、コンテナオーケストレーションのデプ
 
 デザインドキュメントとユーザードキュメント (godocで生成されたドキュメントに加えて)。
 
-例に関しては、['/docs`](docs/README.md)ディレクトリを参照してください。
+例に関しては、[`/docs`](docs/README.md)ディレクトリを参照してください。
 
 ### `/tools`
 
 このプロジェクトをサポートするツールです。これらのツールは `/pkg` と `/internal` ディレクトリからコードをインポートできることに注意してください。
 
-例に関しては、['/tools`](tools/README.md)ディレクトリを参照してください。
+例に関しては、[`/tools`](tools/README.md)ディレクトリを参照してください。
 
 ### `/examples`
 
 あなたのアプリケーション、またはpublic librariesのための例。
 
-例に関しては、['/examples`](examples/README.md)ディレクトリを参照してください。
+例に関しては、[`/examples`](examples/README.md)ディレクトリを参照してください。
 
 ### `/third_party`
 
@@ -168,7 +169,7 @@ Gitフック。
 
 Githubページを使用していない場合は、プロジェクトのWebサイトのデータを置く場所です。
 
-例に関しては、['/website`](website/README.md)ディレクトリを参照してください。
+例に関しては、[`/website`](website/README.md)ディレクトリを参照してください。
 
 ## 作成してはいけないディレクトリ
 

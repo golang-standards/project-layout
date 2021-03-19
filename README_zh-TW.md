@@ -9,6 +9,7 @@
 * [简体中文](README_zh-CN.md) - ???
 * [Français](README_fr.md)
 * [日本語](README_ja.md)
+* [Portuguese](README_ptBR.md)
 * [Español](README_es.md)
 
 這是 Go 應用程式專案的基本目錄結構。它不是核心 Go 開發團隊定義的官方標準；然而，它是 Go 生態系統中一組常見的老專案和新專案的目錄結構。其中一些目錄結構比其他目錄結構更受歡迎。這個專案目錄結構還有一些細微的改進，可以支援任何大型且實用的應用程式目錄結構。

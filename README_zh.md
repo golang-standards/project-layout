@@ -9,6 +9,7 @@
 * [简体中文](README_zh-CN.md) - ???
 * [Français](README_fr.md)
 * [日本語](README_ja.md)
+* [Portuguese](README_ptBR.md)
 * [Español](README_es.md)
 
 这是 Go 应用程序项目的基本布局。它不是核心 Go 开发团队定义的官方标准；然而，它是 Go 生态系统中一组常见的老项目和新项目的布局模式。其中一些模式比其他模式更受欢迎。它还具有许多小的增强，以及对任何足够大的实际应用程序通用的几个支持目录。
