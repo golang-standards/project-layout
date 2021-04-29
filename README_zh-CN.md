@@ -9,6 +9,7 @@
 * [日本語](README_ja.md)
 * [Portuguese](README_ptBR.md)
 * [Español](README_es.md)
+* [Română](README_ro.md)
 
 这是Go应用程序项目的基础布局。这不是Go核心开发团队定义的官方标准；无论是在经典项目还是在新兴的项目中，这都是Go生态系统中一组常见的项目布局模式。这其中有一些模式比另外的一些更受欢迎。它通过几个支撑目录为任何足够大规模的实际应用程序提供一些增强功能。
 
@@ -105,7 +106,7 @@ Web应用程序特定的组件：静态Web资源，服务器端模板和单页�
 
 用于执行各种构建，安装，分析等操作的脚本。
 
-这些脚本使根级别的Makefile变得更小更简单（例如 https://github.com/hashicorp/terraform/blob/master/Makefile）。
+这些脚本使根级别的Makefile变得更小更简单（例如 https://github.com/hashicorp/terraform/blob/master/Makefile ）。
 
 更多样例查看[`/scripts`](https://github.com/golang-standards/project-layout/blob/master/scripts/README.md)。
 
