@@ -8,7 +8,7 @@ Note that this is not a universally accepted pattern and for every popular repo 
 
 Ok not to use it if your app project is really small and where an extra level of nesting doesn't add much value (unless you really want to). Think about it when it's getting big enough and your root directory gets pretty busy (especially if you have a lot of non-Go app components).
 
-The `pkg` directory origins: The old Go source code used to use `pkg` for its packages and then various Go projects in the community started copying the patteren (see [`this`](https://twitter.com/bradfitz/status/1039512487538970624) Brad Fitzpatrick's tweet for more context).
+The `pkg` directory origins: The old Go source code used to use `pkg` for its packages and then various Go projects in the community started copying the pattern (see [`this`](https://twitter.com/bradfitz/status/1039512487538970624) Brad Fitzpatrick's tweet for more context).
 
 
 Examples:
