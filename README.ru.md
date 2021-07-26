@@ -2,18 +2,17 @@
 
 Translations:
 
-* [English](README.md)
-* [한국어 문서](README_ko.md)
-* [简体中文](README_zh.md)
-* [正體中文](README_zh-TW.md)
-* [简体中文](README_zh-CN.md) - ???
-* [Français](README_fr.md)
-* [日本語](README_ja.md)
-* [Portuguese](README_ptBR.md)
-* [Español](README_es.md)
-* [Română](README_ro.md)
-* [Русский](README_ru.md)
-* [Türkçe](README_tr.md)
+- [English](README.md)
+- [简体中文](README.zh-Hans.md)
+- [繁體中文](README.zh-Hant.md)
+- [한국어 문서](README.ko.md)
+- [日本語](README.ja.md)
+- [Français](README.fr.md)
+- [Portuguese](README.pt-BR.md)
+- [Español](README.es.md)
+- [Română](README.ro.md)
+- [Русский](README.ru.md)
+- [Türkçe](README.tr.md)
 
 ## Overview
 
@@ -28,22 +27,25 @@ Translations:
 Этот репозиторий открыт к усилиям сообщества. Создайте заявку о проблеме, если вы нашли новый шаблон или считаете, что один из существующих шаблонов необходимо обновить.
 
 Если вам нужна помощь в наименовании, форматировании или стилизации кода - начните с [`gofmt`](https://golang.org/cmd/gofmt/) и [`golint`](https://github.com/golang/lint). Также обязательно прочтите эти руководства по стилизации кода Golang и рекомендации:
-* https://talks.golang.org/2014/names.slide
-* https://golang.org/doc/effective_go.html#names
-* https://blog.golang.org/package-names
-* https://github.com/golang/go/wiki/CodeReviewComments
-* [Руководство по стилизации кода для пакетов Golang](https://rakyll.org/style-packages) (rakyll/JBD)
+
+- https://talks.golang.org/2014/names.slide
+- https://golang.org/doc/effective_go.html#names
+- https://blog.golang.org/package-names
+- https://github.com/golang/go/wiki/CodeReviewComments
+- [Руководство по стилизации кода для пакетов Golang](https://rakyll.org/style-packages) (rakyll/JBD)
 
 Обратите внимание на [`Шаблон проекта Golang`](https://medium.com/golang-learn/go-project-layout-e5213cdcfaa2) для получения дополнительной информации.
 
 Еще больше про наименование и организацию пакетов, а так же про структуру кода можно узнать здесь:
-* [GopherCon EU 2018: Peter Bourgon - Best Practices for Industrial Programming](https://www.youtube.com/watch?v=PTE4VJIdHPg)
-* [GopherCon Russia 2018: Ashley McNamara + Brian Ketelsen - Go best practices.](https://www.youtube.com/watch?v=MzTcsI6tn-0)
-* [GopherCon 2017: Edward Muller - Go Anti-Patterns](https://www.youtube.com/watch?v=ltqV6pDKZD8)
-* [GopherCon 2018: Kat Zien - How Do You Structure Your Go Apps](https://www.youtube.com/watch?v=oL6JBUk6tj0)
+
+- [GopherCon EU 2018: Peter Bourgon - Best Practices for Industrial Programming](https://www.youtube.com/watch?v=PTE4VJIdHPg)
+- [GopherCon Russia 2018: Ashley McNamara + Brian Ketelsen - Go best practices.](https://www.youtube.com/watch?v=MzTcsI6tn-0)
+- [GopherCon 2017: Edward Muller - Go Anti-Patterns](https://www.youtube.com/watch?v=ltqV6pDKZD8)
+- [GopherCon 2018: Kat Zien - How Do You Structure Your Go Apps](https://www.youtube.com/watch?v=oL6JBUk6tj0)
 
 Пост о руководствах по пакетноориентированному дизайну и макетам архитектур
-* [面向包的设计和架构分层](https://github.com/danceyoung/paper-code/blob/master/package-oriented-design/packageorienteddesign.md)
+
+- [面向包的设计和架构分层](https://github.com/danceyoung/paper-code/blob/master/package-oriented-design/packageorienteddesign.md)
 
 ## Директории Go
 
@@ -61,13 +63,13 @@ Translations:
 
 ### `/internal`
 
-Внутренний код приложения и библиотек. Это код, который не должен быть применен в других приложениях и библиотеках. Стоит отметить, что этот шаблон навязан самим компилятором Golang. Ознакомьтесь с [`release notes`](https://golang.org/doc/go1.4#internalpackages)  Go 1.4. Также, вы вольны использовать `internal` директорию на разных уровнях своего проекта.
+Внутренний код приложения и библиотек. Это код, который не должен быть применен в других приложениях и библиотеках. Стоит отметить, что этот шаблон навязан самим компилятором Golang. Ознакомьтесь с [`release notes`](https://golang.org/doc/go1.4#internalpackages) Go 1.4. Также, вы вольны использовать `internal` директорию на разных уровнях своего проекта.
 
 Вы можете добавить дополнительное структурирование, чтобы разделить открытую и закрытую части вашего внутреннего кода. Такой подход не является необходимым, особенно для маленьких проектов, но позволяет сразу визуально оценить применение кода. Код самого приложения может находиться в директории `/internal/app` (например, `/internal/app/myapp`) а код, который это приложение использует - в директории `/internal/pkg` (например, `/internal/pkg/myprivlib`).
 
 ### `/pkg`
 
-Код библиотек, пригодных для использования в сторонних приложениях. (например, `/pkg/mypubliclib`). Другие проекты будут импортировать эти библиотеки, ожидая их автономной работы, поэтому стоит подумать дважды, прежде чем класть сюда какой-нибудь код :-) Заметьте, что использование директории `internal`  - более оптимальный способ не дать импортировать внутренние пакеты, потому что это обеспечит сам Golang. Директория `/pkg` - всё еще хороший путь дать понять, что код в этой директории могут безопасно использовать другие. Пост [`I'll take pkg over internal`](https://travisjeffery.com/b/2019/11/i-ll-take-pkg-over-internal/) в блоге Трэвиса Джеффери предоставляет хороший обзор директорий `pkg` и `internal` и когда есть смысл их использовать.
+Код библиотек, пригодных для использования в сторонних приложениях. (например, `/pkg/mypubliclib`). Другие проекты будут импортировать эти библиотеки, ожидая их автономной работы, поэтому стоит подумать дважды, прежде чем класть сюда какой-нибудь код :-) Заметьте, что использование директории `internal` - более оптимальный способ не дать импортировать внутренние пакеты, потому что это обеспечит сам Golang. Директория `/pkg` - всё еще хороший путь дать понять, что код в этой директории могут безопасно использовать другие. Пост [`I'll take pkg over internal`](https://travisjeffery.com/b/2019/11/i-ll-take-pkg-over-internal/) в блоге Трэвиса Джеффери предоставляет хороший обзор директорий `pkg` и `internal` и когда есть смысл их использовать.
 
 Существует возможность группировать код на Golang в одном месте, когда ваша корневая директория содержит множество не относящихся к Go компонентов и директорий, что позволит облегчить работу с разными инструментами Go (как упомянуто в этих разговорах: [`Best Practices for Industrial Programming`](https://www.youtube.com/watch?v=PTE4VJIdHPg) с GopherCon EU 2018, [GopherCon 2018: Kat Zien - How Do You Structure Your Go Apps](https://www.youtube.com/watch?v=oL6JBUk6tj0) и [GoLab 2018 - Massimiliano Pippi - Project layout patterns in Go](https://www.youtube.com/watch?v=3gQa1LWwuzk)).
 
@@ -131,7 +133,7 @@ Translations:
 
 ### `/test`
 
-Дополнительные внешние приложения и данные для тестирования. Вы вольны организовывать структуру директории `/test` так, как вам угодно. Для больших проектов имеет смысл создавать вложенную директорию с данными для тестов. Например,`/test/data` или `/test/testdata`, если вы хотите, чтобы Go игнорировал находящиеся там файлы. Отметьте, что Go будет также игнорировать файлы, путь к которым начинается с "." или "_", что предоставляет вам гибкость в наименовании вашей папки с тестами.
+Дополнительные внешние приложения и данные для тестирования. Вы вольны организовывать структуру директории `/test` так, как вам угодно. Для больших проектов имеет смысл создавать вложенную директорию с данными для тестов. Например,`/test/data` или `/test/testdata`, если вы хотите, чтобы Go игнорировал находящиеся там файлы. Отметьте, что Go будет также игнорировать файлы, путь к которым начинается с "." или "\_", что предоставляет вам гибкость в наименовании вашей папки с тестами.
 
 Ознакомьтесь с директорией [`/test`](test/README.md) для примеров.
 
@@ -181,21 +183,20 @@ Git hooks.
 
 Не путайте директорию уровня проекта `/src` с директорией `/src`, которую Go использует для своих рабочих пространств, как это описано в [`How to Write Go Code`](https://golang.org/doc/code.html). Переменная окружения `$GOPATH` указывает на ваше текущее рабочее пространство (по-умолчанию - `$HOME/go` на системах под управлением ОС, отличной от Windows). Это рабочее пространство включает высокоуровневые директории `/pkg`, `/bin` и `/src`. Ваш проект в свою очередь находится во вложенной в `/src` директории, поэтому если вы имеете директорию `/src` внутри вашего проекта, путь к нему будет выглядеть примерно так: `/some/path/to/workspace/src/your_project/src/your_code.go`. Отметьте, что в версиях после Go 1.11 возможно хранить проект отдельно от локации, описанной в `GOPATH`, но это всё еще не значит, что применять этот Java-шаблон - хорошая идея.
 
-
 ## Badges
 
-* [Go Report Card](https://goreportcard.com/) - Просканирует ваш код с помощью `gofmt`, `go vet`, `gocyclo`, `golint`, `ineffassign`, `license` и `misspell`. Замените `github.com/golang-standards/project-layout` на ссылку на ваш проект.
+- [Go Report Card](https://goreportcard.com/) - Просканирует ваш код с помощью `gofmt`, `go vet`, `gocyclo`, `golint`, `ineffassign`, `license` и `misspell`. Замените `github.com/golang-standards/project-layout` на ссылку на ваш проект.
 
-    [![Go Report Card](https://goreportcard.com/badge/github.com/golang-standards/project-layout?style=flat-square)](https://goreportcard.com/report/github.com/golang-standards/project-layout)
+  [![Go Report Card](https://goreportcard.com/badge/github.com/golang-standards/project-layout?style=flat-square)](https://goreportcard.com/report/github.com/golang-standards/project-layout)
 
-* [GoDoc](http://godoc.org) - Предоставит онлайн версию вашей сгенерированной GoDoc документации
+- [GoDoc](http://godoc.org) - Предоставит онлайн версию вашей сгенерированной GoDoc документации
 
-    [![Go Doc](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat-square)](http://godoc.org/github.com/golang-standards/project-layout)
+  [![Go Doc](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat-square)](http://godoc.org/github.com/golang-standards/project-layout)
 
-* [Pkg.go.dev](https://pkg.go.dev) - Pkg.go.dev is a new destination for Go discovery & docs. You can create a badge using the [badge generation tool](https://pkg.go.dev/badge).
+- [Pkg.go.dev](https://pkg.go.dev) - Pkg.go.dev is a new destination for Go discovery & docs. You can create a badge using the [badge generation tool](https://pkg.go.dev/badge).
 
-    [![PkgGoDev](https://pkg.go.dev/badge/github.com/golang-standards/project-layout)](https://pkg.go.dev/github.com/golang-standards/project-layout)
+  [![PkgGoDev](https://pkg.go.dev/badge/github.com/golang-standards/project-layout)](https://pkg.go.dev/github.com/golang-standards/project-layout)
 
-* Release - Покажет версию последнего релиза вашего проекта.
+- Release - Покажет версию последнего релиза вашего проекта.
 
-    [![Release](https://img.shields.io/github/release/golang-standards/project-layout.svg?style=flat-square)](https://github.com/golang-standards/project-layout/releases/latest)
+  [![Release](https://img.shields.io/github/release/golang-standards/project-layout.svg?style=flat-square)](https://github.com/golang-standards/project-layout/releases/latest)

@@ -2,18 +2,17 @@
 
 Traduceri:
 
-* [English](README.md)
-* [한국어 문서](README_ko.md)
-* [简体中文](README_zh.md)
-* [正體中文](README_zh-TW.md)
-* [简体中文](README_zh-CN.md) - ???
-* [Français](README_fr.md)
-* [日本語](README_ja.md)
-* [Portuguese](README_ptBR.md)
-* [Español](README_es.md)
-* [Română](README_ro.md)
-* [Русский](README_ru.md)
-* [Türkçe](README_tr.md)
+- [English](README.md)
+- [简体中文](README.zh-Hans.md)
+- [繁體中文](README.zh-Hant.md)
+- [한국어 문서](README.ko.md)
+- [日本語](README.ja.md)
+- [Français](README.fr.md)
+- [Portuguese](README.pt-BR.md)
+- [Español](README.es.md)
+- [Română](README.ro.md)
+- [Русский](README.ru.md)
+- [Türkçe](README.tr.md)
 
 ## General
 
@@ -28,22 +27,25 @@ Această structură este intenționat generică și nu își dorește să impun�
 Această structură este un efort al comunității. Deschide o problemă (issue) dacă observi o nouă structură sau consideri că una existentă ar trebui actualizată.
 
 Dacă ai nevoie de ajutor cu denumirile, formatare, stilare vezi [`gofmt`](https://golang.org/cmd/gofmt/) și [`golint`](https://github.com/golang/lint). Ar fi bine să citești și aceste linii de ghidare în vederea stilării codului Go:
-* https://talks.golang.org/2014/names.slide
-* https://golang.org/doc/effective_go.html#names
-* https://blog.golang.org/package-names
-* https://github.com/golang/go/wiki/CodeReviewComments
-* [Ghid de stilare pentru modulele Go](https://rakyll.org/style-packages) (rakyll/JBD)
+
+- https://talks.golang.org/2014/names.slide
+- https://golang.org/doc/effective_go.html#names
+- https://blog.golang.org/package-names
+- https://github.com/golang/go/wiki/CodeReviewComments
+- [Ghid de stilare pentru modulele Go](https://rakyll.org/style-packages) (rakyll/JBD)
 
 Vezi [`Go Project Layout`](https://medium.com/golang-learn/go-project-layout-e5213cdcfaa2) pentru informații adiționale.
 
 Mai multe despre numirea și organizarea modulelor + recomandări:
-* [GopherCon EU 2018: Peter Bourgon - Best Practices for Industrial Programming](https://www.youtube.com/watch?v=PTE4VJIdHPg)
-* [GopherCon Russia 2018: Ashley McNamara + Brian Ketelsen - Go best practices.](https://www.youtube.com/watch?v=MzTcsI6tn-0)
-* [GopherCon 2017: Edward Muller - Go Anti-Patterns](https://www.youtube.com/watch?v=ltqV6pDKZD8)
-* [GopherCon 2018: Kat Zien - How Do You Structure Your Go Apps](https://www.youtube.com/watch?v=oL6JBUk6tj0)
+
+- [GopherCon EU 2018: Peter Bourgon - Best Practices for Industrial Programming](https://www.youtube.com/watch?v=PTE4VJIdHPg)
+- [GopherCon Russia 2018: Ashley McNamara + Brian Ketelsen - Go best practices.](https://www.youtube.com/watch?v=MzTcsI6tn-0)
+- [GopherCon 2017: Edward Muller - Go Anti-Patterns](https://www.youtube.com/watch?v=ltqV6pDKZD8)
+- [GopherCon 2018: Kat Zien - How Do You Structure Your Go Apps](https://www.youtube.com/watch?v=oL6JBUk6tj0)
 
 Un articol chinezeasc despre Package-Oriented-Design și arhitectură:
-* [面向包的设计和架构分层](https://github.com/danceyoung/paper-code/blob/master/package-oriented-design/packageorienteddesign.md)
+
+- [面向包的设计和架构分层](https://github.com/danceyoung/paper-code/blob/master/package-oriented-design/packageorienteddesign.md)
 
 ## Directoarele Go
 
@@ -71,7 +73,7 @@ Cod librărie care poate fi folosit de aplicațiile externe (e.g., `/pkg/mypubli
 
 Este o metodă bună să grupezi codul Go într-un singur loc atunci când directorul root al aplicației conține multe componente no-Go, (cum este menționat în aceste prezentări: [`Best Practices for Industrial Programming`](https://www.youtube.com/watch?v=PTE4VJIdHPg) from GopherCon EU 2018, [GopherCon 2018: Kat Zien - How Do You Structure Your Go Apps](https://www.youtube.com/watch?v=oL6JBUk6tj0) and [GoLab 2018 - Massimiliano Pippi - Project layout patterns in Go](https://www.youtube.com/watch?v=3gQa1LWwuzk)).
 
-Vezi [`/pkg`](pkg/README.md) dacă vrei să vezi care repo-uri populare Go folosesc această structură de proiect. Aceasta este o structură comună de proiect însă nu este universală și nu o recomand în comunitatea Go. 
+Vezi [`/pkg`](pkg/README.md) dacă vrei să vezi care repo-uri populare Go folosesc această structură de proiect. Aceasta este o structură comună de proiect însă nu este universală și nu o recomand în comunitatea Go.
 
 ### `/vendor`
 
@@ -81,7 +83,7 @@ Nu da commit la dependințele aplicației dacă construiești un modul.
 
 Odată cu versiunea [`1.13`](https://golang.org/doc/go1.13#modules) Go a implementat funcționalitatea modulelor proxy (folosind [`https://proxy.golang.org`](https://proxy.golang.org) ca server proxy al modulelor implicit). Poți citi mai multe despre el [`aici`](https://blog.golang.org/module-mirror-launch). S-ar putea să nu ai nevoie de directorul `/vendor` dacă poți folosi modulele proxy.
 
-## Directoarele de servicii ale aplicației 
+## Directoarele de servicii ale aplicației
 
 ### `/api`
 
@@ -95,7 +97,7 @@ Vezi directorul [`/api`](api/README.md) pentru exemple.
 
 Componente specifice aplicațiilor Web: asset-uri, template-uri, SPAs, etc
 
-## Directoare comune aplicațiilor 
+## Directoare comune aplicațiilor
 
 ### `/configs`
 
@@ -121,11 +123,11 @@ Packaging și Integrare Continuă.
 
 Pune configurări ale modulelor AMI, Docker, OS (deb, rpm, pkg) și scripturi în directorul `/build/package`
 
-Pune configurările CI (travis, circle, drone) și scripturile similare în directorul `/build/ci`. Unele instrumente CI sunt pretențioase când vine vorba de locația configurărilor (e.g., Travis CI). Încearcă să pui fișierele de configurare în directorul `/build/ci` legându-le de locația în care uneltele CI se așteaptă să fie. 
+Pune configurările CI (travis, circle, drone) și scripturile similare în directorul `/build/ci`. Unele instrumente CI sunt pretențioase când vine vorba de locația configurărilor (e.g., Travis CI). Încearcă să pui fișierele de configurare în directorul `/build/ci` legându-le de locația în care uneltele CI se așteaptă să fie.
 
 ### `/deployments`
 
-Conține sisteme și containere de orchestrare, implementare, șablonare (docker-compose, kubernetes/helm, mesos, terraform, bosh) IaaS, PaaS. În unele repo-uri (în special cele implementate cu kubernetes) acest director e numit direct `/deploy`. 
+Conține sisteme și containere de orchestrare, implementare, șablonare (docker-compose, kubernetes/helm, mesos, terraform, bosh) IaaS, PaaS. În unele repo-uri (în special cele implementate cu kubernetes) acest director e numit direct `/deploy`.
 
 ### `/test`
 
@@ -181,21 +183,21 @@ Nu confunda directorul `/src` cu cel pe care Go îl folosește ca spațiu de luc
 
 ## Adiționale
 
-* [Go Report Card](https://goreportcard.com/) - Îți va scana codul cu `gofmt`, `go vet`, `gocyclo`, `golint`, `ineffassign`, `license` și `misspell`. Înlocuiește `github.com/golang-standards/project-layout` cu referința la proiuectul tău.
+- [Go Report Card](https://goreportcard.com/) - Îți va scana codul cu `gofmt`, `go vet`, `gocyclo`, `golint`, `ineffassign`, `license` și `misspell`. Înlocuiește `github.com/golang-standards/project-layout` cu referința la proiuectul tău.
 
-    [![Go Report Card](https://goreportcard.com/badge/github.com/golang-standards/project-layout?style=flat-square)](https://goreportcard.com/report/github.com/golang-standards/project-layout)
+  [![Go Report Card](https://goreportcard.com/badge/github.com/golang-standards/project-layout?style=flat-square)](https://goreportcard.com/report/github.com/golang-standards/project-layout)
 
-* ~~[GoDoc](http://godoc.org) - Va furniza versiuni online ale documentației generate local de GoDoc.~~
+- ~~[GoDoc](http://godoc.org) - Va furniza versiuni online ale documentației generate local de GoDoc.~~
 
-    [![Go Doc](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat-square)](http://godoc.org/github.com/golang-standards/project-layout)
+  [![Go Doc](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat-square)](http://godoc.org/github.com/golang-standards/project-layout)
 
-* [Pkg.go.dev](https://pkg.go.dev) - Pkg.go.dev este o nouă destinație pentru descoperiri și documentație Go. Poți creea o insignă (badge) cu [badge generation tool](https://pkg.go.dev/badge).
+- [Pkg.go.dev](https://pkg.go.dev) - Pkg.go.dev este o nouă destinație pentru descoperiri și documentație Go. Poți creea o insignă (badge) cu [badge generation tool](https://pkg.go.dev/badge).
 
-    [![PkgGoDev](https://pkg.go.dev/badge/github.com/golang-standards/project-layout)](https://pkg.go.dev/github.com/golang-standards/project-layout)
+  [![PkgGoDev](https://pkg.go.dev/badge/github.com/golang-standards/project-layout)](https://pkg.go.dev/github.com/golang-standards/project-layout)
 
-* Release - Va arăta ultimele lansări (versiuni) ale proiectului tău. 
+- Release - Va arăta ultimele lansări (versiuni) ale proiectului tău.
 
-    [![Release](https://img.shields.io/github/release/golang-standards/project-layout.svg?style=flat-square)](https://github.com/golang-standards/project-layout/releases/latest)
+  [![Release](https://img.shields.io/github/release/golang-standards/project-layout.svg?style=flat-square)](https://github.com/golang-standards/project-layout/releases/latest)
 
 ## Note
 

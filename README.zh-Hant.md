@@ -2,18 +2,17 @@
 
 其他語言的翻譯：
 
-* [English](README.md)
-* [한국어 문서](README_ko.md)
-* [简体中文](README_zh.md)
-* [正體中文](README_zh-TW.md)
-* [简体中文](README_zh-CN.md) - ???
-* [Français](README_fr.md)
-* [日本語](README_ja.md)
-* [Portuguese](README_ptBR.md)
-* [Español](README_es.md)
-* [Română](README_ro.md)
-* [Русский](README_ru.md)
-* [Türkçe](README_tr.md)
+- [English](README.md)
+- [简体中文](README.zh-Hans.md)
+- [繁體中文](README.zh-Hant.md)
+- [한국어 문서](README.ko.md)
+- [日本語](README.ja.md)
+- [Français](README.fr.md)
+- [Portuguese](README.pt-BR.md)
+- [Español](README.es.md)
+- [Română](README.ro.md)
+- [Русский](README.ru.md)
+- [Türkçe](README.tr.md)
 
 這是 Go 應用程式專案的基本目錄結構。它不是核心 Go 開發團隊定義的官方標準；然而，它是 Go 生態系統中一組常見的老專案和新專案的目錄結構。其中一些目錄結構比其他目錄結構更受歡迎。這個專案目錄結構還有一些細微的改進，可以支援任何大型且實用的應用程式目錄結構。
 
@@ -27,19 +26,19 @@ Go 1.14 的 [`Go Modules`](https://github.com/golang/go/wiki/Modules) 已經是�
 
 如果需要命名、格式與程式碼風格方面的協助，請使用 [`gofmt`](https://golang.org/cmd/gofmt/) 和 [`golint`](https://github.com/golang/lint)。也請確保你閱讀過以下這些 Go 程式碼撰寫風格的指導方針與建議：
 
-* https://talks.golang.org/2014/names.slide
-* https://golang.org/doc/effective_go.html#names
-* https://blog.golang.org/package-names
-* https://github.com/golang/go/wiki/CodeReviewComments
+- https://talks.golang.org/2014/names.slide
+- https://golang.org/doc/effective_go.html#names
+- https://blog.golang.org/package-names
+- https://github.com/golang/go/wiki/CodeReviewComments
 
 參見 [`Go Project Layout`](https://medium.com/golang-learn/go-project-layout-e5213cdcfaa2) 了解更多的背景資訊。
 
 更多關於套件的命名與組織方式，以及其他程式碼結構的建議：
 
-* [GopherCon EU 2018: Peter Bourgon - Best Practices for Industrial Programming](https://www.youtube.com/watch?v=PTE4VJIdHPg)
-* [GopherCon Russia 2018: Ashley McNamara + Brian Ketelsen - Go best practices.](https://www.youtube.com/watch?v=MzTcsI6tn-0)
-* [GopherCon 2017: Edward Muller - Go Anti-Patterns](https://www.youtube.com/watch?v=ltqV6pDKZD8)
-* [GopherCon 2018: Kat Zien - How Do You Structure Your Go Apps](https://www.youtube.com/watch?v=oL6JBUk6tj0)
+- [GopherCon EU 2018: Peter Bourgon - Best Practices for Industrial Programming](https://www.youtube.com/watch?v=PTE4VJIdHPg)
+- [GopherCon Russia 2018: Ashley McNamara + Brian Ketelsen - Go best practices.](https://www.youtube.com/watch?v=MzTcsI6tn-0)
+- [GopherCon 2017: Edward Muller - Go Anti-Patterns](https://www.youtube.com/watch?v=ltqV6pDKZD8)
+- [GopherCon 2018: Kat Zien - How Do You Structure Your Go Apps](https://www.youtube.com/watch?v=oL6JBUk6tj0)
 
 > 這裡有份中文的文件可供參考：[Go 面向包的设计和架构分层](https://github.com/danceyoung/paper-code/blob/master/package-oriented-design/packageorienteddesign.md)
 
@@ -71,7 +70,7 @@ Go 1.14 的 [`Go Modules`](https://github.com/golang/go/wiki/Modules) 已經是�
 
 如果你想查看哪些知名的 Go 專案使用本專案的目錄結構，請查看 [`/pkg`](pkg/README.md) 目錄。這是一組常見的目錄結構，但並不是所有人都接受它，有些 Go 社群的人也不推薦使用。
 
-如果你的應用程式專案真的很小，或是套用這些資料夾不會對你有太大幫助（除非你真的很想用XD），不使用本專案推薦的目錄結構是完全沒問題的。當你的專案變的越來越大，根目錄將會會變得越來越複雜（尤其是當你有許多不是 Go 所寫的元件時)，你可以考慮參考這個專案所建議的目錄結構來組織你的程式碼。
+如果你的應用程式專案真的很小，或是套用這些資料夾不會對你有太大幫助（除非你真的很想用 XD），不使用本專案推薦的目錄結構是完全沒問題的。當你的專案變的越來越大，根目錄將會會變得越來越複雜（尤其是當你有許多不是 Go 所寫的元件時)，你可以考慮參考這個專案所建議的目錄結構來組織你的程式碼。
 
 ### `/vendor`
 
@@ -181,21 +180,21 @@ Git hooks。
 
 ## 徽章 (Badges)
 
-* [Go Report Card](https://goreportcard.com/) - 它會使用 `gofmt`, `go vet`, `gocyclo`, `golint`, `ineffassign`, `license` 與 `misspell` 掃描你的程式碼。如下範例請替換 `github.com/golang-standards/project-layout` 為你的專案參考。
+- [Go Report Card](https://goreportcard.com/) - 它會使用 `gofmt`, `go vet`, `gocyclo`, `golint`, `ineffassign`, `license` 與 `misspell` 掃描你的程式碼。如下範例請替換 `github.com/golang-standards/project-layout` 為你的專案參考。
 
-    [![Go Report Card](https://goreportcard.com/badge/github.com/golang-standards/project-layout?style=flat-square)](https://goreportcard.com/report/github.com/golang-standards/project-layout)
+  [![Go Report Card](https://goreportcard.com/badge/github.com/golang-standards/project-layout?style=flat-square)](https://goreportcard.com/report/github.com/golang-standards/project-layout)
 
-* ~~[GoDoc](http://godoc.org) - It will provide online version of your GoDoc generated documentation. Change the link to point to your project.~~
+- ~~[GoDoc](http://godoc.org) - It will provide online version of your GoDoc generated documentation. Change the link to point to your project.~~
 
-    [![Go Doc](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat-square)](http://godoc.org/github.com/golang-standards/project-layout)
+  [![Go Doc](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat-square)](http://godoc.org/github.com/golang-standards/project-layout)
 
-* [Pkg.go.dev](https://pkg.go.dev) - Pkg.go.dev 是一個探索 Go 與查閱相關文件的新目標，你可以利用 [徽章建立工具](https://pkg.go.dev/badge) 來替你的套件建立一個徽章。
+- [Pkg.go.dev](https://pkg.go.dev) - Pkg.go.dev 是一個探索 Go 與查閱相關文件的新目標，你可以利用 [徽章建立工具](https://pkg.go.dev/badge) 來替你的套件建立一個徽章。
 
-    [![PkgGoDev](https://pkg.go.dev/badge/github.com/golang-standards/project-layout)](https://pkg.go.dev/github.com/golang-standards/project-layout)
+  [![PkgGoDev](https://pkg.go.dev/badge/github.com/golang-standards/project-layout)](https://pkg.go.dev/github.com/golang-standards/project-layout)
 
-* Release - 它會顯示你專案中的最新發行版號。請變更 GitHub 連結到你的專案！
+- Release - 它會顯示你專案中的最新發行版號。請變更 GitHub 連結到你的專案！
 
-    [![Release](https://img.shields.io/github/release/golang-standards/project-layout.svg?style=flat-square)](https://github.com/golang-standards/project-layout/releases/latest)
+  [![Release](https://img.shields.io/github/release/golang-standards/project-layout.svg?style=flat-square)](https://github.com/golang-standards/project-layout/releases/latest)
 
 ## 備註 (Notes)
 

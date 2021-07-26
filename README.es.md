@@ -2,18 +2,17 @@
 
 Traducciones:
 
-* [English](README.md)
-* [한국어 문서](README_ko.md)
-* [简体中文](README_zh.md)
-* [正體中文](README_zh-TW.md)
-* [简体中文](README_zh-CN.md) - ???
-* [Français](README_fr.md)
-* [日本語](README_ja.md)
-* [Portuguese](README_ptBR.md)
-* [Español](README_es.md)
-* [Română](README_ro.md)
-* [Русский](README_ru.md)
-* [Türkçe](README_tr.md)
+- [English](README.md)
+- [简体中文](README.zh-Hans.md)
+- [繁體中文](README.zh-Hant.md)
+- [한국어 문서](README.ko.md)
+- [日本語](README.ja.md)
+- [Français](README.fr.md)
+- [Portuguese](README.pt-BR.md)
+- [Español](README.es.md)
+- [Română](README.ro.md)
+- [Русский](README.ru.md)
+- [Türkçe](README.tr.md)
 
 ## Resumen
 
@@ -28,23 +27,25 @@ Este diseño de proyecto es intencionalmente genérico y no intenta imponer una 
 Este es un esfuerzo comunitario. Abra un problema si ve un patrón nuevo o si cree que uno de los patrones existentes debe actualizarse.
 
 Si necesita ayuda con el nombre, el formato y el estilo, comience ejecutando `gofmt` y `golint`. También asegúrese de leer estas recomendaciones y pautas de estilo del código Go:
-* https://talks.golang.org/2014/names.slide
-* https://golang.org/doc/effective_go.html#names
-* https://blog.golang.org/package-names
-* https://github.com/golang/go/wiki/CodeReviewComments
-* [Guía de estilo para paquetes Go](https://rakyll.org/style-packages) (rakyll/JBD)
+
+- https://talks.golang.org/2014/names.slide
+- https://golang.org/doc/effective_go.html#names
+- https://blog.golang.org/package-names
+- https://github.com/golang/go/wiki/CodeReviewComments
+- [Guía de estilo para paquetes Go](https://rakyll.org/style-packages) (rakyll/JBD)
 
 Consulte [`Diseño de proyecto de Go`](https://medium.com/golang-learn/go-project-layout-e5213cdcfaa2) para obtener información adicional sobre los antecedentes.
 
 Más sobre cómo nombrar y organizar paquetes, así como otras recomendaciones de estructura de código:
-* [GopherCon EU 2018: Peter Bourgon - Best Practices for Industrial Programming](https://www.youtube.com/watch?v=PTE4VJIdHPg)
-* [GopherCon Russia 2018: Ashley McNamara + Brian Ketelsen - Go best practices.](https://www.youtube.com/watch?v=MzTcsI6tn-0)
-* [GopherCon 2017: Edward Muller - Go Anti-Patterns](https://www.youtube.com/watch?v=ltqV6pDKZD8)
-* [GopherCon 2018: Kat Zien - How Do You Structure Your Go Apps](https://www.youtube.com/watch?v=oL6JBUk6tj0)
+
+- [GopherCon EU 2018: Peter Bourgon - Best Practices for Industrial Programming](https://www.youtube.com/watch?v=PTE4VJIdHPg)
+- [GopherCon Russia 2018: Ashley McNamara + Brian Ketelsen - Go best practices.](https://www.youtube.com/watch?v=MzTcsI6tn-0)
+- [GopherCon 2017: Edward Muller - Go Anti-Patterns](https://www.youtube.com/watch?v=ltqV6pDKZD8)
+- [GopherCon 2018: Kat Zien - How Do You Structure Your Go Apps](https://www.youtube.com/watch?v=oL6JBUk6tj0)
 
 Una publicación en idioma chino sobre las pautas de diseño orientado a paquetes y la capa de arquitectura
 
-* [面向包的设计和架构分层](https://github.com/danceyoung/paper-code/blob/master/package-oriented-design/packageorienteddesign.md)
+- [面向包的设计和架构分层](https://github.com/danceyoung/paper-code/blob/master/package-oriented-design/packageorienteddesign.md)
 
 ## Directorios en Go
 
@@ -132,7 +133,7 @@ Configuraciones y plantillas de implementación de IaaS, PaaS, sistema y orquest
 
 ### `/test`
 
-Aplicaciones de prueba externas adicionales y datos de prueba. Siéntase libre de estructurar el directorio `/test` como desee. Para proyectos más grandes, tiene sentido tener un subdirectorio de datos. Por ejemplo, puede tener `/test/data` o `/test/testdata` si necesita Go para ignorar lo que hay en ese directorio. Tenga en cuenta que Go también ignorará los directorios o archivos que comiencen con "." o "_", por lo que tiene más flexibilidad en términos de cómo nombrar su directorio de datos de prueba.
+Aplicaciones de prueba externas adicionales y datos de prueba. Siéntase libre de estructurar el directorio `/test` como desee. Para proyectos más grandes, tiene sentido tener un subdirectorio de datos. Por ejemplo, puede tener `/test/data` o `/test/testdata` si necesita Go para ignorar lo que hay en ese directorio. Tenga en cuenta que Go también ignorará los directorios o archivos que comiencen con "." o "\_", por lo que tiene más flexibilidad en términos de cómo nombrar su directorio de datos de prueba.
 
 Consulte el directorio [`/test`](test/README.md) para ver ejemplos.
 
@@ -184,13 +185,13 @@ No confunda el directorio `/src` de nivel de proyecto con el directorio `/src` q
 
 ## Badges
 
-* [Go Report Card](https://goreportcard.com/) - Escaneará su código con `gofmt`, `go vet`, `gocyclo`, `golint`, `ineffassign`, `license` y `misspell`. Cambie `github.com/golang-standards/project-layout` por la referencia de su proyecto.
+- [Go Report Card](https://goreportcard.com/) - Escaneará su código con `gofmt`, `go vet`, `gocyclo`, `golint`, `ineffassign`, `license` y `misspell`. Cambie `github.com/golang-standards/project-layout` por la referencia de su proyecto.
 
-* ~~[GoDoc](http://godoc.org) - Proporcionará una versión en online de su documentación generada por GoDoc. Cambie el enlace para que apunte a su proyecto.~~
+- ~~[GoDoc](http://godoc.org) - Proporcionará una versión en online de su documentación generada por GoDoc. Cambie el enlace para que apunte a su proyecto.~~
 
-* [Pkg.go.dev](https://pkg.go.dev) - Pkg.go.dev es un nuevo destino para Go discovery & docs. Puede crear una insignia con [la herramienta de generación de insignias](https://pkg.go.dev/badge).
+- [Pkg.go.dev](https://pkg.go.dev) - Pkg.go.dev es un nuevo destino para Go discovery & docs. Puede crear una insignia con [la herramienta de generación de insignias](https://pkg.go.dev/badge).
 
-* Release - mostrará el número de versión más reciente de su proyecto. Cambie el enlace de github para que apunte a su proyecto.
+- Release - mostrará el número de versión más reciente de su proyecto. Cambie el enlace de github para que apunte a su proyecto.
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/golang-standards/project-layout?style=flat-square)](https://goreportcard.com/report/github.com/golang-standards/project-layout)
 [![Go Doc](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat-square)](http://godoc.org/github.com/golang-standards/project-layout)

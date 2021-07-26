@@ -2,18 +2,17 @@
 
 Çeviriler:
 
-* [English](README.md)
-* [한국어 문서](README_ko.md)
-* [简体中文](README_zh.md)
-* [正體中文](README_zh-TW.md)
-* [简体中文](README_zh-CN.md) - ???
-* [Français](README_fr.md)
-* [日本語](README_ja.md)
-* [Portuguese](README_ptBR.md)
-* [Español](README_es.md)
-* [Română](README_ro.md)
-* [Русский](README_ru.md)
-* [Türkçe](README_tr.md)
+- [English](README.md)
+- [简体中文](README.zh-Hans.md)
+- [繁體中文](README.zh-Hant.md)
+- [한국어 문서](README.ko.md)
+- [日本語](README.ja.md)
+- [Français](README.fr.md)
+- [Portuguese](README.pt-BR.md)
+- [Español](README.es.md)
+- [Română](README.ro.md)
+- [Русский](README.ru.md)
+- [Türkçe](README.tr.md)
 
 ## Genel Bakış
 
@@ -27,23 +26,26 @@ Bu proje düzeni genel bir düzendir ve belirli bir Go paketi yapısını empoze
 
 Bu bir topluluk eseridir. Eğer yeni bir şablon, düzen ile karşılaşırsanız ya da olan şablonların, düzenlerin güncellenmesi gerektiğini düşünüyorsanız bir hata bildirimi açınız.
 
-Eğer isimlendirmekle, biçimlendirmeyle ve stilize etmeyle ilgili yardıma ihtiyacınız varsa [`gofmt`](https://golang.org/cmd/gofmt/) ve [`golint`](https://github.com/golang/lint) yazılımlarını çalıştırmayı deneyin. Ayrıca aşağıdaki Go kod stili rehberlerini ve önerilerini okuduğunuzdan emin olun.    
-* https://talks.golang.org/2014/names.slide
-* https://golang.org/doc/effective_go.html#names
-* https://blog.golang.org/package-names
-* https://github.com/golang/go/wiki/CodeReviewComments
-* [Style guideline for Go packages](https://rakyll.org/style-packages) (rakyll/JBD)
+Eğer isimlendirmekle, biçimlendirmeyle ve stilize etmeyle ilgili yardıma ihtiyacınız varsa [`gofmt`](https://golang.org/cmd/gofmt/) ve [`golint`](https://github.com/golang/lint) yazılımlarını çalıştırmayı deneyin. Ayrıca aşağıdaki Go kod stili rehberlerini ve önerilerini okuduğunuzdan emin olun.
+
+- https://talks.golang.org/2014/names.slide
+- https://golang.org/doc/effective_go.html#names
+- https://blog.golang.org/package-names
+- https://github.com/golang/go/wiki/CodeReviewComments
+- [Style guideline for Go packages](https://rakyll.org/style-packages) (rakyll/JBD)
 
 Ek bilgi için [`Go Project Layout`](https://medium.com/golang-learn/go-project-layout-e5213cdcfaa2) adlı yazıya bakabilirsin.
 
 Paketlerin adlandırılması ve düzenlenmesi ile diğer kod yapısı önerileri hakkında daha fazla bilgi:
-* [GopherCon EU 2018: Peter Bourgon - Best Practices for Industrial Programming](https://www.youtube.com/watch?v=PTE4VJIdHPg)
-* [GopherCon Russia 2018: Ashley McNamara + Brian Ketelsen - Go best practices.](https://www.youtube.com/watch?v=MzTcsI6tn-0)
-* [GopherCon 2017: Edward Muller - Go Anti-Patterns](https://www.youtube.com/watch?v=ltqV6pDKZD8)
-* [GopherCon 2018: Kat Zien - How Do You Structure Your Go Apps](https://www.youtube.com/watch?v=oL6JBUk6tj0)
+
+- [GopherCon EU 2018: Peter Bourgon - Best Practices for Industrial Programming](https://www.youtube.com/watch?v=PTE4VJIdHPg)
+- [GopherCon Russia 2018: Ashley McNamara + Brian Ketelsen - Go best practices.](https://www.youtube.com/watch?v=MzTcsI6tn-0)
+- [GopherCon 2017: Edward Muller - Go Anti-Patterns](https://www.youtube.com/watch?v=ltqV6pDKZD8)
+- [GopherCon 2018: Kat Zien - How Do You Structure Your Go Apps](https://www.youtube.com/watch?v=oL6JBUk6tj0)
 
 Paket odaklı dizayn rehberi ve Mimari katmanı ile alakalı Çince bir yazı:
-* [面向包的设计和架构分层](https://github.com/danceyoung/paper-code/blob/master/package-oriented-design/packageorienteddesign.md)
+
+- [面向包的设计和架构分层](https://github.com/danceyoung/paper-code/blob/master/package-oriented-design/packageorienteddesign.md)
 
 ## Go Klasörleri
 
@@ -77,7 +79,7 @@ Eğer projenizde ekstra bir katmana gerek yoksa ya da projeniz çok küçükse b
 
 ### `/vendor`
 
-Uygulama bağımlılıkları (el ile yönetilen ya da yeni bir özellik olan  [`Go Modules`](https://github.com/golang/go/wiki/Modules) gibi favori bağımlılık yönetim aracınızla yönetilen). `go mod vendor` komutu size yeni bir `/vendor` klasörü yaratır. Unutmayın eğer Go 1.14 kullanmıyorsanız `go build` komutuna `-mod=vendor` parametresi vermeniz gerekebilir Go 1.14 bunu varsayılan olarak yapar.
+Uygulama bağımlılıkları (el ile yönetilen ya da yeni bir özellik olan [`Go Modules`](https://github.com/golang/go/wiki/Modules) gibi favori bağımlılık yönetim aracınızla yönetilen). `go mod vendor` komutu size yeni bir `/vendor` klasörü yaratır. Unutmayın eğer Go 1.14 kullanmıyorsanız `go build` komutuna `-mod=vendor` parametresi vermeniz gerekebilir Go 1.14 bunu varsayılan olarak yapar.
 
 Eğer bir kütüphane yazıyorsanız bağımlılıklarınızı `commit` etmeyin.
 
@@ -131,7 +133,7 @@ IaaS, Paas, sistem ve konteyner orkestrasyon yayınlama konfigürasyonlarını v
 
 ### `/test`
 
-Ek harici test uygulamaları ve test verileri. `/test` klasörünün içini istediğiniz gibi yapılandırmada özgür hissedin. Daha büyük projelerde test verileri için alt klasörler açmak mantıklı olabilir. Örneğin, eğer Go'nun test dosyalarını görmezden gelmesini istiyorsanız bu dosyalar için `/test/data` veya `/test/testdata` adlı klasörlere sahip olabilirsiniz. Not olarak Go "." veya "_" ile başlayan klasörleri ve dosyalarıda görmezden gelir, bu sayede test klasörlerinizi ve dosyalarınızı isimlendirmede daha esnek olabilirsiniz.
+Ek harici test uygulamaları ve test verileri. `/test` klasörünün içini istediğiniz gibi yapılandırmada özgür hissedin. Daha büyük projelerde test verileri için alt klasörler açmak mantıklı olabilir. Örneğin, eğer Go'nun test dosyalarını görmezden gelmesini istiyorsanız bu dosyalar için `/test/data` veya `/test/testdata` adlı klasörlere sahip olabilirsiniz. Not olarak Go "." veya "\_" ile başlayan klasörleri ve dosyalarıda görmezden gelir, bu sayede test klasörlerinizi ve dosyalarınızı isimlendirmede daha esnek olabilirsiniz.
 
 Örnekler için [`/test`](test/README.md) klasörüne bakabilirsiniz.
 
@@ -183,21 +185,21 @@ Proje seviyesindeki `/src` klasörü ile [`How to Write Go Code`](https://golang
 
 ## Rozetler
 
-* [Go Report Card](https://goreportcard.com/) - Kodunuzu  `gofmt`, `go vet`, `gocyclo`, `golint`, `ineffassign`, `license` ve `misspell` yazılımları ile tarar. `github.com/golang-standards/project-layout` linkini kendi proje linkiniz ile değiştirin.
+- [Go Report Card](https://goreportcard.com/) - Kodunuzu `gofmt`, `go vet`, `gocyclo`, `golint`, `ineffassign`, `license` ve `misspell` yazılımları ile tarar. `github.com/golang-standards/project-layout` linkini kendi proje linkiniz ile değiştirin.
 
-    [![Go Report Card](https://goreportcard.com/badge/github.com/golang-standards/project-layout?style=flat-square)](https://goreportcard.com/report/github.com/golang-standards/project-layout)
+  [![Go Report Card](https://goreportcard.com/badge/github.com/golang-standards/project-layout?style=flat-square)](https://goreportcard.com/report/github.com/golang-standards/project-layout)
 
-* ~~[GoDoc](http://godoc.org) - Projenizin GoDoc tarafından yaratılmış online bir dökümantasyonunu çıkartır. İşaret ettiği linki kendi proje linkiniz ile değiştirin.~~
+- ~~[GoDoc](http://godoc.org) - Projenizin GoDoc tarafından yaratılmış online bir dökümantasyonunu çıkartır. İşaret ettiği linki kendi proje linkiniz ile değiştirin.~~
 
-    [![Go Doc](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat-square)](http://godoc.org/github.com/golang-standards/project-layout)
+  [![Go Doc](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat-square)](http://godoc.org/github.com/golang-standards/project-layout)
 
-* [Pkg.go.dev](https://pkg.go.dev) - Paket keşfi ve dökümantasyonları için yeni adres Pkg.go.dev. [Rozet yaratma aracı](https://pkg.go.dev/badge) ile projenize bir rozet yaratabilirsiniz.
+- [Pkg.go.dev](https://pkg.go.dev) - Paket keşfi ve dökümantasyonları için yeni adres Pkg.go.dev. [Rozet yaratma aracı](https://pkg.go.dev/badge) ile projenize bir rozet yaratabilirsiniz.
 
-    [![PkgGoDev](https://pkg.go.dev/badge/github.com/golang-standards/project-layout)](https://pkg.go.dev/github.com/golang-standards/project-layout)
+  [![PkgGoDev](https://pkg.go.dev/badge/github.com/golang-standards/project-layout)](https://pkg.go.dev/github.com/golang-standards/project-layout)
 
-* Release - Projenizin en son yayınlanmış versiyonunu gösterir. İşaret ettiği linki kendi proje linkiniz ile değiştirin.
+- Release - Projenizin en son yayınlanmış versiyonunu gösterir. İşaret ettiği linki kendi proje linkiniz ile değiştirin.
 
-    [![Release](https://img.shields.io/github/release/golang-standards/project-layout.svg?style=flat-square)](https://github.com/golang-standards/project-layout/releases/latest)
+  [![Release](https://img.shields.io/github/release/golang-standards/project-layout.svg?style=flat-square)](https://github.com/golang-standards/project-layout/releases/latest)
 
 ## Notlar
 
