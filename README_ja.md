@@ -43,7 +43,7 @@ Go 1.14では、[`Go Modules`](https://github.com/golang/go/wiki/Modules)がつ�
 * [GopherCon 2018: Kat Zien - How Do You Structure Your Go Apps](https://www.youtube.com/watch?v=oL6JBUk6tj0)
 
 パッケージ指向の設計ガイドラインとアーキテクチャレイヤーに関する中国の投稿
-* [パッケージ指向の設計とアーキテクチャの階層化](https://github.com/danceyoung/paper-code/blob/master/package-directiond-design/packagedirectioneddesign.md)
+* [パッケージ指向の設計とアーキテクチャの階層化](https://github.com/danceyoung/paper-code/blob/master/package-oriented-design/packageorienteddesign.md)
 
 ## Goのディレクトリ
 

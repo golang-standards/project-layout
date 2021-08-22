@@ -15,17 +15,17 @@
 * [Русский](README_ru.md)
 * [Türkçe](README_tr.md)
 
-## Genel Bakış
+## Genel Bakış:
 
-Bu proje Go projeleri için basit bir yerleşim düzenidir. Go geliştirici takımının belirlediği resmi standartları değil, Go ekosistemindeki ortak geçmişi ve zaman içinde ortaya çıkmış şablonları içerir. Bu şablonlardan bazıları diğerlerinden daha popülerdir. Bir dizi iyileştirmenin yanı sıra yeterli büyüklükte herhangi bir gerçek dünya uygulamasına özgü birkaç destekli dizin de içerir.
+Bu proje Go projeleri için basit bir yerleşim düzenidir. `Go geliştirici takımının belirlediği, resmi standartları değil`. Go ekosistemindeki, ortak geçmişi ve zaman içinde ortaya çıkmış şablonları içerir. Bu şablonlardan bazıları diğerlerinden daha popülerdir. Bir dizi iyileştirmenin yanı sıra yeterli büyüklükte herhangi bir gerçek dünya uygulamasına özgü birkaç destekli dizin de içerir.
 
-Eğer Go'yu öğrenmeye çalışıyorsanız veya PoC (Proof of Concept) ya da kendinize oyuncak bir proje yapıyorsanız bu klasör düzeni aşırı olabilir. Çok basit bir şeyle başlayın (tek bir `main.go` dosyası fazlasıyla yeterli). Projeniz büyüdükçe projenin iyi yapılandırıldığından emin olmanın önemli olduğunu unutmayın yoksa bir sürü gizli bağımlılık (dependency) ve bir sürü her yerden erişilebilen, `global` değişkenlerle dolu dağınık bir kodla karşılaşabilirsiniz. Proje üstünde fazla kişi çalıştığında projeyi çok daha fazla yapılandırmanız gerekebilir. İşte tam da bu durumda paketleri/kütüphaneleri idare edebilmek için ortaya ortak bir yol koymak gerekir. Açık kaynak bir projeniz olduğunda ya da başkalarının sizin projenizi kullandıklarını bildiğinizde projenizde özel paketlerin ve kodların (diğer adıyla, `internal` klasörü) olması önemlidir. Bu projeyi klonlayın, ihtiyacınız olanları bırakın ve diğer bütün her şeyi silin. Bütün klasörlerin burada olması kullanmanız gerektiği anlamına gelmez. `vendor` klasörü bile herkes tarafından kullanılan bir şey değildir.
+**`Eğer Go'yu öğrenmeye çalışıyorsanız veya PoC (Proof of Concept) ya da kendinize deneme bir proje yapıyorsanız bu klasör düzeni sizin için ideal olmaya bilir. Çok basit bir şeyle başlayın (tek bir` main.go `dosyası ve` go.mod `fazlasıyla yeterli olucaktır).`** Projeniz büyüdükçe projenin iyi yapılandırıldığından emin olmanın önemli olduğunu unutmayın, yoksa bir sürü gizli bağımlılık (dependency) ve bir sürü, her yerden erişilebilen, `global` değişkenlerle dolu dağınık bir kodla karşılaşabilirsiniz. Proje üstünde fazla kişi çalıştığında projeyi çok daha fazla yapılandırmanız gerekebilir. İşte tam da bu durumda paketleri/kütüphaneleri idare edebilmek için ortaya ortak bir yol koymak gerekir. Açık kaynak bir projeniz olduğunda ya da başkalarının sizin projenizi kullandıklarını bildiğinizde projenizde özel paketlerin ve kodların (diğer adıyla, `internal` klasörü) olması önemlidir. Bu projeyi klonlayın, ihtiyacınız olanları bırakın ve diğer bütün her şeyi silin. Bütün klasörlerin burada olması kullanmanız gerektiği anlamına gelmez. `vendor` klasörü bile herkes tarafından kullanılan bir şey değildir.
 
 Go 1.14 ile birlikte [`Go Modules`](https://github.com/golang/go/wiki/Modules) özelliği sonunda `production` ortamında kullanılması için hazır oldu. Eğer karşı bir nedeniniz yoksa [`Go Modules`](https://blog.golang.org/using-go-modules) kullanın. Eğer kullanırsanız `$GOPATH` ile ve projenizin nereye koyulacağıyla alakalı endişeler duymazsınız. Projenizde bulunan basit `go.mod` dosyası projenizin GitHub'da barındırıldığını varsayar ama bu bir gereklilik değildir. Modül yolu her şey olabilir ama modül yolunun ilk parçasının içinde bir nokta olmalıdır (Go'nun şimdiki versiyonu artık bu konuda zorlamıyor ama eğer daha eski versiyonları kullanırsanız ve derleme işleminde hata alırsanız şaşırmayın). Daha fazla bilgi için [`37554`](https://github.com/golang/go/issues/37554) ve [`32819`](https://github.com/golang/go/issues/32819) hata bildirimlerine bakabilirsiniz.
 
-Bu proje düzeni genel bir düzendir ve belirli bir Go paketi yapısını empoze etmeye çalışmaz.
+"Bu proje düzeni genel bir düzendir ve belirli bir Go paketi yapısını empoze etmeye çalışmaz".
 
-Bu bir topluluk eseridir. Eğer yeni bir şablon, düzen ile karşılaşırsanız ya da olan şablonların, düzenlerin güncellenmesi gerektiğini düşünüyorsanız bir hata bildirimi açınız.
+Bu proje bir topluluk eseridir. Eğer yeni bir şablon ve ya düzen ile karşılaşırsanız ya da olan şablonların, düzenlerin güncellenmesi gerektiğini düşünüyorsanız bir hata bildirimi açınız.
 
 Eğer isimlendirmekle, biçimlendirmeyle ve stilize etmeyle ilgili yardıma ihtiyacınız varsa [`gofmt`](https://golang.org/cmd/gofmt/) ve [`golint`](https://github.com/golang/lint) yazılımlarını çalıştırmayı deneyin. Ayrıca aşağıdaki Go kod stili rehberlerini ve önerilerini okuduğunuzdan emin olun.    
 * https://talks.golang.org/2014/names.slide
@@ -51,7 +51,7 @@ Paket odaklı dizayn rehberi ve Mimari katmanı ile alakalı Çince bir yazı:
 
 Projenin ana uygulamalarını içerir.
 
-Her uygulamanın klasör adı, eklemek istediğiniz uygulamanın adıyla eşleşmelidir. (örneğin, `/cmd/benimuygulamam`)
+Her uygulamanın klasör adı, eklemek istediğiniz uygulamanın adıyla eşleşmelidir. (örneğin, `/cmd/myapp`)
 
 Bu klasöre çok fazla kod koymanız iyi olmaz. Eğer kodların başka projeler tarafından kullanılabileceğini düşünüyorsanız, o kodları `/pkg` klasörüne koymalısınız. Eğer kod yeniden kullanılabilecek değilse ya da diğerlerinin yeniden kullanmasını istemiyorsanız, bu kodları `/internal` klasörüne koymalısınız. Niyetiniz hakkında açık olun, diğer geliştiricilerin kodunuzu ne için kullanabileceğine şaşıracaksınız!
 
@@ -67,7 +67,7 @@ Paylaşılan ve paylaşılmayan kodunuzu ayırmak için isteğe bağlı olarak e
 
 ### `/pkg`
 
-Diğerleriyle paylaşmak istediğiniz kodu içerir (örneğin, `/pkg/benimherkeseaçıkkütüphanem`). Diğer projeler bu kütüphaneleri çalışacağını tahmin ederek kullanırlar. Yani buraya bir şey koyarken iki kere düşünün :-) Unutmayın ki `internal` klasörü başka projeler tarafından kullanılmasını istemediğiniz kodlar için daha iyi bir yerdir çünkü bu Go tarafından zorunlu olarak uygulanır. `/pkg` klasörü içindeki kodun başkaları tarafından kullanılmasının güvenli olduğunu açıkça belirtmek için hala iyi bir yoldur. Travis Jeffery tarafından yazılan [`I'll take pkg over internal`](https://travisjeffery.com/b/2019/11/i-ll-take-pkg-over-internal/) blog yazısı `pkg` ve `internal` klasörleri ve onları ne zaman kullanmanın mantıklı olacağına dair genel bakış sağlar.
+Diğerleriyle paylaşmak istediğiniz kodu içerir (örneğin, `/pkg/myopenlibrary`). Diğer projeler bu kütüphaneleri çalışacağını tahmin ederek kullanırlar. Yani buraya bir şey koyarken iki kere düşünün :-) Unutmayın ki `internal` klasörü başka projeler tarafından kullanılmasını istemediğiniz kodlar için daha iyi bir yerdir çünkü bu Go tarafından zorunlu olarak uygulanır. `/pkg` klasörü içindeki kodun başkaları tarafından kullanılmasının güvenli olduğunu açıkça belirtmek için hala iyi bir yoldur. Travis Jeffery tarafından yazılan [`I'll take pkg over internal`](https://travisjeffery.com/b/2019/11/i-ll-take-pkg-over-internal/) blog yazısı `pkg` ve `internal` klasörleri ve onları ne zaman kullanmanın mantıklı olacağına dair genel bakış sağlar.
 
 Ayrıca ana klasörünüz çok sayıda Go kodu olmayan dosya ve klasör içerdiğinde Go kodunu tek bir yerde gruplamanın yoludur ve bazı Go araçlarını kullanmayı daha kolay hale getirir (bu konuşmalarda bahsedildiği gibi: [`Best Practices for Industrial Programming`](https://www.youtube.com/watch?v=PTE4VJIdHPg) GopherCon Avrupa 2018 konferansından, [GopherCon 2018: Kat Zien - How Do You Structure Your Go Apps](https://www.youtube.com/watch?v=oL6JBUk6tj0) ve [GoLab 2018 - Massimiliano Pippi - Project layout patterns in Go](https://www.youtube.com/watch?v=3gQa1LWwuzk)).
 
