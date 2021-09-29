@@ -14,6 +14,7 @@ Traduceri:
 * [Română](README_ro.md)
 * [Русский](README_ru.md)
 * [Türkçe](README_tr.md)
+* [Vietnamese](README_vi.md)
 
 ## General
 
