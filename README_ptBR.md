@@ -99,7 +99,7 @@ Componentes específicos de aplicativos da Web: ativos estáticos da Web, modelo
 
 ## Diretórios de aplicativos comuns
 
-### `/configs`
+### `/config`
 
 Modelos de arquivo de configuração ou configurações padrão.
 
