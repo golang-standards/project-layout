@@ -98,7 +98,7 @@ OpenAPI/Swagger 规范，JSON 模式文件，协议定义文件。
 ## 通用应用目录
 
 
-### `/configs`
+### `/config`
 
 配置文件模板或默认配置。
 

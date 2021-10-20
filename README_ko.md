@@ -101,7 +101,7 @@ OpenAPI/Swagger 스펙들, JSON schema 파일들, 프로토콜 정의 파일들.
 
 ## 공통 애플리케이션 디렉터리
 
-### `/configs`
+### `/config`
 
 설정 파일 템플릿이나 기본 설정들.
 

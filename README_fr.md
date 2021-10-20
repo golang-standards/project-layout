@@ -99,7 +99,7 @@ Les composants spécifiques aux applications web : assets statiques, templates s
 
 ## Les répertoire communs aux applications
 
-### `/configs`
+### `/config`
 
 Templates de fichiers de configuration ou configurations par défaut.
 
