@@ -79,7 +79,7 @@ Internal 패키지에서 공유되는 내부 코드와 공유되지 않는 내�
 
 ### `/vendor`
 
-애플리캐이션 종속성 (직접 혹은 새 빌트인 [`Go Modules`](https://github.com/golang/go/wiki/Modules) 피쳐와 같은 종속성 관리 도구로 관리되는).  `go mod vendor` 명령어는 `/vendor` 디렉터리를 만들어 줄 것 입니다. `go build` 명령어를 사용할 때 Go 1.14를 사용하지 않는다면 Go 1.14에서 기본으로 켜져있는 `-mod=vendor` 플래그를 추가해야 할 수 있습니다.
+애플리케이션 종속성 (직접 혹은 새 빌트인 [`Go Modules`](https://github.com/golang/go/wiki/Modules) 피쳐와 같은 종속성 관리 도구로 관리되는).  `go mod vendor` 명령어는 `/vendor` 디렉터리를 만들어 줄 것 입니다. `go build` 명령어를 사용할 때 Go 1.14를 사용하지 않는다면 Go 1.14에서 기본으로 켜져있는 `-mod=vendor` 플래그를 추가해야 할 수 있습니다.
 
 만약 당신이 라이브러리를 만들고 있다면 당신의 애플리케이션 종속성을 커밋하지 마세요.
 
