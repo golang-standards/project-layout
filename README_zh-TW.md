@@ -31,6 +31,7 @@ Go 1.14 的 [`Go Modules`](https://github.com/golang/go/wiki/Modules) 已經是�
 * https://golang.org/doc/effective_go.html#names
 * https://blog.golang.org/package-names
 * https://github.com/golang/go/wiki/CodeReviewComments
+* [Style guideline for Go packages](https://rakyll.org/style-packages/) (rakyll/JBD)
 
 參見 [`Go Project Layout`](https://medium.com/golang-learn/go-project-layout-e5213cdcfaa2) 了解更多的背景資訊。
 
