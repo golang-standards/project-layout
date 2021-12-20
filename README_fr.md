@@ -14,6 +14,7 @@ Traductions:
 * [Română](README_ro.md)
 * [Русский](README_ru.md)
 * [Türkçe](README_tr.md)
+* [فارسی](README_fa.md)
 
 ## Introduction
 
