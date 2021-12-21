@@ -112,7 +112,7 @@ System init（systemd，upstart，sysv）和 process manager/supervisor（runit�
 
 执行各种构建、安装、分析等操作的脚本。
 
-这些脚本保持了根级别的 Makefile 变得小而简单(例如， [`https://github.com/hashicorp/terraform/blob/master/Makefile`](https://github.com/hashicorp/terraform/blob/master/Makefile) )。
+这些脚本保持了根级别的 Makefile 变得小而简单(例如， [`https://github.com/hashicorp/terraform/blob/main/Makefile`](https://github.com/hashicorp/terraform/blob/main/Makefile) )。
 
 有关示例，请参见  [`/scripts`](scripts/README.md) 目录。
 

@@ -111,7 +111,7 @@ Web 應用程式相關的元件：靜態 Web 檔案、伺服器端範本與 SPAs
 
 放置要執行各種建置、安裝、分析等操作的命令腳本！
 
-這些腳本可以讓你在根目錄的 `Makefile` 更小、更簡單（例如：[`https://github.com/hashicorp/terraform/blob/master/Makefile`](https://github.com/hashicorp/terraform/blob/master/Makefile))。
+這些腳本可以讓你在根目錄的 `Makefile` 更小、更簡單（例如：[`https://github.com/hashicorp/terraform/blob/main/Makefile`](https://github.com/hashicorp/terraform/blob/main/Makefile))。
 
 請查看 [`/scripts`](scripts/README.md) 目錄獲得更多範例。
 

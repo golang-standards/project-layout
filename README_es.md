@@ -114,7 +114,7 @@ Configuraciones de inicio del sistema (systemd, upstart, sysv) y administración
 
 Scripts para realizar varias operaciones de construcción, instalación, análisis, etc.
 
-Estos scripts mantienen el Makefile de nivel raíz pequeño y simple (p.ej, [`https://github.com/hashicorp/terraform/blob/master/Makefile`](https://github.com/hashicorp/terraform/blob/master/Makefile)).
+Estos scripts mantienen el Makefile de nivel raíz pequeño y simple (p.ej, [`https://github.com/hashicorp/terraform/blob/main/Makefile`](https://github.com/hashicorp/terraform/blob/main/Makefile)).
 
 Consulte el directorio `/scripts` para ver ejemplos.
 

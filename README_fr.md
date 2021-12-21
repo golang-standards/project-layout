@@ -113,7 +113,7 @@ Initialisation du système (systemd, upstart, sysv) et configurations des admini
 
 Scripts permettant différentes opérations telles que le build, l'installation, des analyses, ...
 
-Ces scripts permettent de garder le Makefile du dossier racine réduit et simple (p. ex., [`https://github.com/hashicorp/terraform/blob/master/Makefile`](https://github.com/hashicorp/terraform/blob/master/Makefile)).
+Ces scripts permettent de garder le Makefile du dossier racine réduit et simple (p. ex., [`https://github.com/hashicorp/terraform/blob/main/Makefile`](https://github.com/hashicorp/terraform/blob/main/Makefile)).
 
 Voir le dossier [`/scripts`](scripts/README.md) pour des exemples.
 
