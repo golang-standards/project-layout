@@ -19,13 +19,13 @@
 
 Bu proje Go projeleri için basit bir yerleşim düzenidir. `Go geliştirici takımının belirlediği, resmi standartları değil`. Go ekosistemindeki, ortak geçmişi ve zaman içinde ortaya çıkmış şablonları içerir. Bu şablonlardan bazıları diğerlerinden daha popülerdir. Bir dizi iyileştirmenin yanı sıra yeterli büyüklükte herhangi bir gerçek dünya uygulamasına özgü birkaç destekli dizin de içerir.
 
-**`Eğer Go'yu öğrenmeye çalışıyorsanız veya PoC (Proof of Concept) ya da kendinize deneme bir proje yapıyorsanız bu klasör düzeni sizin için ideal olmaya bilir. Çok basit bir şeyle başlayın (tek bir` main.go `dosyası ve` go.mod `fazlasıyla yeterli olucaktır).`** Projeniz büyüdükçe projenin iyi yapılandırıldığından emin olmanın önemli olduğunu unutmayın, yoksa bir sürü gizli bağımlılık (dependency) ve bir sürü, her yerden erişilebilen, `global` değişkenlerle dolu dağınık bir kodla karşılaşabilirsiniz. Proje üstünde fazla kişi çalıştığında projeyi çok daha fazla yapılandırmanız gerekebilir. İşte tam da bu durumda paketleri/kütüphaneleri idare edebilmek için ortaya ortak bir yol koymak gerekir. Açık kaynak bir projeniz olduğunda ya da başkalarının sizin projenizi kullandıklarını bildiğinizde projenizde özel paketlerin ve kodların (diğer adıyla, `internal` klasörü) olması önemlidir. Bu projeyi klonlayın, ihtiyacınız olanları bırakın ve diğer bütün her şeyi silin. Bütün klasörlerin burada olması kullanmanız gerektiği anlamına gelmez. `vendor` klasörü bile herkes tarafından kullanılan bir şey değildir.
+**`Eğer Go'yu öğrenmeye çalışıyorsanız veya PoC (Proof of Concept) ya da kendinize deneme bir proje yapıyorsanız bu klasör düzeni sizin için ideal olmaya bilir. Çok basit bir şeyle başlayın (tek bir` main.go `dosyası ve` go.mod `fazlasıyla yeterli olacaktır).`** Projeniz büyüdükçe projenin iyi yapılandırıldığından emin olmanın önemli olduğunu unutmayın, yoksa bir sürü gizli bağımlılık (dependency) ve bir sürü, her yerden erişilebilen, `global` değişkenlerle dolu dağınık bir kodla karşılaşabilirsiniz. Proje üstünde fazla kişi çalıştığında projeyi çok daha fazla yapılandırmanız gerekebilir. İşte tam da bu durumda paketleri/kütüphaneleri idare edebilmek için ortaya ortak bir yol koymak gerekir. Açık kaynak bir projeniz olduğunda ya da başkalarının sizin projenizi kullandıklarını bildiğinizde projenizde özel paketlerin ve kodların (diğer adıyla, `internal` klasörü) olması önemlidir. Bu projeyi klonlayın, ihtiyacınız olanları bırakın ve diğer bütün her şeyi silin. Bütün klasörlerin burada olması kullanmanız gerektiği anlamına gelmez. `vendor` klasörü bile herkes tarafından kullanılan bir şey değildir.
 
 Go 1.14 ile birlikte [`Go Modules`](https://github.com/golang/go/wiki/Modules) özelliği sonunda `production` ortamında kullanılması için hazır oldu. Eğer karşı bir nedeniniz yoksa [`Go Modules`](https://blog.golang.org/using-go-modules) kullanın. Eğer kullanırsanız `$GOPATH` ile ve projenizin nereye koyulacağıyla alakalı endişeler duymazsınız. Projenizde bulunan basit `go.mod` dosyası projenizin GitHub'da barındırıldığını varsayar ama bu bir gereklilik değildir. Modül yolu her şey olabilir ama modül yolunun ilk parçasının içinde bir nokta olmalıdır (Go'nun şimdiki versiyonu artık bu konuda zorlamıyor ama eğer daha eski versiyonları kullanırsanız ve derleme işleminde hata alırsanız şaşırmayın). Daha fazla bilgi için [`37554`](https://github.com/golang/go/issues/37554) ve [`32819`](https://github.com/golang/go/issues/32819) hata bildirimlerine bakabilirsiniz.
 
 "Bu proje düzeni genel bir düzendir ve belirli bir Go paketi yapısını empoze etmeye çalışmaz".
 
-Bu proje bir topluluk eseridir. Eğer yeni bir şablon ve ya düzen ile karşılaşırsanız ya da olan şablonların, düzenlerin güncellenmesi gerektiğini düşünüyorsanız bir hata bildirimi açınız.
+Bu proje bir topluluk eseridir. Eğer yeni bir şablon veya düzen ile karşılaşırsanız ya da olan şablonların, düzenlerin güncellenmesi gerektiğini düşünüyorsanız bir hata bildirimi açınız.
 
 Eğer isimlendirmekle, biçimlendirmeyle ve stilize etmeyle ilgili yardıma ihtiyacınız varsa [`gofmt`](https://golang.org/cmd/gofmt/) ve [`golint`](https://github.com/golang/lint) yazılımlarını çalıştırmayı deneyin. Ayrıca aşağıdaki Go kod stili rehberlerini ve önerilerini okuduğunuzdan emin olun.    
 * https://talks.golang.org/2014/names.slide
@@ -53,7 +53,7 @@ Projenin ana uygulamalarını içerir.
 
 Her uygulamanın klasör adı, eklemek istediğiniz uygulamanın adıyla eşleşmelidir. (örneğin, `/cmd/myapp`)
 
-Bu klasöre çok fazla kod koymanız iyi olmaz. Eğer kodların başka projeler tarafından kullanılabileceğini düşünüyorsanız, o kodları `/pkg` klasörüne koymalısınız. Eğer kod yeniden kullanılabilecek değilse ya da diğerlerinin yeniden kullanmasını istemiyorsanız, bu kodları `/internal` klasörüne koymalısınız. Niyetiniz hakkında açık olun, diğer geliştiricilerin kodunuzu ne için kullanabileceğine şaşıracaksınız!
+Bu klasöre çok fazla kod koymanız iyi olmaz. Eğer kodların başka projeler tarafından kullanılabileceğini düşünüyorsanız, o kodları `/pkg` klasörüne koymalısınız. Eğer kod yeniden kullanılamıyorsa veya başkalarının onu yeniden kullanmasını istemiyorsanız, bu kodları `/internal` klasörüne koymalısınız. Niyetiniz hakkında açık olun, diğer geliştiricilerin kodunuzu ne için kullanabileceğine şaşıracaksınız!
 
 `/internal` ve `/pkg` klasörlerinden kod çağıran küçük bir `main` fonksiyonunuzun olması yaygındır.
 
@@ -131,7 +131,7 @@ IaaS, Paas, sistem ve konteyner orkestrasyon yayınlama konfigürasyonlarını v
 
 ### `/test`
 
-Ek harici test uygulamaları ve test verileri. `/test` klasörünün içini istediğiniz gibi yapılandırmada özgür hissedin. Daha büyük projelerde test verileri için alt klasörler açmak mantıklı olabilir. Örneğin, eğer Go'nun test dosyalarını görmezden gelmesini istiyorsanız bu dosyalar için `/test/data` veya `/test/testdata` adlı klasörlere sahip olabilirsiniz. Not olarak Go "." veya "_" ile başlayan klasörleri ve dosyalarıda görmezden gelir, bu sayede test klasörlerinizi ve dosyalarınızı isimlendirmede daha esnek olabilirsiniz.
+Ek harici test uygulamaları ve test verileri. `/test` klasörünün içini istediğiniz gibi yapılandırmada özgür hissedin. Daha büyük projelerde test verileri için alt klasörler açmak mantıklı olabilir. Örneğin, eğer Go'nun test dosyalarını görmezden gelmesini istiyorsanız bu dosyalar için `/test/data` veya `/test/testdata` adlı klasörlere sahip olabilirsiniz. Not olarak Go "." veya "_" ile başlayan klasörleri ve dosyaları da görmezden gelir, bu sayede test klasörlerinizi ve dosyalarınızı isimlendirmede daha esnek olabilirsiniz.
 
 Örnekler için [`/test`](test/README.md) klasörüne bakabilirsiniz.
 
@@ -139,13 +139,13 @@ Ek harici test uygulamaları ve test verileri. `/test` klasörünün içini iste
 
 ### `/docs`
 
-Tasarım ve kullanıcı dökümanları (godoc ile oluşturulmuş dökümanlara ek olarak)
+Tasarım ve kullanıcı dokümanları (godoc ile oluşturulmuş dokümanlara ek olarak)
 
 Örnekler için [`/docs`](docs/README.md) klasörüne bakabilirsiniz.
 
 ### `/tools`
 
-Bu klasöre projen için destekleyici araçları koyabilirsiniz. Unutmayın bu araçlar `/pkg` ve `/internal` klasörlerindeki kodları kullanabilirler.
+Bu klasöre projeniz için destekleyici araçları koyabilirsiniz. Unutmayın bu araçlar `/pkg` ve `/internal` klasörlerindeki kodları kullanabilirler.
 
 Örnekler için [`/tools`](tools/README.md) klasörüne bakabilirsiniz.
 
@@ -187,11 +187,11 @@ Proje seviyesindeki `/src` klasörü ile [`How to Write Go Code`](https://golang
 
     [![Go Report Card](https://goreportcard.com/badge/github.com/golang-standards/project-layout?style=flat-square)](https://goreportcard.com/report/github.com/golang-standards/project-layout)
 
-* ~~[GoDoc](http://godoc.org) - Projenizin GoDoc tarafından yaratılmış online bir dökümantasyonunu çıkartır. İşaret ettiği linki kendi proje linkiniz ile değiştirin.~~
+* ~~[GoDoc](http://godoc.org) - Projenizin GoDoc tarafından yaratılmış online bir dokümantasyonunu çıkartır. İşaret ettiği linki kendi proje linkiniz ile değiştirin.~~
 
     [![Go Doc](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat-square)](http://godoc.org/github.com/golang-standards/project-layout)
 
-* [Pkg.go.dev](https://pkg.go.dev) - Paket keşfi ve dökümantasyonları için yeni adres Pkg.go.dev. [Rozet yaratma aracı](https://pkg.go.dev/badge) ile projenize bir rozet yaratabilirsiniz.
+* [Pkg.go.dev](https://pkg.go.dev) - Paket keşfi ve dokümantasyonları için yeni adres Pkg.go.dev. [Rozet yaratma aracı](https://pkg.go.dev/badge) ile projenize bir rozet yaratabilirsiniz.
 
     [![PkgGoDev](https://pkg.go.dev/badge/github.com/golang-standards/project-layout)](https://pkg.go.dev/github.com/golang-standards/project-layout)
 
