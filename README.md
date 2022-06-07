@@ -1,7 +1,6 @@
 # Standard Go Project Layout
 
 Translations:
-
 * [한국어 문서](README_ko.md)
 * [简体中文](README_zh.md)
 * [正體中文](README_zh-TW.md)
@@ -128,7 +127,7 @@ Put your CI (travis, circle, drone) configurations and scripts in the `/build/ci
 
 ### `/deployments`
 
-IaaS, PaaS, system and container orchestration deployment configurations and templates (docker-compose, kubernetes/helm, mesos, terraform, bosh). Note that in some repos (especially apps deployed with kubernetes) this directory is called `/deploy`.
+IaaS, PaaS, system and container orchestration deployment configurations and templates (docker-compose, kubernetes/helm, terraform). Note that in some repos (especially apps deployed with kubernetes) this directory is called `/deploy`.
 
 ### `/test`
 
