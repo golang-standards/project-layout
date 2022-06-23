@@ -201,4 +201,4 @@ Proje seviyesindeki `/src` klasörü ile [`How to Write Go Code`](https://golang
 
 ## Notlar
 
-Örnek/yeniden kullanılabilir yapılandırmalar, komut dosyaları ve kodları içeren daha kararlı bir proje şablonu yapım aşamasındadır.
+Örnek / yeniden kullanılabilir yapılandırmalar, komut dosyaları ve kodları içeren daha kararlı bir proje şablonu yapım aşamasındadır.
