@@ -13,7 +13,6 @@ The `pkg` directory origins: The old Go source code used to use `pkg` for its pa
 
 Examples:
 
-* https://github.com/prometheus/prometheus/tree/master/pkg
 * https://github.com/jaegertracing/jaeger/tree/master/pkg
 * https://github.com/istio/istio/tree/master/pkg
 * https://github.com/GoogleContainerTools/kaniko/tree/master/pkg
