@@ -9,3 +9,4 @@ Examples:
 * https://github.com/kubernetes/helm/tree/master/scripts
 * https://github.com/cockroachdb/cockroach/tree/master/scripts
 * https://github.com/hashicorp/terraform/tree/master/scripts
+* https://github.com/marmotedu/iam/tree/master/scripts
