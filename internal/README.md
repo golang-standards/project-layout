@@ -6,12 +6,12 @@ You can optionally add a bit of extra structure to your internal packages to sep
 
 Examples:
 
-* https://github.com/hashicorp/terraform/tree/master/internal
+* https://github.com/hashicorp/terraform/tree/main/internal
 * https://github.com/influxdata/influxdb/tree/master/internal
 * https://github.com/perkeep/perkeep/tree/master/internal
-* https://github.com/jaegertracing/jaeger/tree/master/internal
+* https://github.com/jaegertracing/jaeger/tree/main/internal
 * https://github.com/moby/moby/tree/master/internal
-* https://github.com/satellity/satellity/tree/master/internal
+* https://github.com/satellity/satellity/tree/main/internal
 
 ## `/internal/pkg`
 
