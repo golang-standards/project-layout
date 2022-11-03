@@ -144,7 +144,7 @@ IaaS，PaaS，系统和容器编排部署配置和模板（docker-compose，kube
 
 更多样例查看[`/tools`](https://github.com/golang-standards/project-layout/blob/master/tools/README.md)。
 
-### `/ examples`
+### `/examples`
 
 应用程序或公共库的示例。
 
