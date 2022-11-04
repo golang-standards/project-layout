@@ -186,16 +186,19 @@ Goプロジェクトの中には `src` フォルダを持っているものも�
 
 * [Go Report Card](https://goreportcard.com/) - `gofmt`, `go vet`, `gocyclo`, `golint`, `ineffassign`, `license`, `misspell` でコードをスキャンします。`github.com/golang-standards/project-layout` をプロジェクトリファレンスに置き換えてください。
 
+    [![Go Report Card](https://goreportcard.com/badge/github.com/golang-standards/project-layout?style=flat-square)](https://goreportcard.com/report/github.com/golang-standards/project-layout)
+
 * ~~[GoDoc](http://godoc.org) - GoDocで作成したドキュメントのオンライン版を提供します。リンクを自分のプロジェクトへのリンクに変更してください。~~
 
-* [Pkg.go.dev](https://pkg.go.dev) - Pkg.go.devは、囲碁の発見とドキュメントの新しい目的地です。[バッジ生成ツール](https://pkg.go.dev/badge)を使ってバッジを作成することができます。
+    [![Go Doc](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat-square)](http://godoc.org/github.com/golang-standards/project-layout)
+
+* [Pkg.go.dev](https://pkg.go.dev) - Pkg.go.devは、Goの発見とドキュメントの新しい目的地です。[バッジ生成ツール](https://pkg.go.dev/badge)を使ってバッジを作成することができます。
+
+    [![PkgGoDev](https://pkg.go.dev/badge/github.com/golang-standards/project-layout)](https://pkg.go.dev/github.com/golang-standards/project-layout)
 
 * リリース - あなたのプロジェクトの最新のリリース番号が表示されます。githubのリンクを変更して、あなたのプロジェクトを指すようにしてください。
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/golang-standards/project-layout?style=flat-square)](https://goreportcard.com/report/github.com/golang-standards/project-layout)
-[![Go Doc](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat-square)](http://godoc.org/github.com/golang-standards/project-layout)
-[![PkgGoDev](https://pkg.go.dev/badge/github.com/golang-standards/project-layout)](https://pkg.go.dev/github.com/golang-standards/project-layout)
-[![リリース](https://img.shields.io/github/release/golang-standards/project-layout.svg?style=flat-square)](https://github.com/golang-standards/project-layout/releases/latest)
+    [![リリース](https://img.shields.io/github/release/golang-standards/project-layout.svg?style=flat-square)](https://github.com/golang-standards/project-layout/releases/latest)
 
 ## 注意事項
 
