@@ -71,7 +71,7 @@ Codice di libreria che può essere utilizzato da applicazioni esterne (es:, `/pk
 
 C'è anche un modo di raggruppare il codice Go in unico posto quando la tua cartella di root contiene molti componenti non-Go e cartelle semplificando l'utilizzo di vari strumenti Go (come menzionato in questi talk: [`Best Practices for Industrial Programming`](https://www.youtube.com/watch?v=PTE4VJIdHPg) dal GopherCon EU 2018, [GopherCon 2018: Kat Zien - How Do You Structure Your Go Apps](https://www.youtube.com/watch?v=oL6JBUk6tj0) e [GoLab 2018 - Massimiliano Pippi - Project layout patterns in Go](https://www.youtube.com/watch?v=3gQa1LWwuzk)).
 
-Guarda la cartella [`/pkg`](pkg/README.md) se vuoi vedere quali popolari repos utilizzano questa struttura di progetto. Questo è un pattern di layout comune, tuttavia non è universalmente accettato e qualcuno nella community Go non lo raccomanda.
+Guarda la cartella [`/pkg`](pkg/README.md) se vuoi vedere quali popolari repo utilizzano questa struttura di progetto. Questo è un pattern di layout comune, tuttavia non è universalmente accettato e qualcuno nella community Go non lo raccomanda.
 
 E' ok non utilizzarla se il tuo progetto è molto piccolo e aggiungere un ulteriore strato di nesting non dà un valore aggiunto (a meno che tu non lo voglia davvero molto :-)). Pensa di prevederla quando sta diventando grande abbastanza e la tua cartella root si sta riempendo troppo (specialmente quando hai molti componenti non Go nell'applicativo).
 
