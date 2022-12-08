@@ -125,7 +125,7 @@ Packaging e Continuous Integration.
 
 Metti le configurazioni dei tuoi pacchetti: cloud (AMI), container (Docker), OS (deb, rpm, pkg) e script nella cartella `/build/package`.
 
-Metti le tue configurazioni della CI (travis, circle, drone) e script nella cartella `/build/ci`. Nota che qualche tool di CI (es: Travis CI) sono molto stringenti riguardo la posizione dei propri files di configurazione. Prova mettendo le configurazioni nella cartella `/build/ci` collegandole al percorso dove i strumenti di CI se le aspettano (quando possibile).
+Metti le tue configurazioni della CI (travis, circle, drone) e script nella cartella `/build/ci`. Nota che qualche tool di CI (es: Travis CI) sono molto stringenti riguardo la posizione dei propri file di configurazione. Prova mettendo le configurazioni nella cartella `/build/ci` collegandole al percorso dove i strumenti di CI se le aspettano (quando possibile).
 
 ### `/deployments`
 
