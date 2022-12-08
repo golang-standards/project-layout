@@ -113,9 +113,9 @@ Inizializzazione del sistema (systemd, upstart, sysv) e configurazioni per proce
 
 ### `/scripts`
 
-Scripts per effettuare varie operazioni per la build, installazione, analisi, ecc...
+Script per effettuare varie operazioni per la build, installazione, analisi, ecc...
 
-Questi scripts mantengono a livello di root un Makefile piccolo e immediato (es: [`https://github.com/hashicorp/terraform/blob/master/Makefile`](https://github.com/hashicorp/terraform/blob/master/Makefile)).
+Questi script mantengono a livello di root un Makefile piccolo e immediato (es: [`https://github.com/hashicorp/terraform/blob/master/Makefile`](https://github.com/hashicorp/terraform/blob/master/Makefile)).
 
 Vedi la cartella [`/scripts`](scripts/README.md) per esempi.
 
@@ -123,9 +123,9 @@ Vedi la cartella [`/scripts`](scripts/README.md) per esempi.
 
 Packaging e Continuous Integration.
 
-Metti le configurazioni dei tuoi pacchetti: cloud (AMI), container (Docker), OS (deb, rpm, pkg) e scripts nella cartella `/build/package`.
+Metti le configurazioni dei tuoi pacchetti: cloud (AMI), container (Docker), OS (deb, rpm, pkg) e script nella cartella `/build/package`.
 
-Metti le tue configurazioni della CI (travis, circle, drone) e scripts nella cartella `/build/ci`. Nota che qualche tool di CI (es: Travis CI) sono molto stringenti riguardo la posizione dei propri files di configurazione. Prova mettendo le configurazioni nella cartella `/build/ci` collegandole al percorso dove i strumenti di CI se le aspettano (quando possibile).
+Metti le tue configurazioni della CI (travis, circle, drone) e script nella cartella `/build/ci`. Nota che qualche tool di CI (es: Travis CI) sono molto stringenti riguardo la posizione dei propri files di configurazione. Prova mettendo le configurazioni nella cartella `/build/ci` collegandole al percorso dove i strumenti di CI se le aspettano (quando possibile).
 
 ### `/deployments`
 
