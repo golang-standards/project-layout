@@ -73,7 +73,7 @@ C'è anche un modo di raggruppare il codice Go in unico posto quando la tua cart
 
 Guarda la cartella [`/pkg`](pkg/README.md) se vuoi vedere quali popolari repo utilizzano questa struttura di progetto. Questo è un pattern di layout comune, tuttavia non è universalmente accettato e qualcuno nella community Go non lo raccomanda.
 
-È ok non utilizzarla se il tuo progetto è molto piccolo e aggiungere un ulteriore strato di nesting non dà un valore aggiunto (a meno che tu non lo voglia davvero molto :-)). Pensa di prevederla quando sta diventando grande abbastanza e la tua cartella root si sta riempendo troppo (specialmente quando hai molti componenti non Go nell'applicativo).
+È ok non utilizzarla se il tuo progetto è molto piccolo e aggiungere un ulteriore strato di annidamento non dà un valore aggiunto (a meno che tu non lo voglia davvero molto :-)). Pensa di prevederla quando sta diventando grande abbastanza e la tua cartella root si sta riempendo troppo (specialmente quando hai molti componenti non Go nell'applicativo).
 
 Origini della cartella `pkg`: Il vecchio codice sorgente di Go usava la cartella `pkg` per i suoi pacchetti e così diversi progetti Go nella community hanno iniziato a copiare questo pattern (vedi [`questo`](https://twitter.com/bradfitz/status/1039512487538970624) tweet di Brad Fitzpatrick per avere un contesto più dettagliato).
 
