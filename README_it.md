@@ -204,4 +204,4 @@ Non confondere la cartella `/src` a livello di progetto con la cartella `/src` c
 
 ## Note
 
-Un template di progetto standardizzato con configurazioni semplici e riutilizzabili, gli aggiornamenti per gli scripts e il codice sono in corso.
+Un template di progetto standardizzato con configurazioni semplici e riutilizzabili, gli aggiornamenti per gli script e il codice sono in corso.
