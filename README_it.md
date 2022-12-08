@@ -129,7 +129,7 @@ Metti le tue configurazioni della CI (travis, circle, drone) e script nella cart
 
 ### `/deployments`
 
-Configurazioni e template per distribuzioni IaaS, PaaS, di sistema e basati su sistemi di orchestrazione (docker-compose, kubernetes/helm, mesos, terraform, bosh). Nota che in alcuni repos (specialmente per gli applicativi pubblicati con kubernetes) questa cartella è chiamata `/deploy`.
+Configurazioni e template per distribuzioni IaaS, PaaS, di sistema e basati su sistemi di orchestrazione (docker-compose, kubernetes/helm, mesos, terraform, bosh). Nota che in alcuni repo (specialmente per gli applicativi pubblicati con kubernetes) questa cartella è chiamata `/deploy`.
 
 ### `/test`
 
