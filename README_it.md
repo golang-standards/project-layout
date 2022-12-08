@@ -167,7 +167,7 @@ Hook di Git.
 
 ### `/assets`
 
-Altri assets del tuo repository (immagini, loghi, etc).
+Altri asset del tuo repository (immagini, loghi, etc).
 
 ### `/website`
 
