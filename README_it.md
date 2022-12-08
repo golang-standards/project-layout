@@ -63,7 +63,7 @@ Vedi cartella [`/cmd`](cmd/README.md) per esempi.
 Applicativo privato e codice di libreria. Quì c'è il codice che non vuoi gli altri importino nei loro progetti o librerie. Nota che questo pattern archittetturale è forzato dallo stesso compilatore Go. Vedi Go 1.4 [`release notes`](https://golang.org/doc/go1.4#internalpackages) per maggiori dettagli. Nota che non sei obbligato ad avere unicamente la cartella padre `internal`. Puoi avere più di una singola cartella `internal` a qualsiasi livello della tua ramificazione di progetto.
 
 
-Puoi opzionalmente aggiungere una struttura aggiuntiva ai tuoi pacchetti interni, per separare il tuo codice interno condiviso e non condiviso. Non è obbligatorio (specialmente per piccoli progetti), ma è meglio avere indicazioni per mostrare l'utilizzo raccomandato del pacchetto. Il tuo effettivo codice applicativo può essere inserito nella cartella `/internal/app` (es: `/internal/app/myapp`) e il codice condiviso da queste apps nella cartella `/internal/pkg` (es: `/internal/pkg/myprivlib`).
+Puoi opzionalmente aggiungere una struttura aggiuntiva ai tuoi pacchetti interni, per separare il tuo codice interno condiviso e non condiviso. Non è obbligatorio (specialmente per piccoli progetti), ma è meglio avere indicazioni per mostrare l'utilizzo raccomandato del pacchetto. Il tuo effettivo codice applicativo può essere inserito nella cartella `/internal/app` (es: `/internal/app/myapp`) e il codice condiviso da queste app nella cartella `/internal/pkg` (es: `/internal/pkg/myprivlib`).
 
 ### `/pkg`
 
