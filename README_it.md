@@ -159,7 +159,7 @@ Vedi la cartella [`/examples`](examples/README.md) per esempi.
 
 ### `/third_party`
 
-Strumenti esterni di aiuto, codice forcato e altre utilities di terze parti (es: Swagger UI).
+Strumenti esterni di aiuto, codice forcato e altre utility di terze parti (es: Swagger UI).
 
 ### `/githooks`
 
