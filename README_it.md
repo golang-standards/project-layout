@@ -133,7 +133,7 @@ Configurazioni e template per distribuzioni IaaS, PaaS, di sistema e basati su s
 
 ### `/test`
 
-Ulteriori app di test esterne e dati di test. Sentiti libero di strutturare la cartella `/test` come preferisci. Per progetti più grandi ha senso avere una sotto cartella data. Per esempio potresti avere  `/test/data` o `/test/testdata` se hai bisogno che Go ignori il contenuto di questa cartella. Nota che Go ignorerà anche le cartelle o files che iniziano con "." o "_", così si ha più flessibilità in termini di come intendi chiamare la cartella dei tuoi dati test.
+Ulteriori app di test esterne e dati di test. Sentiti libero di strutturare la cartella `/test` come preferisci. Per progetti più grandi ha senso avere una sotto cartella data. Per esempio potresti avere  `/test/data` o `/test/testdata` se hai bisogno che Go ignori il contenuto di questa cartella. Nota che Go ignorerà anche le cartelle o file che iniziano con "." o "_", così si ha più flessibilità in termini di come intendi chiamare la cartella dei tuoi dati test.
 
 Vedi la cartella [`/test`](test/README.md) per esempi.
 
