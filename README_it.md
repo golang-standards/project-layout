@@ -163,7 +163,7 @@ Strumenti esterni di aiuto, codice forcato e altre utility di terze parti (es: S
 
 ### `/githooks`
 
-Git hooks.
+Hook di Git.
 
 ### `/assets`
 
