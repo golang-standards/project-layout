@@ -129,59 +129,59 @@ IЯкщо вам потрібна допомога з іменуванням, ф
 
 ### `/deployments`
 
-IaaS, PaaS, system and container orchestration deployment configurations and templates (docker-compose, kubernetes/helm, mesos, terraform, bosh). Note that in some repos (especially apps deployed with kubernetes) this directory is called `/deploy`.
+Конфігурації та шаблони розгортання IaaS, PaaS, системної та контейнерної оркестрації (docker-compose, kubernetes/helm, mesos, terraform, bosh). Зверніть увагу, що в деяких репозиторіях (особливо для додатків, що розгортаються за допомогою kubernetes) цей каталог називається `/deploy`.
 
 ### `/test`
 
-Additional external test apps and test data. Feel free to structure the `/test` directory anyway you want. For bigger projects it makes sense to have a data subdirectory. For example, you can have `/test/data` or `/test/testdata` if you need Go to ignore what's in that directory. Note that Go will also ignore directories or files that begin with "." or "_", so you have more flexibility in terms of how you name your test data directory.
+Додаткові зовнішні тестові програми та тестові дані. Не соромтеся структурувати каталог `/test` як завгодно. Для великих проектів має сенс мати підкаталог даних. Наприклад, ви можете мати `/test/data` або `/test/testdata`, якщо вам потрібно, щоб команда Go ігнорувала те, що знаходиться в цьому каталозі. Зауважте, що Go також ігноруватиме каталоги або файли, які починаються з "." або "_", тому у вас є більше гнучкості в плані того, як ви можете назвати свій каталог тестових даних.
 
-See the [`/test`](test/README.md) directory for examples.
+Приклади дивіться у каталозі [`/test`](test/README.md).
 
 ## Other Directories
 
 ### `/docs`
 
-Design and user documents (in addition to your godoc generated documentation).
+Проектна та користувацька документація (на додаток до вашої документації, згенерованої в godoc).
 
-See the [`/docs`](docs/README.md) directory for examples.
+Приклади дивіться у каталозі [`/docs`](docs/README.md).
 
 ### `/tools`
 
-Supporting tools for this project. Note that these tools can import code from the `/pkg` and `/internal` directories.
+Допоміжні інструменти для цього проекту. Зверніть увагу, що ці інструменти можуть імпортувати код з каталогів `/pkg` та `/internal`.
 
-See the [`/tools`](tools/README.md) directory for examples.
+Приклади дивіться у каталозі [`/tools`](tools/README.md).
 
 ### `/examples`
 
-Examples for your applications and/or public libraries.
+Приклади для ваших додатків та/або публічних бібліотек.
 
-See the [`/examples`](examples/README.md) directory for examples.
+Приклади дивіться у каталозі [`/examples`](examples/README.md).
 
 ### `/third_party`
 
-External helper tools, forked code and other 3rd party utilities (e.g., Swagger UI).
+Зовнішні допоміжні інструменти, форкований код та інші утиліти сторонніх розробників (наприклад, Swagger UI).
 
 ### `/githooks`
 
-Git hooks.
+Скріпти (хуки) Git.
 
 ### `/assets`
 
-Other assets to go along with your repository (images, logos, etc).
+Інші ресурси, які будуть супроводжувати ваш репозиторій (зображення, логотипи тощо).
 
 ### `/website`
 
-This is the place to put your project's website data if you are not using GitHub pages.
+Це місце для розміщення даних сайту вашого проекту, якщо ви не використовуєте GitHub Pages.
 
-See the [`/website`](website/README.md) directory for examples.
+Приклади дивіться у каталозі [`/website`](website/README.md).
 
-## Directories You Shouldn't Have
+## Директорії, яких у вас не має бути
 
 ### `/src`
 
-Some Go projects do have a `src` folder, but it usually happens when the devs came from the Java world where it's a common pattern. If you can help yourself try not to adopt this Java pattern. You really don't want your Go code or Go projects to look like Java :-)
+Деякі проекти Go мають папку `src`, але це зазвичай трапляється, коли розробники прийшли зі світу Java, де це є поширеним шаблоном. Намагайтеся не використовувати цей патерн Java. Ви ж не хочете, щоб ваш Go код або Go проекти виглядали як Java :-)
 
-Don't confuse the project level `/src` directory with the `/src` directory Go uses for its workspaces as described in [`How to Write Go Code`](https://golang.org/doc/code.html). The `$GOPATH` environment variable points to your (current) workspace (by default it points to `$HOME/go` on non-windows systems). This workspace includes the top level `/pkg`, `/bin` and `/src` directories. Your actual project ends up being a sub-directory under `/src`, so if you have the `/src` directory in your project the project path will look like this: `/some/path/to/workspace/src/your_project/src/your_code.go`. Note that with Go 1.11 it's possible to have your project outside of your `GOPATH`, but it still doesn't mean it's a good idea to use this layout pattern.
+Не плутайте каталог `/src` на рівні проекту з каталогом `/src`, який Go використовує для своїх робочих областей, як описано в [`How to Write Go Code`] (https://golang.org/doc/code.html). Змінна оточення `$GOPATH` вказує на вашу (поточну) робочу область (за замовчуванням вона вказує на `$HOME/go` на системах, відмінних від Windows). Ця робоча область включає в себе каталоги верхнього рівня `/pkg`, `/bin` та `/src`. Ваш фактичний проект закінчується підкаталогом у каталозі `/src`, тому, якщо у вашому проекті є каталог `/src`, шлях до проекту буде виглядати наступним чином: `/some/path/to/workspace/src/ваш_проект/src/ваш_код.go`. Зауважте, що з Go 1.11 можна мати проект поза `GOPATH`, але це ще не означає, що це гарна ідея використовувати цей шаблон компонування.
 
 
 ## Badges
