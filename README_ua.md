@@ -186,22 +186,22 @@ IЯкщо вам потрібна допомога з іменуванням, ф
 
 ## Badges
 
-* [Go Report Card](https://goreportcard.com/) - It will scan your code with `gofmt`, `go vet`, `gocyclo`, `golint`, `ineffassign`, `license` and `misspell`. Replace `github.com/golang-standards/project-layout` with your project reference.
+* [Go Report Card](https://goreportcard.com/) - відсканує ваш код за допомогою `gofmt`, `go vet`, `gocyclo`, `golint`, `ineffassign`, `license` та `misspell`. Замініть `github.com/golang-standards/project-layout` посиланням на ваш проєкт.
 
     [![Go Report Card](https://goreportcard.com/badge/github.com/golang-standards/project-layout?style=flat-square)](https://goreportcard.com/report/github.com/golang-standards/project-layout)
 
-* ~~[GoDoc](http://godoc.org) - It will provide online version of your GoDoc generated documentation. Change the link to point to your project.~~
+* ~~[GoDoc](http://godoc.org) - надає онлайн-версію вашої документації, створеної у форматі GoDoc. Змініть посилання, щоб воно вказувало на ваш проект.~~
 
     [![Go Doc](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat-square)](http://godoc.org/github.com/golang-standards/project-layout)
 
-* [Pkg.go.dev](https://pkg.go.dev) - Pkg.go.dev is a new destination for Go discovery & docs. You can create a badge using the [badge generation tool](https://pkg.go.dev/badge).
+* [Pkg.go.dev](https://pkg.go.dev) - Pkg.go.dev це нове місцезнаходження для дослідження Go та документації. Ви можете створити бейдж використовуючи [badge generation tool](https://pkg.go.dev/badge).
 
     [![PkgGoDev](https://pkg.go.dev/badge/github.com/golang-standards/project-layout)](https://pkg.go.dev/github.com/golang-standards/project-layout)
 
-* Release - It will show the latest release number for your project. Change the github link to point to your project.
+* Реліз - покаже номер останнього релізу для вашого проекту. Змініть посилання на github, щоб воно вказувало на ваш проект.
 
     [![Release](https://img.shields.io/github/release/golang-standards/project-layout.svg?style=flat-square)](https://github.com/golang-standards/project-layout/releases/latest)
 
-## Notes
+## Нотатки
 
-A more opinionated project template with sample/reusable configs, scripts and code is a WIP.
+Більш розгорнутий шаблон проекту зі зразками/багаторазовими конфігураціями, скриптами та кодом - це WIP.
