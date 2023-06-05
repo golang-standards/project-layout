@@ -1,4 +1,4 @@
-# Standard Go Project Layout
+# Standar Tata Letak Proyek Go
 
 Terjemahan:
 
@@ -19,9 +19,9 @@ Terjemahan:
 
 Berikut ini merupakan tata letak dasar untuk proyek aplikasi Go. Ini **`bukan standar resmi yang ditetapkan oleh tim pengembang inti Go`**; namun, ini merupakan sejumlah pola tata letak proyek historis dan terkini yang umumnya digunakan dalam ekosistem Go. Beberapa pola ini lebih populer daripada yang lain. Selain itu, terdapat beberapa pembaharuan kecil bersama dengan beberapa direktori pendukung yang umum ditemukan dalam aplikasi dunia nyata yang cukup besar.
 
-Jika kamu sedang belajar Go atau sedang membangun PoC atau proyek sederhana untuk dirimu sendiri, tata letak proyek ini terlalu berlebihan. Mulailah dengan sesuatu yang sederhana saja (sebuah file `main.go` tunggal dan `go.mod` sudah cukup). Ketika proyekmu berkembang, penting untuk memastikan kodemu terstruktur dengan baik, jika tidak, kamu akan berakhir dengan kode yang berantakan dengan banyak dependensi tersembunyi dan state global. Ketika ada lebih banyak orang yang bekerja pada proyekmu, kamu akan membutuhkan struktur yang lebih terorganisir. Itulah saat yang penting untuk memperkenalkan cara umum dalam mengelola paket/pustaka. Ketika kamu memiliki proyek open source atau ketika kamu tahu proyek lain mengimpor kode dari repositori proyekmu, saat itulah penting untuk memiliki paket dan kode pribadi (dikenal juga sebagai `internal`). Klon repositori tersebut, ambil yang kamu butuhkan, dan hapus sisanya! Hanya karena ada di sana, tidak berarti kamu harus menggunakannya semua. Tidak satu pun dari pola-pola ini digunakan dalam setiap proyek. Bahkan pola `vendor` tidaklah universal.
+Jika kamu sedang belajar Go atau sedang membangun PoC atau proyek sederhana untuk dirimu sendiri, tata letak proyek ini terlalu berlebihan. Mulailah dengan sesuatu yang sederhana saja (sebuah file `main.go` tunggal dan `go.mod` sudah cukup). Ketika proyekmu berkembang, penting untuk memastikan kodemu terstruktur dengan baik, jika tidak, kamu akan berakhir dengan kode yang berantakan dengan banyak dependensi tersembunyi dan state global. Ketika ada lebih banyak orang yang bekerja pada proyekmu, kamu akan membutuhkan struktur yang lebih terorganisir. Itulah saat yang penting untuk memperkenalkan cara umum dalam mengelola paket/pustaka. Ketika kamu memiliki proyek open source atau ketika kamu tahu proyek lain mengimpor kode dari repositori proyekmu, saat itulah penting untuk memiliki paket dan kode pribadi (dikenal juga sebagai `internal`). Klon repositori tersebut, ambil yang kamu butuhkan, dan hapus sisanya! Hanya karena ada di sana, tidak berarti kamu harus menggunakan semuanya. Tidak satu pun dari pola-pola ini digunakan dalam setiap proyek. Bahkan pola `vendor` tidaklah universal.
 
-Dengan Go 1.14, [`Go Modules`](https://github.com/golang/go/wiki/Modules) akhirnya siap digunakan untuk produksi. Gunakan [`Go Modules`](https://blog.golang.org/using-go-modules) kecuali kamu memiliki alasan khusus untuk tidak menggunakannya. Jika kamu tidak menggunakan Go Modules, maka kamu tidak perlu khawatir tentang $GOPATH dan di mana kamu meletakkan proyekmu. File `go.mod` di dalam repositori ini mengasumsikan bahwa proyekmu di-host di GitHub, tetapi itu bukan menjadi persyaratan. Path modul dapat menjadi apa saja, meskipun komponen path modul pertama sebaiknya memiliki tanda titik dalam namanya (versi Go saat ini tidak lagi memaksakannya, tetapi jika kamu menggunakan versi yang sedikit lebih lama, jangan heran jika proses build tidak akan berhasil). Lihat isu [`37554`](https://github.com/golang/go/issues/37554) dan [`32819`](https://github.com/golang/go/issues/32819) jika kamu ingin tahu lebih banyak mengenai hal ini.
+Dengan Go 1.14, [`Go Modules`](https://github.com/golang/go/wiki/Modules) akhirnya siap digunakan untuk produksi. Gunakan [`Go Modules`](https://blog.golang.org/using-go-modules) kecuali kamu memiliki alasan khusus untuk tidak menggunakannya. Jika kamu tidak menggunakan Go Modules, maka kamu tidak perlu khawatir tentang `$GOPATH` dan di mana kamu meletakkan proyekmu. File `go.mod` di dalam repositori ini mengasumsikan bahwa proyekmu di-host di GitHub, tetapi itu bukan menjadi persyaratan. Path modul dapat menjadi apa saja, meskipun komponen path modul pertama sebaiknya memiliki tanda titik dalam namanya (versi Go saat ini tidak lagi memaksakannya, tetapi jika kamu menggunakan versi yang sedikit lebih lama, jangan heran jika proses build tidak akan berhasil). Lihat isu [`37554`](https://github.com/golang/go/issues/37554) dan [`32819`](https://github.com/golang/go/issues/32819) jika kamu ingin tahu lebih banyak mengenai hal ini.
 
 Tata letak proyek ini sengaja dirancang secara generik dan tidak mencoba memaksakan struktur paket Go yang spesifik.
 
@@ -51,9 +51,9 @@ Sebuah postingan dalam bahasa Cina tentang pedoman Package-Oriented Design dan A
 
 Aplikasi utama untuk proyek ini.
 
-Nama direktori untuk setiap aplikasi harus sesuai dengan nama file eksekusi yang diinginkan (misalnya, /cmd/myapp).
+Nama direktori untuk setiap aplikasi harus sesuai dengan nama file eksekusi yang diinginkan (misalnya, `/cmd/myapp`).
 
-Jangan menempatkan banyak kode di dalam direktori aplikasi. Jika Anda berpikir bahwa kode tersebut dapat diimpor dan digunakan dalam proyek lain, maka kode tersebut harus ditempatkan di dalam direktori `/pkg`. Jika kode tersebut tidak dapat digunakan kembali atau jika Anda tidak ingin orang lain menggunakannya kembali, letakkan kode tersebut di dalam direktori `/internal`. Anda akan terkejut dengan apa yang orang lain lakukan, jadi tetap jelaskan niat Anda! 
+Jangan menempatkan banyak kode di dalam direktori aplikasi. Jika anda berpikir bahwa kode tersebut dapat diimpor dan digunakan dalam proyek lain, maka kode tersebut harus ditempatkan di dalam direktori `/pkg`. Jika kode tersebut tidak dapat digunakan kembali atau jika anda tidak ingin orang lain menggunakannya kembali, letakkan kode tersebut di dalam direktori `/internal`. Anda akan terkejut dengan apa yang orang lain lakukan, jadi tetap jelaskan niat anda! 
 
 Biasanya, terdapat fungsi `main` kecil yang mengimpor dan memanggil kode dari direktori `/internal` dan `/pkg`, dan tidak ada yang lain.
 
@@ -61,29 +61,29 @@ Lihat direktori [`/cmd`](cmd/README.md) untuk contoh-contoh lebih lanjut.
 
 ### `/internal`
 
-Kode aplikasi dan library privat. Ini adalah kode anda yang tidak ingin diimpor oleh aplikasi atau perpustakaan lain. Perlu dicatat bahwa pola tata letak ini dipaksakan atau dijaga oleh kompiler Go itu sendiri. Lihat catatan rilis Go 1.4 [`di sini`](https://golang.org/doc/go1.4#internalpackages) untuk detailnya. Perhatikan bahwa Anda tidak dibatasi pada direktori top level `internal` saja. Anda dapat memiliki lebih dari satu direktori `internal` di setiap tingkatan proyek Anda.
+Kode aplikasi dan library privat. Ini adalah kode anda yang tidak ingin diimpor oleh aplikasi atau library lain. Perlu dicatat bahwa pola tata letak ini dipaksakan atau dijaga oleh kompiler Go itu sendiri. Lihat catatan rilis Go 1.4 [`di sini`](https://golang.org/doc/go1.4#internalpackages) untuk detailnya. Perhatikan bahwa anda tidak dibatasi pada direktori top level `internal` saja. Anda dapat memiliki lebih dari satu direktori `internal` di setiap tingkatan proyek anda.
 
-Secara opsional anda dapat menambahkan struktur tambahan ke paket internal anda, untuk memisahkan kode internal yang bersifat berbagi (shared) dan tidak berbagi (non-shared). Hal ini tidak diwajibkan (terutama untuk proyek-proyek kecil), tetapi bagus untuk memiliki petunjuk visual yang menunjukkan penggunaan paket yang dimaksudkan. Sebenarnya Kode aplikasi dapat ditempatkan di direktori `/internal/app` (misalnya, `/internal/app/myapp`) dan kode yang dibagikan oleh aplikasi tersebut dapat ditempatkan di direktori `/internal/pkg` (misalnya, `/internal/pkg/myprivlib`).
+Secara opsional anda dapat menambahkan struktur tambahan ke paket internal anda, untuk memisahkan kode internal yang bersifat shared dan non-shared. Hal ini tidak diwajibkan (terutama untuk proyek-proyek kecil), tetapi bagus untuk memiliki petunjuk visual yang menunjukkan penggunaan paket yang dimaksudkan. Sebenarnya kode aplikasi dapat ditempatkan di direktori `/internal/app` (misalnya, `/internal/app/myapp`) dan kode yang dibagikan oleh aplikasi tersebut dapat ditempatkan di direktori `/internal/pkg` (misalnya, `/internal/pkg/myprivlib`).
 
 ### `/pkg`
 
-Kode library yang boleh digunakan oleh aplikasi eksternal (misalnya, `/pkg/mypubliclib`). Proyek lain akan mengimpor library ini dengan harapan dapat berfungsi, jadi berpikirlah dua kali sebelum Anda meletakkan sesuatu di sini :-) Perlu dicatat bahwa direktori `internal` adalah cara yang lebih baik untuk memastikan paket pribadi Anda tidak dapat diimpor karena dijaga oleh Go. Namun, direktori `/pkg` tetap cara yang baik untuk mengkomunikasikan secara eksplisit  bahwa kode di dalam direktori tersebut aman digunakan oleh orang lain. Postingan [`I'll take pkg over internal`](https://travisjeffery.com/b/2019/11/i-ll-take-pkg-over-internal/) oleh Travis Jeffery memberikan gambaran yang baik tentang direktori `pkg` dan `internal` serta kapan waktu yang tepat untuk menggunakannya.
+Kode library yang boleh digunakan oleh aplikasi eksternal (misalnya, `/pkg/mypubliclib`). Proyek lain akan mengimpor library ini dengan harapan dapat berfungsi, jadi berpikirlah dua kali sebelum anda meletakkan sesuatu di sini :-) Perlu dicatat bahwa direktori `internal` adalah cara yang lebih baik untuk memastikan paket pribadi anda tidak dapat diimpor karena dijaga oleh Go. Namun, direktori `/pkg` tetap cara yang baik untuk mengkomunikasikan secara eksplisit  bahwa kode di dalam direktori tersebut aman digunakan oleh orang lain. Postingan [`I'll take pkg over internal`](https://travisjeffery.com/b/2019/11/i-ll-take-pkg-over-internal/) oleh Travis Jeffery memberikan gambaran yang baik tentang direktori `pkg` dan `internal` serta kapan waktu yang tepat untuk menggunakannya.
 
 Hal ini merupakan cara untuk mengelompokkan kode Go di satu tempat ketika direktori root anda berisi banyak komponen dan direktori non-Go, sehingga memudahkan dalam menjalankan berbagai tools Go (seperti yang disebutkan dalam presentasi-presentasi ini: [`Best Practices for Industrial Programming`](https://www.youtube.com/watch?v=PTE4VJIdHPg) dari GopherCon EU 2018, [GopherCon 2018: Kat Zien - How Do You Structure Your Go Apps](https://www.youtube.com/watch?v=oL6JBUk6tj0), dan [GoLab 2018 - Massimiliano Pippi - Project layout patterns in Go](https://www.youtube.com/watch?v=3gQa1LWwuzk)).
 
 Lihat direktori [`/pkg`](pkg/README.md) jika anda ingin melihat repositori Go populer yang menggunakan pola tata letak proyek seperti ini. Ini adalah pola tata letak yang umum digunakan, akan tetapi tidak diterima secara universal dan beberapa anggota komunitas Go tidak merekomendasikannya.
 
-Tidak masalah jika juga anda tidak menggunakannya, jika proyek aplikasi anda benar-benar kecil dan tingkatan level tambahan tidak begitu penting (kecuali jika anda benar-benar menginginkannya :-)). Pikirkanlah tentang hal itu ketika proyek anda cukup besar dan direktori root anda sudah cukup sibuk (terutama jika anda memiliki banyak komponen aplikasi non-Go).
+Tidak masalah jika anda tidak menggunakannya, apabila proyek aplikasi anda benar-benar kecil dan tingkatan level tambahan tidak begitu penting (kecuali jika anda benar-benar menginginkannya :-)). Pikirkanlah hal tersebut ketika proyek anda cukup besar dan direktori root anda sudah cukup sibuk (terutama jika anda memiliki banyak komponen aplikasi non-Go).
 
 Asal-usul direktori `pkg`: Source code Go yang lama menggunakan `pkg` untuk paket-paketnya, dan kemudian berbagai proyek Go dalam komunitas mulai meniru pola tersebut (Lihat [`tweet Brad Fitzpatrick ini`](https://twitter.com/bradfitz/status/1039512487538970624) untuk konteks lebih lanjut).
 
 ### `/vendor`
 
-Dependency aplikasi (dikelola secara manual atau dengan dependency management tool favorit anda seperti fitur baru bawaan [`Go Modules`](https://github.com/golang/go/wiki/Modules). Perintah `go mod vendor` akan membuat direktori `/vendor `untuk anda. Perlu dicatat bahwa anda mungkin perlu menambahkan flag `-mod=vendor` ke perintah `go build` jika anda tidak menggunakan Go 1.14 di mana fitur tersebut sudah diaktifkan secara default.
+Dependensi aplikasi (dikelola secara manual atau dengan dependency management tool favorit anda seperti fitur baru bawaan [`Go Modules`](https://github.com/golang/go/wiki/Modules). Perintah `go mod vendor` akan membuat direktori `/vendor `untuk anda. Perlu dicatat bahwa anda mungkin perlu menambahkan flag `-mod=vendor` ke perintah `go build` jika anda tidak menggunakan Go 1.14 di mana fitur tersebut sudah diaktifkan secara default.
 
 Jangan meng-commit dependency aplikasi anda jika anda sedang membangun sebuah library.
 
-Perlu dicatat bahwa sejak versi [`1.13`](https://golang.org/doc/go1.13#modules), Go juga telah mengaktifkan fitur module proxy (menggunakan [`https://proxy.golang.org`](https://proxy.golang.org) sebagai server proxy modul default). Baca lebih lanjut tentang fitur ini [`di sini`](https://blog.golang.org/module-mirror-launch) untuk melihat apakah sesuai dengan semua persyaratan dan batasan anda. Jika sesuai, maka anda sama sekali tidak perlu menggunakan direktori `vendor`.
+Perlu dicatat bahwa sejak versi [`1.13`](https://golang.org/doc/go1.13#modules), Go telah mengaktifkan fitur module proxy (menggunakan [`https://proxy.golang.org`](https://proxy.golang.org) sebagai server proxy modul default). Baca lebih lanjut tentang fitur ini [`di sini`](https://blog.golang.org/module-mirror-launch) untuk melihat apakah sesuai dengan semua persyaratan dan batasan anda. Jika sesuai, maka anda sama sekali tidak perlu menggunakan direktori `vendor`.
 
 ## Direktori Servis Aplikasi
 
@@ -131,7 +131,7 @@ Konfigurasi dan template untuk IaaS, PaaS, orkestrasi sistem, dan container (doc
 
 ### `/test`
 
-Tambahan eksternal untuk menguji aplikasi dan data. Aturlah struktur direktori `/test` sesuai keinginan Anda. Untuk proyek yang lebih besar, disarankan memiliki subdirektori data. Misalnya, anda dapat memiliki `/test/data` atau `/test/testdata` jika anda ingin Go mengabaikan apa yang ada dalam direktori tersebut. Perhatikan bahwa Go juga akan mengabaikan direktori atau file yang dimulai dengan "." atau "_", sehingga Anda memiliki fleksibilitas lebih dalam penamaan direktori data pengujian.
+Tambahan eksternal untuk menguji aplikasi dan data. Aturlah struktur direktori `/test` sesuai keinginan anda. Untuk proyek yang lebih besar, disarankan memiliki subdirektori data. Misalnya, anda dapat memiliki `/test/data` atau `/test/testdata` jika anda ingin Go mengabaikan apa yang ada dalam direktori tersebut. Perhatikan bahwa Go juga akan mengabaikan direktori atau file yang dimulai dengan "." atau "_", sehingga anda memiliki fleksibilitas lebih dalam penamaan direktori data pengujian.
 
 Lihat direktori [`/test`](test/README.md) untuk contoh-contohnya.
 
@@ -151,7 +151,7 @@ Lihat direktori [`/tools`](tools/README.md) untuk contoh-contohnya.
 
 ### `/examples`
 
-Contoh-contoh aplikasi atau library publik Anda.
+Contoh-contoh aplikasi atau library publik anda.
 
 Lihat direktori [`/examples`](examples/README.md) untuk melihat contoh-contohnya.
 
@@ -169,7 +169,7 @@ Aset lainnya yang ada di repositori anda (gambar, logo, dll).
 
 ### `/website`
 
-Tempat untuk meletakkan data situs web proyek Anda jika anda tidak menggunakan halaman GitHub.
+Tempat untuk meletakkan data situs web proyek anda jika anda tidak menggunakan halaman GitHub.
 
 Lihat direktori [`/website`](website/README.md) untuk contoh-contohnya.
 
@@ -188,7 +188,7 @@ Jangan bingung antara direktori proyek `/src` dengan direktori `/src` yang digun
 
     [![Go Report Card](https://goreportcard.com/badge/github.com/golang-standards/project-layout?style=flat-square)](https://goreportcard.com/report/github.com/golang-standards/project-layout)
 
-* ~~[GoDoc](http://godoc.org) -Ini akan menyediakan versi online dari dokumentasi yang dihasilkan oleh GoDoc anda. Ubah tautan tersebut agar mengarah ke proyek Anda.~~
+* ~~[GoDoc](http://godoc.org) -Ini akan menyediakan versi online dari dokumentasi yang dihasilkan oleh GoDoc anda. Ubah tautan tersebut agar mengarah ke proyek anda.~~
 
     [![Go Doc](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat-square)](http://godoc.org/github.com/golang-standards/project-layout)
 
@@ -202,4 +202,4 @@ Jangan bingung antara direktori proyek `/src` dengan direktori `/src` yang digun
 
 ## Catatan
 
-Opsi Template lainaya dengan contoh konfigurasi, skrip, dan kode yang dapat digunakan kembali sedang dalam pengembangan (WIP).
+Opsi template lainya disertai contoh konfigurasi, skrip, dan kode yang dapat digunakan kembali sedang dalam pengembangan (WIP).
