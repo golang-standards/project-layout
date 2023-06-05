@@ -15,6 +15,7 @@ Traduceri:
 * [Русский](README_ru.md)
 * [Türkçe](README_tr.md)
 * [Українська](README_ua.md)
+* [Indonesian](README_id.md)
 
 ## General
 
