@@ -14,6 +14,7 @@ Traduções:
 * [Română](README_ro.md)
 * [Русский](README_ru.md)
 * [Türkçe](README_tr.md)
+* [Italiano](README_it.md)
 * [Vietnamese](README_vi.md)
 * [Українська](README_ua.md)
 * [Indonesian](README_id.md)
