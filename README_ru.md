@@ -116,7 +116,7 @@ Translations:
 
 Скрипты для сборки, установки, анализа и прочих операций над проектом.
 
-Эти скрипты позволяют оставить основной Makefile небольшим и простым (например, [`https://github.com/hashicorp/terraform/blob/master/Makefile`](https://github.com/hashicorp/terraform/blob/master/Makefile)).
+Эти скрипты позволяют оставить основной Makefile небольшим и простым (например, [`https://github.com/hashicorp/terraform/blob/main/Makefile`](https://github.com/hashicorp/terraform/blob/main/Makefile)).
 
 Ознакомьтесь с директорией [`/scripts`](scripts/README.md) для примеров.
 

@@ -117,7 +117,7 @@ OpenAPI/Swagger 스펙들, JSON schema 파일들, 프로토콜 정의 파일들.
 
 빌드, 설치, 분석, 기타 작업을 위한 스크립트들.
 
-이 스크립트들은 루트의 Makefile을 작고 간단하게 유지해줍니다 (e.g., [`https://github.com/hashicorp/terraform/blob/master/Makefile`](https://github.com/hashicorp/terraform/blob/master/Makefile)).
+이 스크립트들은 루트의 Makefile을 작고 간단하게 유지해줍니다 (e.g., [`https://github.com/hashicorp/terraform/blob/main/Makefile`](https://github.com/hashicorp/terraform/blob/main/Makefile)).
 
 예시로  [`/scripts`](scripts/README.md) 디렉터리를 확인하세요.
 
