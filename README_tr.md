@@ -14,7 +14,10 @@
 * [Română](README_ro.md)
 * [Русский](README_ru.md)
 * [Türkçe](README_tr.md)
+* [Italiano](README_it.md)
+* [Vietnamese](README_vi.md)
 * [Українська](README_ua.md)
+* [Indonesian](README_id.md)
 
 ## Genel Bakış:
 
@@ -114,7 +117,7 @@ Sistem başlangıcı (systemd, upstart, sysv) ve işlem yöneticisi (runit, supe
 
 Çeşitli derleme, yükleme, analiz ve benzeri işlemleri gerçekleştirmek için olan komut dosyaları.
 
-Bu dosyalar ana katmandaki Makefile dosyasını küçük ve basit tutar. (örneğin, [`https://github.com/hashicorp/terraform/blob/master/Makefile`](https://github.com/hashicorp/terraform/blob/master/Makefile)).
+Bu dosyalar ana katmandaki Makefile dosyasını küçük ve basit tutar. (örneğin, [`https://github.com/hashicorp/terraform/blob/main/Makefile`](https://github.com/hashicorp/terraform/blob/main/Makefile)).
 
 Örnekler için [`/scripts`](scripts/README.md) klasörüne bakabilirsiniz.
 

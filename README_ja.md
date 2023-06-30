@@ -14,7 +14,10 @@
 * [Română](README_ro.md)
 * [Русский](README_ru.md)
 * [Türkçe](README_tr.md)
+* [Italiano](README_it.md)
+* [Vietnamese](README_vi.md)
 * [Українська](README_ua.md)
+* [Indonesian](README_id.md)
 
 ## 概要
 
@@ -114,7 +117,7 @@ OpenAPI/Swaggerの仕様、JSONスキーマファイル、プロトコル定義�
 
 様々なビルド、インストール、解析などの操作を行うためのスクリプトです。
 
-これらのスクリプトはルートレベルの Makefile を小さくシンプルに保ちます (例: [`https://github.com/hashicorp/terraform/blob/master/Makefile`](https://github.com/hashicorp/terraform/blob/master/Makefile))。
+これらのスクリプトはルートレベルの Makefile を小さくシンプルに保ちます (例: [`https://github.com/hashicorp/terraform/blob/main/Makefile`](https://github.com/hashicorp/terraform/blob/main/Makefile))。
 
 例に関しては、[`/scripts`](scripts/README.md)ディレクトリを参照してください。
 

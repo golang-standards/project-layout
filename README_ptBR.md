@@ -14,7 +14,10 @@ Traduções:
 * [Română](README_ro.md)
 * [Русский](README_ru.md)
 * [Türkçe](README_tr.md)
+* [Italiano](README_it.md)
+* [Vietnamese](README_vi.md)
 * [Українська](README_ua.md)
+* [Indonesian](README_id.md)
 
 ## Visão geral
 
@@ -114,7 +117,7 @@ Configurações de inicialização do sistema (systemd, upstart, sysv) e gerenci
 
 Scripts para executar várias operações de construção, instalação, análise, etc.
 
-Esses scripts mantêm o Makefile de nível raiz pequeno e simples (ex. [`https://github.com/hashicorp/terraform/blob/master/Makefile`](https://github.com/hashicorp/terraform/blob/master/Makefile)).
+Esses scripts mantêm o Makefile de nível raiz pequeno e simples (ex. [`https://github.com/hashicorp/terraform/blob/main/Makefile`](https://github.com/hashicorp/terraform/blob/main/Makefile)).
 
 Veja o diretório [`/scripts`](scripts/README.md) para mais exemplos.
 

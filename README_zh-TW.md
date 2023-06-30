@@ -14,7 +14,10 @@
 * [Română](README_ro.md)
 * [Русский](README_ru.md)
 * [Türkçe](README_tr.md)
+* [Italiano](README_it.md)
+* [Vietnamese](README_vi.md)
 * [Українська](README_ua.md)
+* [Indonesian](README_id.md)
 
 這是 Go 應用程式專案的基本目錄結構。它不是核心 Go 開發團隊定義的官方標準；然而，它是 Go 生態系統中一組常見的老專案和新專案的目錄結構。其中一些目錄結構比其他目錄結構更受歡迎。這個專案目錄結構還有一些細微的改進，可以支援任何大型且實用的應用程式目錄結構。
 
@@ -112,7 +115,7 @@ Web 應用程式相關的元件：靜態 Web 檔案、伺服器端範本與 SPAs
 
 放置要執行各種建置、安裝、分析等操作的命令腳本！
 
-這些腳本可以讓你在根目錄的 `Makefile` 更小、更簡單（例如：[`https://github.com/hashicorp/terraform/blob/master/Makefile`](https://github.com/hashicorp/terraform/blob/master/Makefile))。
+這些腳本可以讓你在根目錄的 `Makefile` 更小、更簡單（例如：[`https://github.com/hashicorp/terraform/blob/main/Makefile`](https://github.com/hashicorp/terraform/blob/main/Makefile))。
 
 請查看 [`/scripts`](scripts/README.md) 目錄獲得更多範例。
 

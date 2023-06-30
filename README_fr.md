@@ -14,7 +14,10 @@ Traductions:
 * [Română](README_ro.md)
 * [Русский](README_ru.md)
 * [Türkçe](README_tr.md)
+* [Italiano](README_it.md)
+* [Vietnamese](README_vi.md)
 * [Українська](README_ua.md)
+* [Indonesian](README_id.md)
 
 ## Introduction
 
@@ -68,7 +71,7 @@ Vous pouvez également ajouter un peu de structure dans vos packages internes po
 
 ### `/pkg`
 
-Placez-y le code qui peut être réutilisé par les applications externes (p. ex., `/pkg/mypubliclib`). D'autres projets peuvent importer ces bibliothèques et s'attendent donc à ce qu'elles soient fonctionnelles, pensez y donc à deux fois avant de mettre du code dans ce dossier :-) Utiliser le dossier `internal` est une manière plus adéquate de garder vos packages privés et non importables car c'est intégré au compilateur Go. Le dossier `/pkg` est nénanmoins une bonne manière d'indiquer que le code contenu dans ce dossier peut être utilisé par les autres utilisateurs sans problème. L'article de blog de Travis Jeffery [`I'll take pkg over internal`](https://travisjeffery.com/b/2019/11/i-ll-take-pkg-over-internal/) explique plus en détail les différences entre les dossier `pkg` et `internal` et quand il fait sens de les utiliser.
+Placez-y le code qui peut être réutilisé par les applications externes (p. ex., `/pkg/mypubliclib`). D'autres projets peuvent importer ces bibliothèques et s'attendent donc à ce qu'elles soient fonctionnelles, pensez y donc à deux fois avant de mettre du code dans ce dossier :-) Utiliser le dossier `internal` est une manière plus adéquate de garder vos packages privés et non importables car c'est intégré au compilateur Go. Le dossier `/pkg` est néanmoins une bonne manière d'indiquer que le code contenu dans ce dossier peut être utilisé par les autres utilisateurs sans problème. L'article de blog de Travis Jeffery [`I'll take pkg over internal`](https://travisjeffery.com/b/2019/11/i-ll-take-pkg-over-internal/) explique plus en détail les différences entre les dossier `pkg` et `internal` et quand il fait sens de les utiliser.
 
 C'est également une manière de regrouper tout votre code Go au même endroit lorsque votre dossier racine comporte de nombreux composants et dossiers non-Go, permettant plus facilement de lancer les différents outils Go, tel que mentionné dans les conférences suivantes : [`Best Practices for Industrial Programming`](https://www.youtube.com/watch?v=PTE4VJIdHPg) lors de GopherCon EU 2018, [GopherCon 2018: Kat Zien - How Do You Structure Your Go Apps](https://www.youtube.com/watch?v=oL6JBUk6tj0) et [GoLab 2018 - Massimiliano Pippi - Project layout patterns in Go](https://www.youtube.com/watch?v=3gQa1LWwuzk)).
 
@@ -114,7 +117,7 @@ Initialisation du système (systemd, upstart, sysv) et configurations des admini
 
 Scripts permettant différentes opérations telles que le build, l'installation, des analyses, ...
 
-Ces scripts permettent de garder le Makefile du dossier racine réduit et simple (p. ex., [`https://github.com/hashicorp/terraform/blob/master/Makefile`](https://github.com/hashicorp/terraform/blob/master/Makefile)).
+Ces scripts permettent de garder le Makefile du dossier racine réduit et simple (p. ex., [`https://github.com/hashicorp/terraform/blob/main/Makefile`](https://github.com/hashicorp/terraform/blob/main/Makefile)).
 
 Voir le dossier [`/scripts`](scripts/README.md) pour des exemples.
 
