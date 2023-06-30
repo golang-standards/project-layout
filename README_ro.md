@@ -2,14 +2,22 @@
 
 Traduceri:
 
+* [English](README.md)
 * [한국어 문서](README_ko.md)
 * [简体中文](README_zh.md)
 * [正體中文](README_zh-TW.md)
 * [简体中文](README_zh-CN.md) - ???
 * [Français](README_fr.md)
 * [日本語](README_ja.md)
+* [Portuguese](README_ptBR.md)
 * [Español](README_es.md)
 * [Română](README_ro.md)
+* [Русский](README_ru.md)
+* [Türkçe](README_tr.md)
+* [Italiano](README_it.md)
+* [Vietnamese](README_vi.md)
+* [Українська](README_ua.md)
+* [Indonesian](README_id.md)
 
 ## General
 
@@ -107,7 +115,7 @@ Configurări de inițializare system (systemd, upstart, sysv) și gestiune/super
 
 Scripturi pentru rularea diferitelor operații.
 
-Ele țin nivelul rădăcinii Makefile mic și simplu (e.g., [`https://github.com/hashicorp/terraform/blob/master/Makefile`](https://github.com/hashicorp/terraform/blob/master/Makefile)).
+Ele țin nivelul rădăcinii Makefile mic și simplu (e.g., [`https://github.com/hashicorp/terraform/blob/main/Makefile`](https://github.com/hashicorp/terraform/blob/main/Makefile)).
 
 Vezi directorul [`/scripts`](scripts/README.md) pentru examples.
 
