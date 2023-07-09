@@ -12,7 +12,10 @@
 * [Română](README_ro.md)
 * [Русский](README_ru.md)
 * [Türkçe](README_tr.md)
+* [Italiano](README_it.md)
+* [Vietnamese](README_vi.md)
 * [Українська](README_ua.md)
+* [Indonesian](README_id.md)
 
 这是Go应用程序项目的基础布局。这不是Go核心开发团队定义的官方标准；无论是在经典项目还是在新兴的项目中，这都是Go生态系统中一组常见的项目布局模式。这其中有一些模式比另外的一些更受欢迎。它通过几个支撑目录为任何足够大规模的实际应用程序提供一些增强功能。
 
@@ -26,20 +29,22 @@ Go 1.14 `Go Modules`已经可以用于生产环境。没有什么特殊原因的
 
 如果需要一些关于命名、格式化或者样式方面的帮助，请先运行[`gofmt`](https://golang.org/cmd/gofmt/)和[`golint`](https://github.com/golang/lint)。另外，请务必阅读以下Go代码样式指南和建议：
 
-- https://talks.golang.org/2014/names.slide
-- https://golang.org/doc/effective_go.html#names
-- https://blog.golang.org/package-names
-- https://github.com/golang/go/wiki/CodeReviewComments
-- Style guideline for Go packages (rakyll/JBD)
+* <https://talks.golang.org/2014/names.slide>
+* <https://golang.org/doc/effective_go.html#names>
+* <https://blog.golang.org/package-names>
+
+* <https://github.com/golang/go/wiki/CodeReviewComments>
+
+* Style guideline for Go packages (rakyll/JBD)
 
 更多背景信息请查看[`Go Project Layout`](https://medium.com/golang-learn/go-project-layout-e5213cdcfaa2)。
 
 有关命名和项目包组织样式以及其他代码结构的更多推荐文章：
 
-- [GopherCon EU 2018: Peter Bourgon - Best Practices for Industrial Programming](https://www.youtube.com/watch?v=PTE4VJIdHPg)
-- [GopherCon Russia 2018: Ashley McNamara + Brian Ketelsen - Go best practices](https://www.youtube.com/watch?v=MzTcsI6tn-0)
-- [GopherCon 2017: Edward Muller - Go Anti-Patterns](https://www.youtube.com/watch?v=ltqV6pDKZD8)
-- [GopherCon 2018: Kat Zien - How Do You Structure Your Go Apps](https://www.youtube.com/watch?v=oL6JBUk6tj0)
+* [GopherCon EU 2018: Peter Bourgon - Best Practices for Industrial Programming](https://www.youtube.com/watch?v=PTE4VJIdHPg)
+* [GopherCon Russia 2018: Ashley McNamara + Brian Ketelsen - Go best practices](https://www.youtube.com/watch?v=MzTcsI6tn-0)
+* [GopherCon 2017: Edward Muller - Go Anti-Patterns](https://www.youtube.com/watch?v=ltqV6pDKZD8)
+* [GopherCon 2018: Kat Zien - How Do You Structure Your Go Apps](https://www.youtube.com/watch?v=oL6JBUk6tj0)
 
 ## Go目录
 
@@ -49,7 +54,7 @@ Go 1.14 `Go Modules`已经可以用于生产环境。没有什么特殊原因的
 
 对于每个应用程序来说这个目录的名字应该和项目可执行文件的名字蔡徐坤匹配（例如，`/cmd/myapp`）。
 
-不要在这个目录中放太多的代码。如果目录中的代码可以被其他项目导入并使用，那么应该把他们放在`/pkg`目录。如果目录中的代码不可重用，或者不希望被他人使用，应该将代码放在`/internal`目录。显示的表明意图比较好！
+不要在这个目录中放太多的代码。如果目录中的代码可以被其他项目导入并使用，那么应该把他们放在`/pkg`目录。如果目录中的代码不可重用，或者不希望被他人使用，应该将代码放在`/internal`目录。显式地表明意图比较好！
 
 通常来说，项目都应该拥有一个小的`main`函数，并在`main`函数中导入或者调用`/internal`和`/pkg`目录中的代码。
 
@@ -109,7 +114,7 @@ Web应用程序特定的组件：静态Web资源，服务器端模板和单页�
 
 用于执行各种构建，安装，分析等操作的脚本。
 
-这些脚本使根级别的Makefile变得更小更简单（例如 https://github.com/hashicorp/terraform/blob/master/Makefile ）。
+这些脚本使根级别的Makefile变得更小更简单（例如<https://github.com/hashicorp/terraform/blob/main/Makefile>）。
 
 更多样例查看[`/scripts`](https://github.com/golang-standards/project-layout/blob/master/scripts/README.md)。
 
@@ -175,13 +180,13 @@ Git的钩子。
 
 有一些Go项目确实包含`src`文件夹，但通常只有在开发者是从Java（这是Java中一个通用的模式）转过来的情况下才会有。如果可以的话请不要使用这种Java模式。你肯定不希望你的Go代码和项目看起来像Java。
 
-不要将项目级别的`/src`目录与Go用于其工作空间的`/src`目录混淆，就像[How to Write Go Code](https://golang.org/doc/code.html)中描述的那样。`$GOPATH`环境变量指向当前的工作空间（默认情况下指向非Windows系统中的`$HOME/go`）。此工作空间包括顶级`/pkg`，`/bin`和`/src`目录。实际的项目最终变成`/src`下的子目录，因此，如果项目中有`/src`目录，则项目路径将会变成：`/some/path/to/workspace/src/your_project/ src/your_code.go`。请注意，使用Go 1.11，可以将项目放在GOPATH之外，但这并不意味着使用此布局模式是个好主意。
+不要将项目级别的`/src`目录与Go用于其工作空间的`/src`目录混淆，就像[How to Write Go Code](https://golang.org/doc/code.html)中描述的那样。`$GOPATH`环境变量指向当前的工作空间（默认情况下指向非Windows系统中的`$HOME/go`）。此工作空间包括顶级`/pkg`，`/bin`和`/src`目录。实际的项目最终变成`/src`下的子目录，因此，如果项目中有`/src`目录，则项目路径将会变成：`/some/path/to/workspace/src/your_project/src/your_code.go`。请注意，使用Go 1.11，可以将项目放在GOPATH之外，但这并不意味着使用此布局模式是个好主意。
 
 ## 徽章
 
-- [Go Report Card](https://goreportcard.com/)：它将使用`gofmt`，`vet`，`gocyclo`，`golint`，`ineffassign`，`license`和`mispell`扫描项目中的代码。将`github.com/golang-standards/project-layout`替换为你的项目的引用。
-- [GoDoc](http://godoc.org/)：它将提供GoDoc生成的文档的在线版本。更改链接以指向你的项目。
-- Release：它将显示你项目的最新版本号。更改github链接以指向你的项目。
+* [Go Report Card](https://goreportcard.com/)：它将使用`gofmt`，`vet`，`gocyclo`，`golint`，`ineffassign`，`license`和`mispell`扫描项目中的代码。将`github.com/golang-standards/project-layout`替换为你的项目的引用。
+* [GoDoc](http://godoc.org/)：它将提供GoDoc生成的文档的在线版本。更改链接以指向你的项目。
+* Release：它将显示你项目的最新版本号。更改github链接以指向你的项目。
 
 [![Go Report Card](https://goreportcard.com/badge/github.com/golang-standards/project-layout?style=flat-square)](https://goreportcard.com/report/github.com/golang-standards/project-layout)
 [![Go Doc](https://img.shields.io/badge/godoc-reference-blue.svg?style=flat-square)](http://godoc.org/github.com/golang-standards/project-layout)

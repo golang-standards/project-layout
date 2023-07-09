@@ -14,7 +14,10 @@
 * [Română](README_ro.md)
 * [Русский](README_ru.md)
 * [Türkçe](README_tr.md)
+* [Italiano](README_it.md)
+* [Vietnamese](README_vi.md)
 * [Українська](README_ua.md)
+* [Indonesian](README_id.md)
 
 ## 개요
 
@@ -70,7 +73,7 @@ Internal 패키지에서 공유되는 내부 코드와 공유되지 않는 내�
 
 ### `/pkg`
 
-외부 애플리케이션에서 사용되어도 괜찮은 라이브러리 코드입니다 (e.g., `/pkg/mypubliclib`). 다른 프로젝트는 이 라이브러리들이 작동할거라고 예상하고 임포트 할 것 이므로, 여기에 무언가를 넣기 전에 두번 고민하세요 :-) `internal`디렉터리는 개인적인 패키지들이 임포트 불가능하도록 하는 더 좋은 방법인데, 이유는 Go가 이를 강제하기 떄문입니다. `/pkg` 디렉터리는 그 디렉터리 안의 코드가 다른 사람들에 의해 사용되어도 안전하다고 명시적으로 보여주는 좋은 방법입니다. Travis Jeffery의 [`I'll take pkg over internal`](https://travisjeffery.com/b/2019/11/i-ll-take-pkg-over-internal/) 블로그 포스트는 `pkg` 와 `internal` 디렉터리와 언제 쓰는게 맞을지에 대해 좋은 개요를 제공합니다. 
+외부 애플리케이션에서 사용되어도 괜찮은 라이브러리 코드입니다 (e.g., `/pkg/mypubliclib`). 다른 프로젝트는 이 라이브러리들이 작동할거라고 예상하고 임포트 할 것 이므로, 여기에 무언가를 넣기 전에 두번 고민하세요 :-) `internal`디렉터리는 개인적인 패키지들이 임포트 불가능하도록 하는 더 좋은 방법인데, 이유는 Go가 이를 강제하기 때문입니다. `/pkg` 디렉터리는 그 디렉터리 안의 코드가 다른 사람들에 의해 사용되어도 안전하다고 명시적으로 보여주는 좋은 방법입니다. Travis Jeffery의 [`I'll take pkg over internal`](https://travisjeffery.com/b/2019/11/i-ll-take-pkg-over-internal/) 블로그 포스트는 `pkg` 와 `internal` 디렉터리와 언제 쓰는게 맞을지에 대해 좋은 개요를 제공합니다. 
 
 또한 루트 디렉터리에 많은 Go가 아닌 컴포넌트와 디렉터리를 포함하고 있다면 Go 코드를 한 곳에 모아서 다양한 Go 툴들을 쉽게 실행할 수 있습니다 (이 발표들에서 언급되었던것 처럼: GopherCon EU 2018의 [`Best Practices for Industrial Programming`](https://www.youtube.com/watch?v=PTE4VJIdHPg),  [GopherCon 2018: Kat Zien - How Do You Structure Your Go Apps](https://www.youtube.com/watch?v=oL6JBUk6tj0) 와 [GoLab 2018 - Massimiliano Pippi - Project layout patterns in Go](https://www.youtube.com/watch?v=3gQa1LWwuzk)).
 
@@ -116,7 +119,7 @@ OpenAPI/Swagger 스펙들, JSON schema 파일들, 프로토콜 정의 파일들.
 
 빌드, 설치, 분석, 기타 작업을 위한 스크립트들.
 
-이 스크립트들은 루트의 Makefile을 작고 간단하게 유지해줍니다 (e.g., [`https://github.com/hashicorp/terraform/blob/master/Makefile`](https://github.com/hashicorp/terraform/blob/master/Makefile)).
+이 스크립트들은 루트의 Makefile을 작고 간단하게 유지해줍니다 (e.g., [`https://github.com/hashicorp/terraform/blob/main/Makefile`](https://github.com/hashicorp/terraform/blob/main/Makefile)).
 
 예시로  [`/scripts`](scripts/README.md) 디렉터리를 확인하세요.
 
