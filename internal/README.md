@@ -11,10 +11,12 @@ Examples:
 * https://github.com/perkeep/perkeep/tree/master/internal
 * https://github.com/jaegertracing/jaeger/tree/main/internal
 * https://github.com/moby/moby/tree/master/internal
-* https://github.com/satellity/satellity/tree/main/internal
+* https://github.com/satellity/satellity/tree/master/internal
+* https://github.com/marmotedu/iam/tree/master/internal
 
 ## `/internal/pkg`
 
 Examples:
 
 * https://github.com/hashicorp/waypoint/tree/main/internal/pkg
+* https://github.com/marmotedu/iam/tree/master/internal/pkg
