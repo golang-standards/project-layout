@@ -1,0 +1,11 @@
+version: '3'
+services:
+  database:
+    image: postgres
+    container_name: sobaki-postgres
+    environment:
+      - POSTGRES_DB=sobaki
+      - POSTGRES_USER=sobaka
+      - POSTGRES_PASSWORD=nikitos_sosaka
+    ports:
+      - 5432:5432
