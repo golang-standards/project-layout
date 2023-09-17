@@ -6,21 +6,15 @@ import (
 	"github.com/gin-gonic/gin"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
-	"log"
 )
-
-var GlobalDb *gorm.DB
 
 func main() {
 	dbUrl := "postgres://sobaka:nikitos_sosaka@localhost:5432/sobaki?sslmode=disable"
-	log.Print("db init started")
 	RunMigrations(dbUrl)
 	db := InitDao(dbUrl)
-	GlobalDb = db
-	log.Print("db init finished")
 
 	router := gin.Default()
-	dog.InitDogHandlers(router, GlobalDb)
+	dog.InitDogHandlers(router, db)
 	router.Run("localhost:8080")
 }
 
