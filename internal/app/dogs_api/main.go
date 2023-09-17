@@ -15,6 +15,7 @@ func main() {
 
 	router := gin.Default()
 	dog.InitDogHandlers(router, db)
+	user.InitUserHandlers(router, db)
 	router.Run("localhost:8080")
 }
 
