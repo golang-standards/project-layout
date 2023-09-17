@@ -7,27 +7,27 @@ import (
 )
 
 type Handler struct {
-	s *Service
+	service *Service
 }
 
 func InitDogHandlers(router *gin.Engine, db *gorm.DB) {
-	s := New(db)
-	h := Handler{s: s}
+	dogService := InitDogService(db)
+	handler := Handler{service: dogService}
 
-	router.GET("/dogs", h.GetDogsHandler)
-	router.GET("/dogs/:id", h.GetDogByIdHandler)
-	router.POST("/dogs", h.CreateDogHandler)
-	router.DELETE("/dogs/:id", h.DeleteDogHandler)
-	router.PATCH("/dogs/:id", h.UpdateDogHandler)
+	router.GET("/dogs", handler.GetDogsHandler)
+	router.GET("/dogs/:id", handler.GetDogByIdHandler)
+	router.POST("/dogs", handler.CreateDogHandler)
+	router.DELETE("/dogs/:id", handler.DeleteDogHandler)
+	router.PATCH("/dogs/:id", handler.UpdateDogHandler)
 }
 
 func (h *Handler) GetDogsHandler(c *gin.Context) {
-	c.IndentedJSON(http.StatusOK, h.s.GetDogs())
+	c.IndentedJSON(http.StatusOK, h.service.GetDogs())
 }
 
 func (h *Handler) GetDogByIdHandler(c *gin.Context) {
 	var id = c.Param("id")
-	var dog, err = h.s.GetDogById(id)
+	var dog, err = h.service.GetDogById(id)
 	if err != nil {
 		c.AbortWithError(http.StatusNotFound, err)
 		return
@@ -41,13 +41,13 @@ func (h *Handler) CreateDogHandler(c *gin.Context) {
 		c.AbortWithError(http.StatusBadRequest, err)
 		return
 	}
-	h.s.CreateDog(dog)
+	h.service.CreateDog(dog)
 	c.IndentedJSON(http.StatusCreated, &dog)
 }
 
 func (h *Handler) DeleteDogHandler(c *gin.Context) {
 	id := c.Param("id")
-	h.s.DeleteDog(id)
+	h.service.DeleteDog(id)
 }
 
 func (h *Handler) UpdateDogHandler(c *gin.Context) {
@@ -58,7 +58,7 @@ func (h *Handler) UpdateDogHandler(c *gin.Context) {
 		c.AbortWithError(http.StatusBadRequest, err)
 		return
 	}
-	result, err := h.s.UpdateDog(id, updateDto)
+	result, err := h.service.UpdateDog(id, updateDto)
 	if err != nil {
 		panic(err)
 	}
