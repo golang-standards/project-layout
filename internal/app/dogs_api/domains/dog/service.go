@@ -22,7 +22,7 @@ func (s *Service) GetDogs() []Dog {
 func (s *Service) GetDogById(id string) (*Dog, error) {
 	var dog Dog
 	err := s.db.Preload(clause.Associations).First(&dog, id).Error
-	if err != nil && err.Error() == "record not found" {
+	if err != nil {
 		return nil, err
 	}
 	return &dog, nil

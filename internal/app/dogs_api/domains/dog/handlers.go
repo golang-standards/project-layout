@@ -29,8 +29,12 @@ func (h *Handler) GetDogByIdHandler(c *gin.Context) {
 	var id = c.Param("id")
 	var dog, err = h.service.GetDogById(id)
 	if err != nil {
-		c.AbortWithError(http.StatusNotFound, err)
-		return
+		if err.Error() == "record not found" {
+			_ = c.AbortWithError(http.StatusNotFound, err)
+			return
+		} else {
+			_ = c.AbortWithError(http.StatusInternalServerError, err)
+		}
 	}
 	c.IndentedJSON(http.StatusOK, dog)
 }
@@ -38,7 +42,7 @@ func (h *Handler) GetDogByIdHandler(c *gin.Context) {
 func (h *Handler) CreateDogHandler(c *gin.Context) {
 	var dog *Dog
 	if err := c.BindJSON(&dog); err != nil {
-		c.AbortWithError(http.StatusBadRequest, err)
+		_ = c.AbortWithError(http.StatusBadRequest, err)
 		return
 	}
 	h.service.CreateDog(dog)
@@ -55,7 +59,7 @@ func (h *Handler) UpdateDogHandler(c *gin.Context) {
 
 	var updateDto *UpdateDto
 	if err := c.BindJSON(updateDto); err != nil {
-		c.AbortWithError(http.StatusBadRequest, err)
+		_ = c.AbortWithError(http.StatusBadRequest, err)
 		return
 	}
 	result, err := h.service.UpdateDog(id, updateDto)
