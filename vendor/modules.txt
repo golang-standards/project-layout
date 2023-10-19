@@ -1,0 +1,46 @@
+# github.com/fsnotify/fsnotify v1.6.0
+## explicit; go 1.16
+# github.com/georgysavva/scany/v2 v2.0.0
+## explicit; go 1.18
+# github.com/hashicorp/hcl v1.0.0
+## explicit
+# github.com/jackc/pgx v3.6.2+incompatible
+## explicit
+# github.com/magiconair/properties v1.8.7
+## explicit; go 1.19
+# github.com/mitchellh/mapstructure v1.5.0
+## explicit; go 1.14
+# github.com/pelletier/go-toml/v2 v2.1.0
+## explicit; go 1.16
+# github.com/pkg/errors v0.9.1
+## explicit
+# github.com/sagikazarmark/locafero v0.3.0
+## explicit; go 1.20
+# github.com/sagikazarmark/slog-shim v0.1.0
+## explicit; go 1.20
+# github.com/sourcegraph/conc v0.3.0
+## explicit; go 1.19
+# github.com/spf13/afero v1.10.0
+## explicit; go 1.16
+# github.com/spf13/cast v1.5.1
+## explicit; go 1.18
+# github.com/spf13/pflag v1.0.5
+## explicit; go 1.12
+# github.com/subosito/gotenv v1.6.0
+## explicit; go 1.18
+# go.uber.org/atomic v1.11.0
+## explicit; go 1.18
+# go.uber.org/multierr v1.11.0
+## explicit; go 1.19
+# golang.org/x/crypto v0.14.0
+## explicit; go 1.17
+# golang.org/x/exp v0.0.0-20231006140011-7918f672742d
+## explicit; go 1.20
+# golang.org/x/sys v0.13.0
+## explicit; go 1.17
+# golang.org/x/text v0.13.0
+## explicit; go 1.17
+# gopkg.in/ini.v1 v1.67.0
+## explicit
+# gopkg.in/yaml.v3 v3.0.1
+## explicit
