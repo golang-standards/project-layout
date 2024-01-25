@@ -12,6 +12,7 @@ Examples:
 * https://github.com/jaegertracing/jaeger/tree/main/internal
 * https://github.com/moby/moby/tree/master/internal
 * https://github.com/satellity/satellity/tree/main/internal
+* https://github.com/minio/minio/tree/master/internal
 
 ## `/internal/pkg`
 
