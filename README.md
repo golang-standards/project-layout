@@ -30,7 +30,7 @@ This project layout is intentionally generic and it doesn't try to impose a spec
 
 This is a community effort. Open an issue if you see a new pattern or if you think one of the existing patterns needs to be updated.
 
-If you need help with naming, formatting and style start by running [`gofmt`](https://golang.org/cmd/gofmt/) and [`golint`](https://github.com/golang/lint). Also make sure to read these Go code style guidelines and recommendations:
+If you need help with naming, formatting and style start by running [`gofmt`](https://golang.org/cmd/gofmt/) and [`staticcheck`](https://github.com/dominikh/go-tools/tree/master/cmd/staticcheck). The previous standard linter, golint, is now deprecated and not maintained; use of a maintained linter such as staticcheck is recommended. Also make sure to read these Go code style guidelines and recommendations:
 * https://talks.golang.org/2014/names.slide
 * https://golang.org/doc/effective_go.html#names
 * https://blog.golang.org/package-names
