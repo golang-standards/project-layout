@@ -15,6 +15,7 @@ Terjemahan:
 * [Türkçe](README_tr.md)
 * [Українська](README_ua.md)
 * [Indonesian](README_id.md)
+* [हिन्दी](README_hi.md)
 
 ## Ringkasan
 
