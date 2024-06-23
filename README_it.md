@@ -22,7 +22,7 @@ Questa è un'impostazione di base per applicativi Go. **Non è uno standard uffi
 
 **`Se stai imparando Go o se stai sviluppando una PoC o un semplice progetto personale, questa struttura è una complicazione non necessaria. Invece inizia con qualcosa di veramente semplice (un unico file `main.go` e `go.mod` è abbastanza).`** Con la crescita del tuo progetto tieni a mente che sarà sempre più importante la corretta impostazione del tuo codice, altrimenti finirai con codice disordinato con molte dipendenze nascoste e uno stato globale. Quando più persone lavorano su un progetto, avrai bisogno di un'impostazione ancora più strutturata. Questo è il momento in cui è importante introdurre un modo comune di gestire pacchetti e librerie. Quando hai un progetto open source o quando sai che altri progetti importano il codice del tuo repository, questo è il momento in cui è importante avere pacchetti e codice privato (`internal`). Clona il repository, mantieni ciò di cui hai bisogno e cancella qualsiasi altra cosa! Solo perchè è presente non significa che vada usato. Nessuno di questi pattern sono usati in ogni singolo progetto. Perfino il `vendor` pattern non è universale.
 
-Con Go 1.14 i [`Go Modules`](https://github.com/golang/go/wiki/Modules) sono finalmente pronti per la produzione. Usa [`Go Modules`](https://blog.golang.org/using-go-modules) fino a quando hai una specifica ragione per non usarli e se lo farai non dovrai preoccuparti riguardo $GOPATH e dove mettere il tuo progetto. Il file `go.mod` di base nel repo presuppone che il tuo progetto sia pubblicato su GitHub, ma non è obbligatorio. Il path del modulo può essere uno qualsiasi, anche se la prima parte del path del modulo dovrebbe avere un punto nel nome (l'attuale versione di Go non lo forza più, ma se stai usando una delle versioni leggermente più vecchie, non essere sorpreso se le tue builds falliranno). Guarda le Issues [`37554`](https://github.com/golang/go/issues/37554) e [`32819`](https://github.com/golang/go/issues/32819) se vuoi saperne di più a riguardo.
+Con Go 1.14 i [`Go Modules`](https://go.dev/wiki/Modules) sono finalmente pronti per la produzione. Usa [`Go Modules`](https://blog.golang.org/using-go-modules) fino a quando hai una specifica ragione per non usarli e se lo farai non dovrai preoccuparti riguardo $GOPATH e dove mettere il tuo progetto. Il file `go.mod` di base nel repo presuppone che il tuo progetto sia pubblicato su GitHub, ma non è obbligatorio. Il path del modulo può essere uno qualsiasi, anche se la prima parte del path del modulo dovrebbe avere un punto nel nome (l'attuale versione di Go non lo forza più, ma se stai usando una delle versioni leggermente più vecchie, non essere sorpreso se le tue builds falliranno). Guarda le Issues [`37554`](https://github.com/golang/go/issues/37554) e [`32819`](https://github.com/golang/go/issues/32819) se vuoi saperne di più a riguardo.
 
 Questa struttura di progetto è intenzionalmente generica e non cerca di imporre una specifica impostazione per i packages Go.
 
@@ -32,7 +32,7 @@ Se hai bisogno di aiuto per la nomenclatura, formattazione e lo stile, inizia da
 * https://talks.golang.org/2014/names.slide
 * https://golang.org/doc/effective_go.html#names
 * https://blog.golang.org/package-names
-* https://github.com/golang/go/wiki/CodeReviewComments
+* https://go.dev/wiki/CodeReviewComments
 * [Style guideline for Go packages](https://rakyll.org/style-packages) (rakyll/JBD)
 
 Vedi [`Go Project Layout`](https://medium.com/golang-learn/go-project-layout-e5213cdcfaa2) per l'aggiunta di altre informazioni a contorno.
@@ -81,7 +81,7 @@ Origini della cartella `pkg`: Il vecchio codice sorgente di Go usava la cartella
 
 ### `/vendor`
 
-Dipendenze dell'applicativo (gestite manualmente o dal tuo gestore di pacchetti preferito come la nuova feature built-in [`Go Modules`](https://github.com/golang/go/wiki/Modules)). Il comando `go mod vendor` creerà  la cartella `/vendor` per te. Tiene presente che potrebbe essere necessario aggiungere il flag `-mod=vendor` al tuo comando `go build` se non stai utilizzando Go 1.14, dove è utilizzato di default.
+Dipendenze dell'applicativo (gestite manualmente o dal tuo gestore di pacchetti preferito come la nuova feature built-in [`Go Modules`](https://go.dev/wiki/Modules)). Il comando `go mod vendor` creerà  la cartella `/vendor` per te. Tiene presente che potrebbe essere necessario aggiungere il flag `-mod=vendor` al tuo comando `go build` se non stai utilizzando Go 1.14, dove è utilizzato di default.
 
 Non effettuare il commit delle dipendenze del tuo applicativo se stai sviluppando una libreria.
 

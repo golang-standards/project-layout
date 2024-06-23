@@ -23,7 +23,7 @@
 
 如果你才剛開始學習 Go 程式語言，或者你只是想建立一個實驗性的玩具專案，這個專案目錄結構就過於複雜了。從一個非常簡單的 `main.go` 檔案開始，其實已經綽綽有餘。但隨著專案增長，你一定要記得，維持一份良好的程式碼結構其實是非常重要的，否則你最終將會得到一堆淩亂的程式碼，這其中肯定也會包含大量隱藏的相依問題與全域狀態。當有越多人參與專案時，你也將需要更多、更好的目錄結構。這時候就是帶入套件/函式庫常見的管理方法最好的時機。當你擁有一個開源專案，或者當你知道有其他專案從你的專案匯入程式碼時，這時候擁有**私有的** (`internal`) 套件和程式碼就很重要。複製這個專案，保留你需要的內容，刪除所有用不到的內容！因為這些目錄結構在這裡並不意味著你全部都要用。這些目錄結構並不是每個專案都會這樣用，甚至連 `vendor` 模式也不是通用的。
 
-Go 1.14 的 [`Go Modules`](https://github.com/golang/go/wiki/Modules) 已經是正式版本，除非你有特定的理由不使用它們，否則請一律使用 [`Go Modules`](https://blog.golang.org/using-go-modules) 來管理套件。如果你用了 Go Modules 之後，就無需擔心 `$GOPATH` 與專案放置的位置。專案中的 `go.mod` 檔案假設你的專案放置在 GitHub 中，但這不是必須的。模組路徑可以是任意位址，然而你的模組路徑名稱至少要有個「點」(`.`) 才是合法路徑 (雖然最新版的 Go 不會強迫你一定要用網址當成模組路徑，但如果你用了早期的 Go 版本的話，遇到建置失敗就不要覺得奇怪)。如果你想知道更多資訊，請參考 Issues [`37554`](https://github.com/golang/go/issues/37554) 和 [`32819`](https://github.com/golang/go/issues/32819)。
+Go 1.14 的 [`Go Modules`](https://go.dev/wiki/Modules) 已經是正式版本，除非你有特定的理由不使用它們，否則請一律使用 [`Go Modules`](https://blog.golang.org/using-go-modules) 來管理套件。如果你用了 Go Modules 之後，就無需擔心 `$GOPATH` 與專案放置的位置。專案中的 `go.mod` 檔案假設你的專案放置在 GitHub 中，但這不是必須的。模組路徑可以是任意位址，然而你的模組路徑名稱至少要有個「點」(`.`) 才是合法路徑 (雖然最新版的 Go 不會強迫你一定要用網址當成模組路徑，但如果你用了早期的 Go 版本的話，遇到建置失敗就不要覺得奇怪)。如果你想知道更多資訊，請參考 Issues [`37554`](https://github.com/golang/go/issues/37554) 和 [`32819`](https://github.com/golang/go/issues/32819)。
 
 此專案目錄結構是通用的，它並非嘗試強迫讓你使用在特定的 Go 套件結構。
 
@@ -34,7 +34,7 @@ Go 1.14 的 [`Go Modules`](https://github.com/golang/go/wiki/Modules) 已經是�
 * https://talks.golang.org/2014/names.slide
 * https://golang.org/doc/effective_go.html#names
 * https://blog.golang.org/package-names
-* https://github.com/golang/go/wiki/CodeReviewComments
+* https://go.dev/wiki/CodeReviewComments
 
 參見 [`Go Project Layout`](https://medium.com/golang-learn/go-project-layout-e5213cdcfaa2) 了解更多的背景資訊。
 
@@ -79,7 +79,7 @@ Go 1.14 的 [`Go Modules`](https://github.com/golang/go/wiki/Modules) 已經是�
 
 ### `/vendor`
 
-應用程式的相依套件可透過手動管理，或使用你喜歡的相依性套件管理工具，例如內建的 [`Go Modules`](https://github.com/golang/go/wiki/Modules) 特性。使用 `go mod vendor` 命令可以幫你建立一個 `/vendor` 目錄。請注意：如果你不是用 Go 1.14+ 版本的話，你可能需要在執行 `go build` 的時候增加 `-mod=vendor` 命令列參數。從 Go 1.14 開始，這個參數預設就是啟用的。
+應用程式的相依套件可透過手動管理，或使用你喜歡的相依性套件管理工具，例如內建的 [`Go Modules`](https://go.dev/wiki/Modules) 特性。使用 `go mod vendor` 命令可以幫你建立一個 `/vendor` 目錄。請注意：如果你不是用 Go 1.14+ 版本的話，你可能需要在執行 `go build` 的時候增加 `-mod=vendor` 命令列參數。從 Go 1.14 開始，這個參數預設就是啟用的。
 
 如果你正在建立一個函式庫套件，那麼請不要將你應用程式的相依套件加入版控！
 

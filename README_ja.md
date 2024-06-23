@@ -25,7 +25,7 @@
 
 Goを学ぼうとしている場合や、自分でPoCやおもちゃのプロジェクトを構築しようとしている場合、このプロジェクトレイアウトはやりすぎです。最初は本当にシンプルなものから始めてください（`main.go`ファイルが1つあれば十分です）。プロジェクトが大きくなるにつれて、コードが適切に構造化されているかどうかが重要になることに注意してください。そうしないと、多くの隠れた依存関係やグローバルな状態を持つ厄介なコードになってしまいます。プロジェクトで作業する人が増えれば、さらに多くの構造が必要になります。そこで、パッケージやライブラリを管理するための共通の方法を導入することが重要になります。オープンソースプロジェクトがある場合や、他のプロジェクトがプロジェクトリポジトリからコードをインポートしていることを知っている場合は、プライベートな(内部的な)パッケージやコードを持つことが重要になります。リポジトリをクローンして、必要なものだけを残し、他のものはすべて削除してください。リポジトリにあるからといって、すべてを使わなければならないわけではありません。これらのパターンはすべてのプロジェクトで使われているわけではありません。`vendor`パターンでさえも、万能ではありません。
 
-Go 1.14では、[`Go Modules`](https://github.com/golang/go/wiki/Modules)がついに本番に向けて準備が整いました。使用しない特別な理由がない限り、[`Go Modules`](https://blog.golang.org/using-go-modules) を使用してください。もし使用するのであれば、$GOPATH やプロジェクトをどこに置くかを気にする必要はありません。レポの基本的な `go.mod` ファイルは、プロジェクトが GitHub でホストされていることを前提としていますが、必須ではありません。モジュールパスは何でも構いませんが、最初のモジュールパスコンポーネントの名前にはドットを付けてください (現在の Go のバージョンではもうこれを強制していませんが、少し古いバージョンを使っているのであれば、これを付けなくてもビルドが失敗しても驚かないでください)。これについて詳しく知りたい場合は、Issue [`37554`](https://github.com/golang/go/issues/37554) と [`32819`](https://github.com/golang/go/issues/32819) を参照してください。
+Go 1.14では、[`Go Modules`](https://go.dev/wiki/Modules)がついに本番に向けて準備が整いました。使用しない特別な理由がない限り、[`Go Modules`](https://blog.golang.org/using-go-modules) を使用してください。もし使用するのであれば、$GOPATH やプロジェクトをどこに置くかを気にする必要はありません。レポの基本的な `go.mod` ファイルは、プロジェクトが GitHub でホストされていることを前提としていますが、必須ではありません。モジュールパスは何でも構いませんが、最初のモジュールパスコンポーネントの名前にはドットを付けてください (現在の Go のバージョンではもうこれを強制していませんが、少し古いバージョンを使っているのであれば、これを付けなくてもビルドが失敗しても驚かないでください)。これについて詳しく知りたい場合は、Issue [`37554`](https://github.com/golang/go/issues/37554) と [`32819`](https://github.com/golang/go/issues/32819) を参照してください。
 
 このプロジェクトは意図的に一般的なレイアウトを使用しており、特定のGoパッケージを押し付けているわけではありません。
 
@@ -35,7 +35,7 @@ Go 1.14では、[`Go Modules`](https://github.com/golang/go/wiki/Modules)がつ�
 * https://talks.golang.org/2014/names.slide
 * https://golang.org/doc/effective_go.html#names
 * https://blog.golang.org/package-names
-* https://github.com/golang/go/wiki/CodeReviewComments
+* https://go.dev/wiki/CodeReviewComments
 * [Style guideline for Go packages](https://rakyll.org/style-packages) (rakyll/JBD)
 
 追加の背景情報については、[`Go Project Layout`](https://medium.com/golang-learn/go-project-layout-e5213cdcfaa2)を参照してください。
@@ -81,7 +81,7 @@ Go 1.14では、[`Go Modules`](https://github.com/golang/go/wiki/Modules)がつ�
 
 ### `/vendor`
 
-アプリケーションの依存関係 (手動で管理するか、新しい組み込みの [`Go Modules`](https://github.com/golang/go/wiki/Modules) 機能のようなお気に入りの依存関係管理ツールで管理します)。`go mod vendor`コマンドは、`/vendor`ディレクトリを作成します。デフォルトでオンになっている Go 1.14 を使用していない場合は、`go build` コマンドに `-mod=vendor` フラグを追加する必要があるかもしれないことに注意してください。
+アプリケーションの依存関係 (手動で管理するか、新しい組み込みの [`Go Modules`](https://go.dev/wiki/Modules) 機能のようなお気に入りの依存関係管理ツールで管理します)。`go mod vendor`コマンドは、`/vendor`ディレクトリを作成します。デフォルトでオンになっている Go 1.14 を使用していない場合は、`go build` コマンドに `-mod=vendor` フラグを追加する必要があるかもしれないことに注意してください。
 
 ライブラリをビルドしている場合は、アプリケーションの依存関係をコミットしないでください。
 

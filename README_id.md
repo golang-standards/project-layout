@@ -22,7 +22,7 @@ Berikut ini merupakan tata letak dasar untuk proyek aplikasi Go. Ini **`bukan st
 
 Jika kamu sedang belajar Go atau sedang membangun PoC atau proyek sederhana untuk dirimu sendiri, tata letak proyek ini terlalu berlebihan. Mulailah dengan sesuatu yang sederhana saja (sebuah file `main.go` tunggal dan `go.mod` sudah cukup). Ketika proyekmu berkembang, penting untuk memastikan kodemu terstruktur dengan baik, jika tidak, kamu akan berakhir dengan kode yang berantakan dengan banyak dependensi tersembunyi dan state global. Ketika ada lebih banyak orang yang bekerja pada proyekmu, kamu akan membutuhkan struktur yang lebih terorganisir. Itulah saat yang penting untuk memperkenalkan cara umum dalam mengelola paket/pustaka. Ketika kamu memiliki proyek open source atau ketika kamu tahu proyek lain mengimpor kode dari repositori proyekmu, saat itulah penting untuk memiliki paket dan kode pribadi (dikenal juga sebagai `internal`). Klon repositori tersebut, ambil yang kamu butuhkan, dan hapus sisanya! Hanya karena ada di sana, tidak berarti kamu harus menggunakan semuanya. Tidak satu pun dari pola-pola ini digunakan dalam setiap proyek. Bahkan pola `vendor` tidaklah universal.
 
-Dengan Go 1.14, [`Go Modules`](https://github.com/golang/go/wiki/Modules) akhirnya siap digunakan untuk produksi. Gunakan [`Go Modules`](https://blog.golang.org/using-go-modules) kecuali kamu memiliki alasan khusus untuk tidak menggunakannya. Jika kamu tidak menggunakan Go Modules, maka kamu tidak perlu khawatir tentang `$GOPATH` dan di mana kamu meletakkan proyekmu. File `go.mod` di dalam repositori ini mengasumsikan bahwa proyekmu di-host di GitHub, tetapi itu bukan menjadi persyaratan. Path modul dapat menjadi apa saja, meskipun komponen path modul pertama sebaiknya memiliki tanda titik dalam namanya (versi Go saat ini tidak lagi memaksakannya, tetapi jika kamu menggunakan versi yang sedikit lebih lama, jangan heran jika proses build tidak akan berhasil). Lihat isu [`37554`](https://github.com/golang/go/issues/37554) dan [`32819`](https://github.com/golang/go/issues/32819) jika kamu ingin tahu lebih banyak mengenai hal ini.
+Dengan Go 1.14, [`Go Modules`](https://go.dev/wiki/Modules) akhirnya siap digunakan untuk produksi. Gunakan [`Go Modules`](https://blog.golang.org/using-go-modules) kecuali kamu memiliki alasan khusus untuk tidak menggunakannya. Jika kamu tidak menggunakan Go Modules, maka kamu tidak perlu khawatir tentang `$GOPATH` dan di mana kamu meletakkan proyekmu. File `go.mod` di dalam repositori ini mengasumsikan bahwa proyekmu di-host di GitHub, tetapi itu bukan menjadi persyaratan. Path modul dapat menjadi apa saja, meskipun komponen path modul pertama sebaiknya memiliki tanda titik dalam namanya (versi Go saat ini tidak lagi memaksakannya, tetapi jika kamu menggunakan versi yang sedikit lebih lama, jangan heran jika proses build tidak akan berhasil). Lihat isu [`37554`](https://github.com/golang/go/issues/37554) dan [`32819`](https://github.com/golang/go/issues/32819) jika kamu ingin tahu lebih banyak mengenai hal ini.
 
 Tata letak proyek ini sengaja dirancang secara generik dan tidak mencoba memaksakan struktur paket Go yang spesifik.
 
@@ -32,7 +32,7 @@ Jika kamu membutuhkan bantuan dalam hal penamaan, pemformatan, dan gaya penulisa
 * https://talks.golang.org/2014/names.slide
 * https://golang.org/doc/effective_go.html#names
 * https://blog.golang.org/package-names
-* https://github.com/golang/go/wiki/CodeReviewComments
+* https://go.dev/wiki/CodeReviewComments
 * [Style guideline for Go packages](https://rakyll.org/style-packages) (rakyll/JBD)
 
 Lihatlah [`Go Project Layout`](https://medium.com/golang-learn/go-project-layout-e5213cdcfaa2) untuk informasi latar belakang tambahan.
@@ -80,7 +80,7 @@ Asal-usul direktori `pkg`: Source code Go yang lama menggunakan `pkg` untuk pake
 
 ### `/vendor`
 
-Dependensi aplikasi (dikelola secara manual atau dengan dependency management tool favorit anda seperti fitur baru bawaan [`Go Modules`](https://github.com/golang/go/wiki/Modules). Perintah `go mod vendor` akan membuat direktori `/vendor `untuk anda. Perlu dicatat bahwa anda mungkin perlu menambahkan flag `-mod=vendor` ke perintah `go build` jika anda tidak menggunakan Go 1.14 di mana fitur tersebut sudah diaktifkan secara default.
+Dependensi aplikasi (dikelola secara manual atau dengan dependency management tool favorit anda seperti fitur baru bawaan [`Go Modules`](https://go.dev/wiki/Modules). Perintah `go mod vendor` akan membuat direktori `/vendor `untuk anda. Perlu dicatat bahwa anda mungkin perlu menambahkan flag `-mod=vendor` ke perintah `go build` jika anda tidak menggunakan Go 1.14 di mana fitur tersebut sudah diaktifkan secara default.
 
 Jangan meng-commit dependency aplikasi anda jika anda sedang membangun sebuah library.
 

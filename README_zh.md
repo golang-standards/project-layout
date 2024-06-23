@@ -23,7 +23,7 @@
 
 如果你尝试学习 Go，或者你正在为自己建立一个 PoC 或一个玩具项目，这个项目布局是没啥必要的。从一些非常简单的事情开始(一个 `main.go` 文件绰绰有余)。随着项目的增长，请记住保持代码结构良好非常重要，否则你最终会得到一个凌乱的代码，这其中就包含大量隐藏的依赖项和全局状态。当有更多的人参与这个项目时，你将需要更多的结构。这时候，介绍一种管理包/库的通用方法是很重要的。当你有一个开源项目时，或者当你知道其他项目从你的项目存储库中导入代码时，这时候拥有私有(又名 `internal`)包和代码就很重要。克隆存储库，保留你需要的内容，删除其他所有的内容！仅仅因为它在那里并不意味着你必须全部使用它。这些模式都没有在每个项目中使用。甚至 `vendor` 模式也不是通用的。
 
-Go 1.14 [`Go Modules`](https://github.com/golang/go/wiki/Modules) 终于可以投入生产了。除非你有特定的理由不使用它们，否则使用 [`Go Modules`](https://blog.golang.org/using-go-modules) 。如果你使用，就无需担心 $GOPATH 以及项目放置的位置。存储库中的 `go.mod` 文件基本假定你的项目托管在 Github 上，但这不是要求。模块路径可以是任何地方，尽管第一个模块路径组件的名称中应该有一个点（当前版本的 Go 不再强制使用该模块，但如果使用稍旧的版本，如果没有 `mod` 文件构建失败的话 ，不要惊讶）。如果你想知道更多信息，请参阅 Issues [`37554`](https://github.com/golang/go/issues/37554) 和 [`32819`](https://github.com/golang/go/issues/32819) 。
+Go 1.14 [`Go Modules`](https://go.dev/wiki/Modules) 终于可以投入生产了。除非你有特定的理由不使用它们，否则使用 [`Go Modules`](https://blog.golang.org/using-go-modules) 。如果你使用，就无需担心 $GOPATH 以及项目放置的位置。存储库中的 `go.mod` 文件基本假定你的项目托管在 Github 上，但这不是要求。模块路径可以是任何地方，尽管第一个模块路径组件的名称中应该有一个点（当前版本的 Go 不再强制使用该模块，但如果使用稍旧的版本，如果没有 `mod` 文件构建失败的话 ，不要惊讶）。如果你想知道更多信息，请参阅 Issues [`37554`](https://github.com/golang/go/issues/37554) 和 [`32819`](https://github.com/golang/go/issues/32819) 。
 
 此项目布局是通用的，并且不会尝试强加一个特定的 Go 包结构。
 
@@ -33,7 +33,7 @@ Go 1.14 [`Go Modules`](https://github.com/golang/go/wiki/Modules) 终于可以�
 * https://talks.golang.org/2014/names.slide
 * https://golang.org/doc/effective_go.html#names
 * https://blog.golang.org/package-names
-* https://github.com/golang/go/wiki/CodeReviewComments
+* https://go.dev/wiki/CodeReviewComments
 * [Style guideline for Go packages](https://rakyll.org/style-packages) (rakyll/JBD)
 
 参见 [`Go Project Layout`](https://medium.com/golang-learn/go-project-layout-e5213cdcfaa2) 了解更多的背景信息。
@@ -76,7 +76,7 @@ Go 1.14 [`Go Modules`](https://github.com/golang/go/wiki/Modules) 终于可以�
 
 ### `/vendor`
 
-应用程序依赖项(手动管理或使用你喜欢的依赖项管理工具，如新的内置 [`Go Modules`](https://github.com/golang/go/wiki/Modules) 功能)。`go mod vendor` 命令将为你创建 `/vendor` 目录。请注意，如果未使用默认情况下处于启用状态的 Go 1.14，则可能需要在 `go build` 命令中添加 `-mod=vendor` 标志。
+应用程序依赖项(手动管理或使用你喜欢的依赖项管理工具，如新的内置 [`Go Modules`](https://go.dev/wiki/Modules) 功能)。`go mod vendor` 命令将为你创建 `/vendor` 目录。请注意，如果未使用默认情况下处于启用状态的 Go 1.14，则可能需要在 `go build` 命令中添加 `-mod=vendor` 标志。
 
 如果你正在构建一个库，那么不要提交你的应用程序依赖项。
 
