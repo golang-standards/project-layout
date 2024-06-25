@@ -18,6 +18,7 @@ Traductions:
 * [Vietnamese](README_vi.md)
 * [Українська](README_ua.md)
 * [Indonesian](README_id.md)
+* [हिन्दी](README_hi.md)
 
 ## Introduction
 
