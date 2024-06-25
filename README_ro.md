@@ -25,7 +25,7 @@ Aceasta este o structură de bază pentru aplicațiile Go. Nu este un standard o
 
 Dacă încerci să înveți Go sau să creezi un PoC/proiect hobby aceasta structură este excesivă. Începe cu ceva foarte simplu (un fișier `main.go` e de ajuns). Pe măsură ce proiectul crește ține minte că va fi nevoie să îl structurezi, altfel te vei trezi cu mult cod spagettă și dependințe/state-uri globale greu de întreținut. Când sunt mai mulți oameni care lucrează la proiect, vei avea nevoie de o structură și mai bună. Din acest motiv este important să introduci un mod comun de gestionare a librăriilor/package-urilor. Când ai un proiect open-source, când știi că alte proiecte importă codul din proiectul tău, e important să ai module (packages) private (internal). Clonează acest repo și ține doar ce ai nevoie. Doar pentru că e acolo, nu înseamnă că trebuie să îl folosești. Aceste standarde nu sunt folosite în toate proiectele Go, nici măcar cel comun `vendor` nu este universal.
 
-De la apariția Go 1.14 [`Go Modules`](https://github.com/golang/go/wiki/Modules) sunt gata de producție (production mode). Folosește [`Go Modules`](https://blog.golang.org/using-go-modules) doar dacă nu ai un motiv specific de a nu le folosești. Dacă nu vrei să le folosești atunci nu este nevoie să te gândești la $GOPATH și unde să îți plasezi proiectul. Fișierul `go.mod` din repo-ul tău asumă că proiectul îți este hostat pe Github, însă asta nu e o necesitate. Calea (path) modulelor poate fi orice, însă primul modul component ar trebui să aibă un punct în numele său (versiunea curentă Go nu o mai cere explicit însă dacă folosești o versiune mai veche nu fi surprins dacă primești erori la compilare). Vezi problemele [`37554`](https://github.com/golang/go/issues/37554) și [`32819`](https://github.com/golang/go/issues/32819) dacă vrei să afli mai multe.
+De la apariția Go 1.14 [`Go Modules`](https://go.dev/wiki/Modules) sunt gata de producție (production mode). Folosește [`Go Modules`](https://blog.golang.org/using-go-modules) doar dacă nu ai un motiv specific de a nu le folosești. Dacă nu vrei să le folosești atunci nu este nevoie să te gândești la $GOPATH și unde să îți plasezi proiectul. Fișierul `go.mod` din repo-ul tău asumă că proiectul îți este hostat pe Github, însă asta nu e o necesitate. Calea (path) modulelor poate fi orice, însă primul modul component ar trebui să aibă un punct în numele său (versiunea curentă Go nu o mai cere explicit însă dacă folosești o versiune mai veche nu fi surprins dacă primești erori la compilare). Vezi problemele [`37554`](https://github.com/golang/go/issues/37554) și [`32819`](https://github.com/golang/go/issues/32819) dacă vrei să afli mai multe.
 
 Această structură este intenționat generică și nu își dorește să impună un standard în gestiunea modulelor Go.
 
@@ -35,7 +35,7 @@ Dacă ai nevoie de ajutor cu denumirile, formatare, stilare vezi [`gofmt`](https
 * https://talks.golang.org/2014/names.slide
 * https://golang.org/doc/effective_go.html#names
 * https://blog.golang.org/package-names
-* https://github.com/golang/go/wiki/CodeReviewComments
+* https://go.dev/wiki/CodeReviewComments
 * [Ghid de stilare pentru modulele Go](https://rakyll.org/style-packages) (rakyll/JBD)
 
 Vezi [`Go Project Layout`](https://medium.com/golang-learn/go-project-layout-e5213cdcfaa2) pentru informații adiționale.

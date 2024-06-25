@@ -33,7 +33,7 @@ Go 1.14 `Go Modules`已经可以用于生产环境。没有什么特殊原因的
 * <https://golang.org/doc/effective_go.html#names>
 * <https://blog.golang.org/package-names>
 
-* <https://github.com/golang/go/wiki/CodeReviewComments>
+* <https://go.dev/wiki/CodeReviewComments>
 
 * Style guideline for Go packages (rakyll/JBD)
 
@@ -78,7 +78,7 @@ Go 1.14 `Go Modules`已经可以用于生产环境。没有什么特殊原因的
 
 ### `/vendor`
 
-应用程序的依赖关系（通过手动或者使用喜欢的依赖管理工具，如新增的内置[Go Modules](https://github.com/golang/go/wiki/Modules)特性）。执行`go mod vendor`命令将会在项目中创建`/vendor`目录，注意，如果使用的不是Go 1.14版本，在执行`go build`进行编译时，需要添加`-mod=vendor`命令行选项，因为它不是默认选项。
+应用程序的依赖关系（通过手动或者使用喜欢的依赖管理工具，如新增的内置[Go Modules](https://go.dev/wiki/Modules)特性）。执行`go mod vendor`命令将会在项目中创建`/vendor`目录，注意，如果使用的不是Go 1.14版本，在执行`go build`进行编译时，需要添加`-mod=vendor`命令行选项，因为它不是默认选项。
 
 构建库文件时，不要提交应用程序依赖项。
 

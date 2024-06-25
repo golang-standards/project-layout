@@ -25,7 +25,7 @@ Ce dépôt est une architecture basique pour des projets d'applications en Go. *
 
 **Si vous commencez à apprendre Go, ou si vous souhaitez développer un petit side-project pour vous-même, cette architecture n'est pas du tout adaptée. Commencez par quelque chose de très simple (un unique fichier `main.go` est largement suffisant).** Au fur et à mesure que votre projet évolue, il est important de garder à l'esprit que votre code doit être bien structuré sinon vous finirez rapidement avec un code difficile à maintenir, comprenant beaucoup de dépendances cachées et un state global. Plus il y aura de gens qui travailleront sur le projet, plus il sera important d'avoir une structure solide. C'est pourquoi il est important d'introduire une façon identique pour tout le monde de gérer les bibliothèques et les packages. Lorsque vous maintenez un projet open source ou que vous savez que d'autres projets importent votre code depuis votre dépôt, il est important d'avoir des packages et du code privé (aka `internal`). Clonez le dépôt, gardez ce dont vous avez besoin et supprimez tout le reste ! Ce n'est pas parce que des dossiers existent que vous devez impérativement tous les utiliser. Tous ces patterns ne sont pas tout le temps utilisés dans tous les projets. Même le pattern `vendor` n'est pas universel.
 
-Depuis la sortie de Go 1.14 les [`Go Modules`](https://github.com/golang/go/wiki/Modules) sont enfin prêts à être utilisés en production. Utilisez les [`Go Modules`](https://blog.golang.org/using-go-modules) par défaut sauf si vous avez une raison bien spécifique de ne pas les utiliser. Lorsque vous les utilisez, vous n'avez pas besoin de vous embêter avec le $GOPATH ou de définir le dossier dans lequel vous allez mettre votre projet. Le fichier `go.mod` part du principe que votre dépôt est hébergé sur Github, mais ce n'est pas une obligation. Le chemin du module peut être n'importe quoi, mais il faut savoir que le premier composant du chemin devrait toujours avoir un point dans son nom (la version actuelle de Go ne l'impose plus, mais si vous utilisez des versions un peu plus anciennes ne soyez pas surpris que votre build échoue s'il n'y a pas de point). Allez voir les tickets [`37554`](https://github.com/golang/go/issues/37554) et [`32819`](https://github.com/golang/go/issues/32819) si vous souhaitez en savoir plus.
+Depuis la sortie de Go 1.14 les [`Go Modules`](https://go.dev/wiki/Modules) sont enfin prêts à être utilisés en production. Utilisez les [`Go Modules`](https://blog.golang.org/using-go-modules) par défaut sauf si vous avez une raison bien spécifique de ne pas les utiliser. Lorsque vous les utilisez, vous n'avez pas besoin de vous embêter avec le $GOPATH ou de définir le dossier dans lequel vous allez mettre votre projet. Le fichier `go.mod` part du principe que votre dépôt est hébergé sur Github, mais ce n'est pas une obligation. Le chemin du module peut être n'importe quoi, mais il faut savoir que le premier composant du chemin devrait toujours avoir un point dans son nom (la version actuelle de Go ne l'impose plus, mais si vous utilisez des versions un peu plus anciennes ne soyez pas surpris que votre build échoue s'il n'y a pas de point). Allez voir les tickets [`37554`](https://github.com/golang/go/issues/37554) et [`32819`](https://github.com/golang/go/issues/32819) si vous souhaitez en savoir plus.
 
 L'architecture de ce projet est générique de manière intentionelle et elle n'essaie pas d'imposer une structure de paquet Go spécifique.
 
@@ -35,7 +35,7 @@ Si vous avez besoin d'aide pour le nommage, le formattage ou le style, commencez
 * https://talks.golang.org/2014/names.slide
 * https://golang.org/doc/effective_go.html#names
 * https://blog.golang.org/package-names
-* https://github.com/golang/go/wiki/CodeReviewComments
+* https://go.dev/wiki/CodeReviewComments
 * [Style guideline for Go packages](https://rakyll.org/style-packages) (rakyll/JBD)
 
 Lisez l'article [`Go Project Layout`](https://medium.com/golang-learn/go-project-layout-e5213cdcfaa2) pour avoir des informations additionnelles.
@@ -81,7 +81,7 @@ Vous n'êtes pas obligés de l'utiliser si votre projet est petit et si l'ajout 
 
 ### `/vendor`
 
-Les dépendances de votre application (gérées manuellement ou via votre gestionnaire de dépendances favori tel que la fonctionnalité incluse dans les [`Go Modules`](https://github.com/golang/go/wiki/Modules)). La commande `go mod vendor` créera un dossier `/vendor` pour vous. Notez que vous devrez peut-être utiliser le flag `-mod=vendor` avec votre commande `go build` si vous n'utilisez pas Go 1.14 qui le définit par défaut.
+Les dépendances de votre application (gérées manuellement ou via votre gestionnaire de dépendances favori tel que la fonctionnalité incluse dans les [`Go Modules`](https://go.dev/wiki/Modules)). La commande `go mod vendor` créera un dossier `/vendor` pour vous. Notez que vous devrez peut-être utiliser le flag `-mod=vendor` avec votre commande `go build` si vous n'utilisez pas Go 1.14 qui le définit par défaut.
 
 Ne commitez pas vos dépendances si vous développez une bibliothèque.
 

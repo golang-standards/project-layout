@@ -25,7 +25,7 @@ Bu proje Go projeleri için basit bir yerleşim düzenidir. `Go geliştirici tak
 
 **`Eğer Go'yu öğrenmeye çalışıyorsanız veya PoC (Proof of Concept) ya da kendinize deneme bir proje yapıyorsanız bu klasör düzeni sizin için ideal olmaya bilir. Çok basit bir şeyle başlayın (tek bir` main.go `dosyası ve` go.mod `fazlasıyla yeterli olucaktır).`** Projeniz büyüdükçe projenin iyi yapılandırıldığından emin olmanın önemli olduğunu unutmayın, yoksa bir sürü gizli bağımlılık (dependency) ve bir sürü, her yerden erişilebilen, `global` değişkenlerle dolu dağınık bir kodla karşılaşabilirsiniz. Proje üstünde fazla kişi çalıştığında projeyi çok daha fazla yapılandırmanız gerekebilir. İşte tam da bu durumda paketleri/kütüphaneleri idare edebilmek için ortaya ortak bir yol koymak gerekir. Açık kaynak bir projeniz olduğunda ya da başkalarının sizin projenizi kullandıklarını bildiğinizde projenizde özel paketlerin ve kodların (diğer adıyla, `internal` klasörü) olması önemlidir. Bu projeyi klonlayın, ihtiyacınız olanları bırakın ve diğer bütün her şeyi silin. Bütün klasörlerin burada olması kullanmanız gerektiği anlamına gelmez. `vendor` klasörü bile herkes tarafından kullanılan bir şey değildir.
 
-Go 1.14 ile birlikte [`Go Modules`](https://github.com/golang/go/wiki/Modules) özelliği sonunda `production` ortamında kullanılması için hazır oldu. Eğer karşı bir nedeniniz yoksa [`Go Modules`](https://blog.golang.org/using-go-modules) kullanın. Eğer kullanırsanız `$GOPATH` ile ve projenizin nereye koyulacağıyla alakalı endişeler duymazsınız. Projenizde bulunan basit `go.mod` dosyası projenizin GitHub'da barındırıldığını varsayar ama bu bir gereklilik değildir. Modül yolu her şey olabilir ama modül yolunun ilk parçasının içinde bir nokta olmalıdır (Go'nun şimdiki versiyonu artık bu konuda zorlamıyor ama eğer daha eski versiyonları kullanırsanız ve derleme işleminde hata alırsanız şaşırmayın). Daha fazla bilgi için [`37554`](https://github.com/golang/go/issues/37554) ve [`32819`](https://github.com/golang/go/issues/32819) hata bildirimlerine bakabilirsiniz.
+Go 1.14 ile birlikte [`Go Modules`](https://go.dev/wiki/Modules) özelliği sonunda `production` ortamında kullanılması için hazır oldu. Eğer karşı bir nedeniniz yoksa [`Go Modules`](https://blog.golang.org/using-go-modules) kullanın. Eğer kullanırsanız `$GOPATH` ile ve projenizin nereye koyulacağıyla alakalı endişeler duymazsınız. Projenizde bulunan basit `go.mod` dosyası projenizin GitHub'da barındırıldığını varsayar ama bu bir gereklilik değildir. Modül yolu her şey olabilir ama modül yolunun ilk parçasının içinde bir nokta olmalıdır (Go'nun şimdiki versiyonu artık bu konuda zorlamıyor ama eğer daha eski versiyonları kullanırsanız ve derleme işleminde hata alırsanız şaşırmayın). Daha fazla bilgi için [`37554`](https://github.com/golang/go/issues/37554) ve [`32819`](https://github.com/golang/go/issues/32819) hata bildirimlerine bakabilirsiniz.
 
 "Bu proje düzeni genel bir düzendir ve belirli bir Go paketi yapısını empoze etmeye çalışmaz".
 
@@ -35,7 +35,7 @@ Eğer isimlendirmekle, biçimlendirmeyle ve stilize etmeyle ilgili yardıma ihti
 * https://talks.golang.org/2014/names.slide
 * https://golang.org/doc/effective_go.html#names
 * https://blog.golang.org/package-names
-* https://github.com/golang/go/wiki/CodeReviewComments
+* https://go.dev/wiki/CodeReviewComments
 * [Style guideline for Go packages](https://rakyll.org/style-packages) (rakyll/JBD)
 
 Ek bilgi için [`Go Project Layout`](https://medium.com/golang-learn/go-project-layout-e5213cdcfaa2) adlı yazıya bakabilirsin.
@@ -81,7 +81,7 @@ Eğer projenizde ekstra bir katmana gerek yoksa ya da projeniz çok küçükse b
 
 ### `/vendor`
 
-Uygulama bağımlılıkları (el ile yönetilen ya da yeni bir özellik olan  [`Go Modules`](https://github.com/golang/go/wiki/Modules) gibi favori bağımlılık yönetim aracınızla yönetilen). `go mod vendor` komutu size yeni bir `/vendor` klasörü yaratır. Unutmayın eğer Go 1.14 kullanmıyorsanız `go build` komutuna `-mod=vendor` parametresi vermeniz gerekebilir Go 1.14 bunu varsayılan olarak yapar.
+Uygulama bağımlılıkları (el ile yönetilen ya da yeni bir özellik olan  [`Go Modules`](https://go.dev/wiki/Modules) gibi favori bağımlılık yönetim aracınızla yönetilen). `go mod vendor` komutu size yeni bir `/vendor` klasörü yaratır. Unutmayın eğer Go 1.14 kullanmıyorsanız `go build` komutuna `-mod=vendor` parametresi vermeniz gerekebilir Go 1.14 bunu varsayılan olarak yapar.
 
 Eğer bir kütüphane yazıyorsanız bağımlılıklarınızı `commit` etmeyin.
 

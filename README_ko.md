@@ -25,7 +25,7 @@
 
 만약 당신이 Go를 배우려하거나, 혼자 PoC나 토이 프로젝트를 만드는 거라면 이 프로젝트 레이아웃은 과한 것입니다. 아주 간단한 것부터 시작하세요 (`main.go` 파일 하나면 아주 충분합니다). 프로젝트가 성장하면서 당신의 코드가 잘 구조화 되도록 하는 것이 중요합니다. 그렇지 않으면 많은 숨겨진 종속성들과 전역 상태가 있는 지저분한 코드로 끝나게 될 것 입니다. 더 많은 사람들이 프로젝트에 참여할 때 더 많은 구조가 필요합니다. 그 때가 패키지/라이브러리를 관리하는 공통된 방법을 도입하는 것이 중요한 시점입니다. 당신이 오픈 소스 프로젝트를 가지고 있거나 다른 프로젝트가 당신의 프로젝트 레포지토리에서 코드를 임포트 하고있다면 프라이빗 (`internal` 로 일컫어지는) 패키지와 코드를 도입하는게 중요합니다. 이 레포지토리를 Clone하고, 당신에게 필요한것만 남긴다음 나머지 것들을 다 지우세요! 거기에 있다고 해서 다 사용해야하는 것은 아닙니다. 모든 프로젝트에서 다 사용하는 패턴은 없습니다. `vendor`패턴 조차 보편적이지 않습니다.
 
-Go 1.14로 [`Go Modules`](https://github.com/golang/go/wiki/Modules) 은 최종적으로 프로덕션 준비가 완료되었습니다. 특별히 사용하지 않을 사유가 없다면 [`Go Modules`](https://blog.golang.org/using-go-modules) 를 사용하세요. 그러면 $GOPATH와 어디에 내 프로젝트를 놓을지 고민할 필요가 없습니다. 레포지토리에서 기본적인 `go.mod` 파일은 프로젝트가 GitHub에 호스팅되어있다고 가정합니다만, 필수사항은 아닙니다. 모듈 패스는 어느것이든 될 수 있지만 첫번째 모듈 패스 컴포넌트는 그 이름에 점이 있어야 합니다. (현재 버전의 Go는 더이상 이를 강제하지는 않지만, 만약 조금 더 오래된 버전을 사용하고 있다면 점이 없을때 빌드가 실패해도 놀라지 마세요). 이에 대해 더 알아보고 싶으시면 이슈 [`37554`](https://github.com/golang/go/issues/37554) 와 [`32819`](https://github.com/golang/go/issues/32819) 를 읽어보세요.
+Go 1.14로 [`Go Modules`](https://go.dev/wiki/Modules) 은 최종적으로 프로덕션 준비가 완료되었습니다. 특별히 사용하지 않을 사유가 없다면 [`Go Modules`](https://blog.golang.org/using-go-modules) 를 사용하세요. 그러면 $GOPATH와 어디에 내 프로젝트를 놓을지 고민할 필요가 없습니다. 레포지토리에서 기본적인 `go.mod` 파일은 프로젝트가 GitHub에 호스팅되어있다고 가정합니다만, 필수사항은 아닙니다. 모듈 패스는 어느것이든 될 수 있지만 첫번째 모듈 패스 컴포넌트는 그 이름에 점이 있어야 합니다. (현재 버전의 Go는 더이상 이를 강제하지는 않지만, 만약 조금 더 오래된 버전을 사용하고 있다면 점이 없을때 빌드가 실패해도 놀라지 마세요). 이에 대해 더 알아보고 싶으시면 이슈 [`37554`](https://github.com/golang/go/issues/37554) 와 [`32819`](https://github.com/golang/go/issues/32819) 를 읽어보세요.
 
 이 프로젝트 레이아웃은 의도적으로 일반적이며 특정 Go 패키지 구조를 강요하지 않습니다.
 
@@ -36,7 +36,7 @@ Go 1.14로 [`Go Modules`](https://github.com/golang/go/wiki/Modules) 은 최종�
 * https://talks.golang.org/2014/names.slide
 * https://golang.org/doc/effective_go.html#names
 * https://blog.golang.org/package-names
-* https://github.com/golang/go/wiki/CodeReviewComments
+* https://go.dev/wiki/CodeReviewComments
 * [Style guideline for Go packages](https://rakyll.org/style-packages) (rakyll/JBD)
 
 자세한 배경 지식에 대해서는 [`Go Project Layout`](https://medium.com/golang-learn/go-project-layout-e5213cdcfaa2) 를 확인하세요.
@@ -83,7 +83,7 @@ Internal 패키지에서 공유되는 내부 코드와 공유되지 않는 내�
 
 ### `/vendor`
 
-애플리캐이션 종속성 (직접 혹은 새 빌트인 [`Go Modules`](https://github.com/golang/go/wiki/Modules) 피쳐와 같은 종속성 관리 도구로 관리되는).  `go mod vendor` 명령어는 `/vendor` 디렉터리를 만들어 줄 것 입니다. `go build` 명령어를 사용할 때 Go 1.14를 사용하지 않는다면 Go 1.14에서 기본으로 켜져있는 `-mod=vendor` 플래그를 추가해야 할 수 있습니다.
+애플리캐이션 종속성 (직접 혹은 새 빌트인 [`Go Modules`](https://go.dev/wiki/Modules) 피쳐와 같은 종속성 관리 도구로 관리되는).  `go mod vendor` 명령어는 `/vendor` 디렉터리를 만들어 줄 것 입니다. `go build` 명령어를 사용할 때 Go 1.14를 사용하지 않는다면 Go 1.14에서 기본으로 켜져있는 `-mod=vendor` 플래그를 추가해야 할 수 있습니다.
 
 만약 당신이 라이브러리를 만들고 있다면 당신의 애플리케이션 종속성을 커밋하지 마세요.
 
