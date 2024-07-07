@@ -1,4 +1,4 @@
-# Standard Go Project Layout
+# Standard Go Project 
 
 Translations:
 
