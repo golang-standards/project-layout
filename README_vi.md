@@ -16,6 +16,7 @@ Các bản dịch:
 * [Türkçe](README_tr.md)
 * [Vietnamese](README_vi.md)
 * [हिन्दी](README_hi.md)
+* [Persian](README_fa.md)
 
 ## Tổng quan
 
