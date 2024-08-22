@@ -20,6 +20,7 @@
 * [正體中文](README_zh-TW.md)
 * [简体中文](README_zh.md)
 * [English](README.md)
+* [Persian](README_fa.md)
 
 ## अवलोकन
 
