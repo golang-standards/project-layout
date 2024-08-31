@@ -1,0 +1,43 @@
+name: Label by Branch
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize]
+
+jobs:
+  label:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Label PR based on branch name
+        id: label
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const branchName = context.payload.pull_request.head.ref;
+            const labels = [];
+
+            // Define label assignment logic based on branch name
+            if (branchName.startsWith('feat/')) {
+              labels.push('feature');
+            } else if (branchName.startsWith('fix/')) {
+              labels.push('bug');
+            } else if (branchName.startsWith('impv/')) {
+              labels.push('improvement');
+            }
+
+            // Add labels to the PR if any were determined
+            if (labels.length > 0) {
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.issue.number,
+                labels: labels,
+              });
+            }
