@@ -19,6 +19,7 @@ Traduções:
 * [Українська](README_ua.md)
 * [Indonesian](README_id.md)
 * [हिन्दी](README_hi.md)
+* [Беларускі](README_by.md)
 
 ## Visão geral
 
