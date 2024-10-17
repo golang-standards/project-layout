@@ -102,7 +102,7 @@ Componente specifice aplicațiilor Web: asset-uri, template-uri, SPAs, etc
 
 ## Directoare comune aplicațiilor 
 
-### `/configs`
+### `/config`
 
 Șablonuri de configurare, configurări implicite.
 

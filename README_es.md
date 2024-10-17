@@ -105,7 +105,7 @@ Componentes específicos de la aplicación web: activos web estáticos, plantill
 
 ## Directorios de aplicaciones comunes
 
-### `/configs`
+### `/config`
 
 Plantillas de archivos de configuración o configuraciones predeterminadas.
 
