@@ -19,7 +19,7 @@
 * [Indonesian](README_id.md)
 * [हिन्दी](README_hi.md)
 * [فارسی](README_fa.md)
-* [Беларуская](README_by.md)
+* [Беларуская](README_be.md)
 
 ## Агляд
 
