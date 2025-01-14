@@ -1,5 +1,7 @@
 # Standard Go Project Layout
 
+This is a test
+
 Translations:
 
 * [한국어 문서](README_ko.md)
