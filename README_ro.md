@@ -19,7 +19,7 @@ Traduceri:
 * [Українська](README_ua.md)
 * [Indonesian](README_id.md)
 * [हिन्दी](README_hi.md)
-* [Беларуская](README_by.md)
+* [Беларуская](README_be.md)
 
 ## General
 
