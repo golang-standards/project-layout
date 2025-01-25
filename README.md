@@ -15,7 +15,7 @@ Translations:
 * [Türkçe](README_tr.md)
 * [Italiano](README_it.md)
 * [Tiếng Việt](README_vi.md)
-* [Українська](README_ua.md)
+* [Українська](README_uk.md)
 * [Indonesian](README_id.md)
 * [हिन्दी](README_hi.md)
 * [فارسی](README_fa.md)
