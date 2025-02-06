@@ -13,6 +13,7 @@
 * [Română](README_ro.md)
 * [Русский](README_ru.md)
 * [Türkçe](README_tr.md)
+* [Türkmençe](README_tk.md)
 * [Italiano](README_it.md)
 * [Vietnamese](README_vi.md)
 * [Українська](README_ua.md)

@@ -14,6 +14,7 @@
 * [Română](README_ro.md)
 * [Русский](README_ru.md)
 * [Türkçe](README_tr.md)
+* [Türkmençe](README_tk.md)
 * [Українська](README_ua.md)
 * [Vietnamese](README_vi.md)
 * [简体中文](README_zh-CN.md) - ???
