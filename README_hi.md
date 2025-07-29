@@ -21,6 +21,7 @@
 * [简体中文](README_zh.md)
 * [English](README.md)
 * [Беларуская](README_be.md)
+* [বাংলা](README_bn.md)
 
 ## अवलोकन
 
