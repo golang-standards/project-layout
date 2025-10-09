@@ -20,6 +20,7 @@
 * [हिन्दी](README_hi.md)
 * [فارسی](README_fa.md)
 * [Беларуская](README_be.md)
+* [বাংলা](README_bn.md)
 
 ## Агляд
 
