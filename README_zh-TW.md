@@ -104,7 +104,7 @@ Web 應用程式相關的元件：靜態 Web 檔案、伺服器端範本與 SPAs
 
 ## 通用應用程式目錄 (Common Application Directories)
 
-### `/configs`
+### `/config`
 
 組態設定的檔案範本或預設設定。
 
