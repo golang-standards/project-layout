@@ -47,6 +47,10 @@ Go 1.14 [`Go Modules`](https://go.dev/wiki/Modules) 终于可以投入生产了
 * [GopherCon 2017: Edward Muller - Go Anti-Patterns](https://www.youtube.com/watch?v=ltqV6pDKZD8)
 * [GopherCon 2018: Kat Zien - How Do You Structure Your Go Apps](https://www.youtube.com/watch?v=oL6JBUk6tj0)
 
+一篇关于面向包的设计指南和架构的中文文章
+
+- 面向包的设计和架构分层
+
 ## Go 目录
 
 ### `/cmd`
