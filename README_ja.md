@@ -20,6 +20,7 @@
 * [Indonesian](README_id.md)
 * [हिन्दी](README_hi.md)
 * [Беларуская](README_be.md)
+* [বাংলা](README_bn.md)
 
 ## 概要
 
@@ -73,7 +74,7 @@ Go 1.14では、[`Go Modules`](https://go.dev/wiki/Modules)がついに本番に
 
 ### `/pkg`
 
-外部アプリケーションで使用しても問題ないライブラリコードを格納するディレクトリです(例: `/pkg/mypubliclib`)。他のプロジェクトは、これらのライブラリが動作することを期待してインポートしますので、ここにコードを書く前によく考えてください :-)。内部ディレクトリは、プライベートパッケージがインポートできないようにするためのより良い方法であることに注意してください。`/pkg` ディレクトリは、そのディレクトリにあるコードが他の人に使われても安全であることを明示的に伝える良い方法です。[`I'll take pkg over internal blog post by Travis Jeffery`](https://travisjeffery.com/b/2019/11/i-ll-take-pkg-over-internal/) は、`pkg` ディレクトリと内部ディレクトリの概要と、それらを使用することが意味のある場合の概要を提供しています。
+外部アプリケーションで使用しても問題ないライブラリコード(例: `/pkg/mypubliclib`)。他のプロジェクトは、これらのライブラリが動作することを期待してインポートしますので、ここに何かを置く前によく考えてください :-)。内部ディレクトリは、プライベートパッケージがインポートできないようにするためのより良い方法であることに注意してください。`/pkg` ディレクトリは、そのディレクトリにあるコードが他の人に使われても安全であることを明示的に伝える良い方法です。[`I'll take pkg over internal blog post by Travis Jeffery`](https://travisjeffery.com/ill-take-pkg-over-internal/) は、`pkg` ディレクトリと内部ディレクトリの概要と、それらを使用することが意味のある場合の概要を提供しています。
 
 また、ルートディレクトリにGo以外のコンポーネントやディレクトリが多数含まれている場合は、Goコードを1つの場所にグループ化して、さまざまなGoツールを簡単に実行できるようにする方法でもあります（これらの講演で言及されているように：[`産業用プログラミングのベストプラクティス`](https://www.youtube.com/watch?v=PTE4VJIdHPg) from GopherCon EU 2018、[`GopherCon 2018：Kat Zien-How Do You Structure Your Go Apps`](https://www.youtube.com/watch?v=oL6JBUk6tj0) および [`GoLab 2018-Massimiliano Pippi-Goのプロジェクトレイアウトパターン`](https://www.youtube.com/watch?v=3gQa1LWwuzk)）。
 

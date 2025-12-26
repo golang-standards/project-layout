@@ -54,7 +54,7 @@
 
 کد کتابخانه که امکان استفاده توسط برنامه‌های خارجی را دارد (به‌عنوان مثال،  `/pkg/mypubliclib`). سایر پروژه‌ها این کتابخانه‌ها را import می‌کنند و انتظار کارکرد درست آنها را دارند، بنابراین قبل از قرار دادن چیزی در اینجا خوب فکر کنید :-) و توجه داشته باشید که  `internal` directory، راه بهتری برای اطمینان از وارد نشدن private packages شماست، زیرا توسط Go اجرا می‌شود. دایرکتوری `/pkg`همچنان راه خوبی برای بیان صریح این است که کد موجود در آن دایرکتوری برای استفاده توسط دیگران ایمن است.
 
-مقاله وبلاگ « [`I'll take pkg over internal`](https://travisjeffery.com/b/2019/11/i-ll-take-pkg-over-internal/)» توسط Travis Jeffery، نمای کلی خوبی از دایرکتوری‌های pkg و internal و زمان‌هایی که استفاده از آنها منطقی است ارائه می‌دهد.
+مقاله وبلاگ « [`I'll take pkg over internal`](https://travisjeffery.com/ill-take-pkg-over-internal/)» توسط Travis Jeffery، نمای کلی خوبی از دایرکتوری‌های pkg و internal و زمان‌هایی که استفاده از آنها منطقی است ارائه می‌دهد.
 
 همچنین این راهی برای گروه‌بندی کد Go در یک مکان است، زمانی که دایرکتوری اصلی شما حاوی بسیاری از اجزا و دایرکتوری‌های غیر Go باشد، این کار اجرای ابزارهای مختلف Go را آسان‌تر می‌کند (همانطور که در این سخنرانی‌ها ذکر شده است: [`Best Practices for Industrial Programming`](https://www.youtube.com/watch?v=PTE4VJIdHPg) از GopherCon EU و [GopherCon 2018: Kat Zien - How Do You Structure Your Go Apps](https://www.youtube.com/watch?v=oL6JBUk6tj0) و [GoLab 2018 - Massimiliano Pippi - Project layout patterns in Go](https://www.youtube.com/watch?v=3gQa1LWwuzk)).
 

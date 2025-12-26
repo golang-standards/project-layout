@@ -17,6 +17,7 @@ Các bản dịch:
 * [Vietnamese](README_vi.md)
 * [हिन्दी](README_hi.md)
 * [Беларуская](README_be.md)
+* [বাংলা](README_bn.md)
 
 ## Tổng quan
 
@@ -73,7 +74,7 @@ Bạn có thể tùy chọn thêm một chút cấu trúc bổ sung vào các g�
 
 ### `/pkg`
 
-Thư mục chứa code thư viện cho phép các ứng dụng bên ngoài sử dụng (ví dụ: `/pkg/mypubliclib`). Các dự án khác sẽ nhập các thư viện này và kỳ vọng là chúng sẽ hoạt động, vì vậy hãy nghĩ cẩn thận trước khi bạn để thứ gì vào đây :-). Lưu ý rằng thư mục `nội bộ` là cách tốt hơn để đảm bảo các gói riêng tư của bạn không thể nhập được vì nó được Go thực thi. Thư mục `/pkg` vẫn là một cách tốt để thông báo rõ ràng rằng mã trong thư mục đó an toàn cho người khác sử dụng. Bài [`Tôi sẽ dùng pkg thay vì gói nội bộ`](https://travisjeffery.com/b/2019/11/i-ll-take-pkg-over-internal/) đăng bởi Travis Jeffery cung cấp một góc nhìn tổng quan về các thư mục `pkg` và `internal` và khi nào nên dùng chúng.
+Thư mục chứa code thư viện cho phép các ứng dụng bên ngoài sử dụng (ví dụ: `/pkg/mypubliclib`). Các dự án khác sẽ nhập các thư viện này và kỳ vọng là chúng sẽ hoạt động, vì vậy hãy nghĩ cẩn thận trước khi bạn để thứ gì vào đây :-). Lưu ý rằng thư mục `nội bộ` là cách tốt hơn để đảm bảo các gói riêng tư của bạn không thể nhập được vì nó được Go thực thi. Thư mục `/pkg` vẫn là một cách tốt để thông báo rõ ràng rằng mã trong thư mục đó an toàn cho người khác sử dụng. Bài [`Tôi sẽ dùng pkg thay vì gói nội bộ`](https://travisjeffery.com/ill-take-pkg-over-internal/) đăng bởi Travis Jeffery cung cấp một góc nhìn tổng quan về các thư mục `pkg` và `internal` và khi nào nên dùng chúng.
 
 Đó cũng là một cách để nhóm mã Go vào một nơi khi thư mục gốc của bạn chứa nhiều thành phần và thư mục không phải Go, giúp chạy các công cụ Go khác nhau dễ dàng hơn (như đã đề cập trong các bài nói này: [`Thực tiễn tốt nhất cho lập trình công nghiệp`](https://www.youtube.com/watch?v=PTE4VJIdHPg) từ GopherCon EU 2018, [GopherCon 2018: Kat Zien - Làm thế nào để tổ chức các ứng dụng Go](https://www.youtube.com/watch?v=oL6JBUk6tj0) và [GoLab 2018 - Massimiliano Pippi - Mẫu bố cục dự án trong Go](https://www.youtube.com/watch?v=3gQa1LWwuzk)).
 

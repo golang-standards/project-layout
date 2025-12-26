@@ -20,6 +20,7 @@
 * [Indonesian](README_id.md)
 * [हिन्दी](README_hi.md)
 * [Беларуская](README_be.md)
+* [বাংলা](README_bn.md)
 
 這是 Go 應用程式專案的基本目錄結構。它不是核心 Go 開發團隊定義的官方標準；然而，它是 Go 生態系統中一組常見的老專案和新專案的目錄結構。其中一些目錄結構比其他目錄結構更受歡迎。這個專案目錄結構還有一些細微的改進，可以支援任何大型且實用的應用程式目錄結構。
 
@@ -71,7 +72,7 @@ Go 1.14 的 [`Go Modules`](https://go.dev/wiki/Modules) 已經是正式版本，
 
 ### `/pkg`
 
-函式庫的程式碼當然可以讓外部應用程式來使用 (例如：`/pkg/mypubliclib`)，其他專案會匯入這些函式庫，並且期待它們能正常運作，所以要把程式放在這個目錄下請多想個幾遍！:-) 注意：使用 `internal` 目錄可以確保私有套件不會被匯入到其他專案使用，因為它是由 Go 的編譯器強制執行的，所以是比較好的解決方案。使用 `/pkg` 目錄仍然是一種很好的方式，它代表其他專案可以安全地使用這個目錄下的程式碼。由 Travis Jeffery 撰寫的 [`I'll take pkg over internal`](https://travisjeffery.com/b/2019/11/i-ll-take-pkg-over-internal/) 文章提供了關於 `pkg` 和 `internal` 目錄很好的概述，以及使用它們的時機點。
+函式庫的程式碼當然可以讓外部應用程式來使用 (例如：`/pkg/mypubliclib`)，其他專案會匯入這些函式庫，並且期待它們能正常運作，所以要把程式放在這個目錄下請多想個幾遍！:-) 注意：使用 `internal` 目錄可以確保私有套件不會被匯入到其他專案使用，因為它是由 Go 的編譯器強制執行的，所以是比較好的解決方案。使用 `/pkg` 目錄仍然是一種很好的方式，它代表其他專案可以安全地使用這個目錄下的程式碼。由 Travis Jeffery 撰寫的 [`I'll take pkg over internal`](https://travisjeffery.com/ill-take-pkg-over-internal/) 文章提供了關於 `pkg` 和 `internal` 目錄很好的概述，以及使用它們的時機點。
 
 當專案的根目錄包含許多不是用 Go 所寫的元件與目錄時，將 Go 程式碼放在一個集中的目錄下也是種不錯的方法，這使得運行各種 Go 工具變得更加容易（正如以下這些演講中提到的那樣：來自 GopherCon EU 2018 的 [`Best Practices for Industrial Programming`](https://www.youtube.com/watch?v=PTE4VJIdHPg)、[GopherCon 2018: Kat Zien - How Do You Structure Your Go Apps](https://www.youtube.com/watch?v=oL6JBUk6tj0) 和 [GoLab 2018 - Massimiliano Pippi - Project layout patterns in Go](https://www.youtube.com/watch?v=3gQa1LWwuzk)）。
 

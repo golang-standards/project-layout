@@ -20,6 +20,7 @@ Traducciones:
 * [Indonesian](README_id.md)
 * [हिन्दी](README_hi.md)
 * [Беларуская](README_be.md)
+* [বাংলা](README_bn.md)
 
 ## Resumen
 
@@ -74,7 +75,7 @@ Opcionalmente, puede agregar un poco de estructura adicional a sus paquetes inte
 
 ### `/pkg`
 
-Código de biblioteca que puede usar aplicaciones externas (por ejemplo, `/pkg/mypubliclib`). Otros proyectos importarán estas bibliotecas esperando que funcionen, así que piénselo dos veces antes de poner algo aquí :-) Tenga en cuenta que el directorio `internal` es la mejor manera de asegurarse de que sus paquetes privados no se puedan importar porque Go lo aplica. El directorio `/pkg` sigue siendo una buena forma de comunicar explícitamente que el código de ese directorio es seguro para que lo utilicen otros. La publicación del blog de Travis Jeffery, [`I'll take pkg over internal`](https://travisjeffery.com/b/2019/11/i-ll-take-pkg-over-internal/), proporciona una buena descripción de los directorios `pkg` e `internal` y de cuándo podría tener sentido usarlos.
+Código de biblioteca que puede usar aplicaciones externas (por ejemplo, `/pkg/mypubliclib`). Otros proyectos importarán estas bibliotecas esperando que funcionen, así que piénselo dos veces antes de poner algo aquí :-) Tenga en cuenta que el directorio `internal` es la mejor manera de asegurarse de que sus paquetes privados no se puedan importar porque Go lo aplica. El directorio `/pkg` sigue siendo una buena forma de comunicar explícitamente que el código de ese directorio es seguro para que lo utilicen otros. La publicación del blog de Travis Jeffery, [`I'll take pkg over internal`](https://travisjeffery.com/ill-take-pkg-over-internal/), proporciona una buena descripción de los directorios `pkg` e `internal` y de cuándo podría tener sentido usarlos.
 
 También es una forma de agrupar el código de Go en un solo lugar cuando su directorio raíz contiene muchos componentes y directorios que no son de Go, lo que facilita la ejecución de varias herramientas de Go (como se menciona en estas charlas: [`Best Practices for Industrial Programming`](https://www.youtube.com/watch?v=PTE4VJIdHPg) de GopherCon EU 2018, [GopherCon 2018: Kat Zien - How Do You Structure Your Go Apps](https://www.youtube.com/watch?v=oL6JBUk6tj0) y [GoLab 2018 - Massimiliano Pippi - Project layout patterns in Go](https://www.youtube.com/watch?v=3gQa1LWwuzk)).
 

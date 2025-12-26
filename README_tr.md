@@ -20,6 +20,7 @@
 * [Indonesian](README_id.md)
 * [हिन्दी](README_hi.md)
 * [Беларуская](README_be.md)
+* [বাংলা](README_bn.md)
 
 ## Genel Bakış:
 
@@ -73,7 +74,7 @@ Paylaşılan ve paylaşılmayan kodunuzu ayırmak için isteğe bağlı olarak e
 
 ### `/pkg`
 
-Diğerleriyle paylaşmak istediğiniz kodu içerir (örneğin, `/pkg/myopenlibrary`). Diğer projeler bu kütüphaneleri çalışacağını tahmin ederek kullanırlar. Yani buraya bir şey koyarken iki kere düşünün :-) Unutmayın ki `internal` klasörü başka projeler tarafından kullanılmasını istemediğiniz kodlar için daha iyi bir yerdir çünkü bu Go tarafından zorunlu olarak uygulanır. `/pkg` klasörü içindeki kodun başkaları tarafından kullanılmasının güvenli olduğunu açıkça belirtmek için hala iyi bir yoldur. Travis Jeffery tarafından yazılan [`I'll take pkg over internal`](https://travisjeffery.com/b/2019/11/i-ll-take-pkg-over-internal/) blog yazısı `pkg` ve `internal` klasörleri ve onları ne zaman kullanmanın mantıklı olacağına dair genel bakış sağlar.
+Diğerleriyle paylaşmak istediğiniz kodu içerir (örneğin, `/pkg/myopenlibrary`). Diğer projeler bu kütüphaneleri çalışacağını tahmin ederek kullanırlar. Yani buraya bir şey koyarken iki kere düşünün :-) Unutmayın ki `internal` klasörü başka projeler tarafından kullanılmasını istemediğiniz kodlar için daha iyi bir yerdir çünkü bu Go tarafından zorunlu olarak uygulanır. `/pkg` klasörü içindeki kodun başkaları tarafından kullanılmasının güvenli olduğunu açıkça belirtmek için hala iyi bir yoldur. Travis Jeffery tarafından yazılan [`I'll take pkg over internal`](https://travisjeffery.com/ill-take-pkg-over-internal/) blog yazısı `pkg` ve `internal` klasörleri ve onları ne zaman kullanmanın mantıklı olacağına dair genel bakış sağlar.
 
 Ayrıca ana klasörünüz çok sayıda Go kodu olmayan dosya ve klasör içerdiğinde Go kodunu tek bir yerde gruplamanın yoludur ve bazı Go araçlarını kullanmayı daha kolay hale getirir (bu konuşmalarda bahsedildiği gibi: [`Best Practices for Industrial Programming`](https://www.youtube.com/watch?v=PTE4VJIdHPg) GopherCon Avrupa 2018 konferansından, [GopherCon 2018: Kat Zien - How Do You Structure Your Go Apps](https://www.youtube.com/watch?v=oL6JBUk6tj0) ve [GoLab 2018 - Massimiliano Pippi - Project layout patterns in Go](https://www.youtube.com/watch?v=3gQa1LWwuzk)).
 
