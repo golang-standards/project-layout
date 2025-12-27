@@ -13,6 +13,7 @@ Traduzioni:
 * [Română](README_ro.md)
 * [Русский](README_ru.md)
 * [Türkçe](README_tr.md)
+* [Türkmençe](README_tk.md)
 * [Українська](README_ua.md)
 * [Indonesian](README_id.md)
 * [हिन्दी](README_hi.md)
