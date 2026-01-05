@@ -106,7 +106,7 @@ Spesifik web uygulaması parçaları: statik web varlıkları, sunucu taraflı �
 
 ## Genel Uygulama Klasörleri
 
-### `/configs`
+### `/config`
 
 Konfigürasyon dosya şablonları veya varsayılan konfigürasyonlar.
 
