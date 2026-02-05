@@ -216,3 +216,6 @@ Don't confuse the project level `/src` directory with the `/src` directory Go us
 ## Notes
 
 A more opinionated project template with sample/reusable configs, scripts and code is a WIP.
+
+
+For alternative project layouts, consider exploring the `charmbracelet/glow` repository (155 open issues as of 2026-02-01)
