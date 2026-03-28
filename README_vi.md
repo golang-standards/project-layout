@@ -37,7 +37,7 @@ Bắt đầu với [`gofmt`](https://golang.org/cmd/gofmt/) và [`golint`](https
 * https://golang.org/doc/effective_go.html#names
 * https://blog.golang.org/package-names
 * https://go.dev/wiki/CodeReviewComments
-* [Hướng dẫn thiết kế các gói trong Go](https://rakyll.org/style-packages) (rakyll/JBD)
+* [Hướng dẫn thiết kế các gói trong Go](https://web.archive.org/web/20260110162648/https://rakyll.org/style-packages/) (rakyll/JBD)
 
 Đọc thêm [`Mẫu dự án Go`](https://medium.com/golang-learn/go-project-layout-e5213cdcfaa2) để biết thêm thông tin cơ bản.
 

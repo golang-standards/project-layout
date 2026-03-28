@@ -39,7 +39,7 @@ Se precisar de ajuda com nomenclatura, formatação e estilo, comece executando 
 * https://golang.org/doc/effective_go.html#names
 * https://blog.golang.org/package-names
 * https://go.dev/wiki/CodeReviewComments
-* [Style guideline for Go packages](https://rakyll.org/style-packages) (rakyll/JBD)
+* [Style guideline for Go packages](https://web.archive.org/web/20260110162648/https://rakyll.org/style-packages/) (rakyll/JBD)
 
 Veja [`Go Project Layout`](https://medium.com/golang-learn/go-project-layout-e5213cdcfaa2) para obter informações adicionais.
 
