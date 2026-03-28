@@ -41,7 +41,7 @@
 * https://golang.org/doc/effective_go.html#names
 * https://blog.golang.org/package-names
 * https://go.dev/wiki/CodeReviewComments
-* [Кіраўніцтва па стылі для пакетаў Go](https://rakyll.org/style-packages) (rakyll/JBD)
+* [Кіраўніцтва па стылі для пакетаў Go](https://web.archive.org/web/20260110162648/https://rakyll.org/style-packages/) (rakyll/JBD)
 
 Глядзіце [`шаблон праекта Go`](https://medium.com/golang-learn/go-project-layout-e5213cdcfaa2) для дадатковай інфармацыі.
 

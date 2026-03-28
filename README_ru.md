@@ -39,7 +39,7 @@
 * https://golang.org/doc/effective_go.html#names
 * https://blog.golang.org/package-names
 * https://go.dev/wiki/CodeReviewComments
-* [Руководство по стилизации кода для пакетов Golang](https://rakyll.org/style-packages) (rakyll/JBD)
+* [Руководство по стилизации кода для пакетов Golang](https://web.archive.org/web/20260110162648/https://rakyll.org/style-packages/) (rakyll/JBD)
 
 Обратите внимание на [`Шаблон проекта Golang`](https://medium.com/golang-learn/go-project-layout-e5213cdcfaa2) для получения дополнительной информации.
 
