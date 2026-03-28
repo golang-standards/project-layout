@@ -14,6 +14,7 @@ Các bản dịch:
 * [Română](README_ro.md)
 * [Русский](README_ru.md)
 * [Türkçe](README_tr.md)
+* [Türkmençe](README_tk.md)
 * [Vietnamese](README_vi.md)
 * [हिन्दी](README_hi.md)
 * [Беларуская](README_be.md)
