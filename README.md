@@ -112,7 +112,7 @@ Web application specific components: static web assets, server side templates an
 
 ## Common Application Directories
 
-### `/configs`
+### `/config`
 
 Configuration file templates or default configs.
 
