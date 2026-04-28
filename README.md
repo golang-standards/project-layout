@@ -54,6 +54,8 @@ More about naming and organizing packages as well as other code structure recomm
 A Chinese post about Package-Oriented-Design guidelines and Architecture layer
 * [面向包的设计和架构分层](https://github.com/danceyoung/paper-code/blob/master/package-oriented-design/packageorienteddesign.md)
 
+Here is a popular open source project that strictly follows the project-layout's project specification for your reference: [iam](https://github.com/marmotedu/iam).
+
 ## Go Directories
 
 ### `/cmd`
