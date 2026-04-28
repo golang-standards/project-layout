@@ -19,7 +19,7 @@
 - [https://golang.org/doc/effective_go.html#names](https://golang.org/doc/effective_go.html#names)
 - [https://blog.golang.org/package-names](https://blog.golang.org/package-names)
 - [https://go.dev/wiki/CodeReviewComments](https://go.dev/wiki/CodeReviewComments)
-- [Style guideline for Go packages](https://rakyll.org/style-packages) (rakyll/JBD)
+- [Style guideline for Go packages](https://web.archive.org/web/20260110162648/https://rakyll.org/style-packages/) (rakyll/JBD)
 
 برای اطلاعات بیشتر ، [`Go Project Layout`](https://medium.com/golang-learn/go-project-layout-e5213cdcfaa2) را ببینید.  
 اطلاعات بیشتر در مورد نامگذاری و سازماندهی بسته‌ها و همچنین سایر توصیه‌های ساختار کد:
